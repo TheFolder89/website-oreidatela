@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-blue: #0088cc;
+    --color-brand-dark: #1d2124;
+    --color-brand-gray: #f4f6f9;
+
+    --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+@layer base {
+    html {
+        font-family: 'Poppins', system-ui, sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-white text-gray-700;
+    }
+}

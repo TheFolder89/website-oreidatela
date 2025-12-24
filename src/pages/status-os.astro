@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StatusForm from '../components/StatusForm';
+import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
+
+---
+
+<Layout title="Status do Reparo - O Rei da Tela" description="Consulte o status da sua ordem de serviço em tempo real.">
+    <Header />
+    
+    <main class="bg-gray-50 min-h-screen py-10 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Acompanhe seu Reparo</h1>
+                <p class="text-gray-500 max-w-xl mx-auto">
+                    Digite o número da sua Ordem de Serviço (OS) para ver em que etapa do processo seu dispositivo está.
+                </p>
+            </div>
+            
+            <StatusForm client:load />
+        </div>
+    </main>
+
+    <WhatsAppFloatingButton client:idle />
+    <Footer />
+</Layout>

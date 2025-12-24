@@ -1,0 +1,155 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloatingButton from '../../components/WhatsAppFloatingButton';
+import neighborhoods from '../../data/neighborhoods.json';
+import { MapPin, Truck, Clock, Phone } from 'lucide-react';
+
+export function getStaticPaths() {
+  return neighborhoods.map(bairro => ({
+    params: { 
+      bairro: bairro.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-') 
+    },
+    props: { bairro },
+  }));
+}
+
+const { bairro } = Astro.props;
+
+// Helper to capitalize for display
+function capitalize(str: string) {
+    return str; // Already capitalized in JSON props, but we could enforce title case if needed
+}
+
+const title = `Assistência Técnica Apple em ${bairro} - Salvador | Delivery`;
+const description = `Precisando consertar seu iPhone ou Apple Watch em ${bairro}? O Rei da Tela atende sua região com delivery rápido. Troca de tela e bateria com garantia.`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": `Conserto Apple em ${bairro}`,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "O Rei da Tela"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": bairro,
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Salvador",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+    }
+  },
+  "description": description
+};
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main>
+    <!-- Geometric Hero -->
+    <section class="bg-brand-dark text-white py-24 relative overflow-hidden">
+      <!-- Overlay Pattern -->
+      <div class="absolute inset-0 bg-brand-blue opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-6 py-2 bg-white/5 rounded-full text-sm font-bold uppercase tracking-wider mb-8 border border-white/10 text-brand-blue">
+          <MapPin className="w-4 h-4" /> Atendimento Exclusivo
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
+          Assistência Apple no <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-200">{bairro}</span>
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+          A conveniência que o {bairro} exige. Buscamos seu iPhone ou Apple Watch em domicílio com segurança total.
+        </p>
+        <div>
+            <a href="https://wa.me/5571999999999" class="bg-brand-blue hover:bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-blue-500/50 inline-flex items-center gap-3">
+                <Truck class="w-5 h-5" /> Agendar Coleta no {bairro}
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props for Location -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Truck className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Delivery Seguro</h3>
+                    <p class="text-gray-600">Nosso motoboy credenciado vai até seu endereço em {bairro} com segurança total e seguro de transporte.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Clock className="w-8 h-8 text-purple-600" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Rapidez</h3>
+                    <p class="text-gray-600">Para moradores de {bairro}, oferecemos prazos expressos. Seu aparelho volta novo em poucas horas.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Phone className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Suporte Local</h3>
+                    <p class="text-gray-600">Dúvidas? Fale direto com um técnico que conhece sua região e entende sua urgência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                   <h2 class="text-3xl font-bold text-gray-900 mb-6">Localização da Nossa Loja Central</h2>
+                   <p class="text-gray-600 mb-6">
+                    Embora atendamos {bairro} via delivery, nosso laboratório central está estrategicamente localizado para atender toda Salvador rapidamente.
+                   </p>
+                   <ul class="space-y-4 mb-8">
+                       <li class="flex items-start gap-3">
+                           <div class="mt-1"><MapPin className="w-5 h-5 text-blue-600"/></div>
+                           <div>
+                               <strong>Endereço:</strong><br>
+                               Av. Antônio Carlos Magalhães, 1234 - Pituba, Salvador - BA
+                           </div>
+                       </li>
+                       <li class="flex items-start gap-3">
+                           <div class="mt-1"><Clock className="w-5 h-5 text-blue-600"/></div>
+                           <div>
+                               <strong>Horário:</strong><br>
+                               Seg a Sex: 09:00 - 18:00<br>Sáb: 09:00 - 13:00
+                           </div>
+                       </li>
+                   </ul>
+                   <a href="https://maps.google.com" target="_blank" class="text-blue-600 font-semibold hover:underline">Ver rota no Google Maps →</a>
+                </div>
+                <div class="h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border border-gray-300 relative">
+                     <!-- Placeholder map due to lack of API Key in prompt env -->
+                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=Salvador,BA&zoom=13&size=600x400&key=YOUR_API_KEY_HERE" 
+                          alt="Mapa Salvador" 
+                          class="w-full h-full object-cover opacity-50 block"
+                          onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Salvador_in_Brazil.svg/2560px-Salvador_in_Brazil.svg.png'"
+                     />
+                     <div class="absolute inset-0 flex items-center justify-center bg-black/5">
+                        <span class="bg-white px-4 py-2 rounded-lg shadow font-medium">Mapa Interativo (Simulação)</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema Injection -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </main>
+
+  <WhatsAppFloatingButton client:idle />
+  <Footer />
+</Layout>
