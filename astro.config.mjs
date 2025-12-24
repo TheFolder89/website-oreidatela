@@ -9,7 +9,8 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap()],
-  site: 'https://ordt.com.br',
+  site: 'https://TheFolder89.github.io',
+  base: '/website-oreidatela',
   output: 'static',
   build: {
     format: 'file'
