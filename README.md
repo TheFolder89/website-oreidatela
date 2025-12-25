@@ -1,43 +1,55 @@
-# Astro Starter Kit: Minimal
+# O Rei da Tela - Website Institucional & SEO
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Website oficial da **O Rei da Tela**, assistência técnica especializada Apple em Salvador, Bahia. Desenvolvido com foco em alta performance, SEO hyperlocal e conversão.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tecnologias
 
-## 🚀 Project Structure
+- **Framework**: [Astro 5](https://astro.build/) (Static Site Generation)
+- **UI**: [React 19](https://react.dev/) (Componentes interativos como o Budget Wizard)
+- **Estilização**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Ícones**: [Lucide React](https://lucide.dev/)
+- **Animações**: Tailwind Transitions & Astro View Transitions
+- **SEO**: [Astro Sitemap](https://docs.astro.build/en/guides/integrations-guide/sitemap/) + JSON-LD Schema Markup
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 Estrutura do Projeto
 
 ```text
 /
-├── public/
+├── docs/               # Documentação e PRD do projeto
+├── public/             # Ativos estáticos (fontes, imagens globais)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Componentes React e Astro (Header, Footer, Wizard)
+│   ├── data/           # Mock data (serviços, bairros de Salvador)
+│   ├── layouts/        # Layout principal (Shell HTML, SEO tags)
+│   ├── pages/          # Rotas e páginas dinâmicas (Astro)
+│   └── styles/         # CSS Global e configurações de tema
+├── astro.config.mjs    # Configuração do Astro e integrações
+└── package.json        # Dependências e scripts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Comandos Principais
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+No terminal, na raiz do projeto:
 
-Any static assets, like images, can be placed in the `public/` directory.
+| Comando | Ação |
+| :--- | :--- |
+| `npm install` | Instala as dependências |
+| `npm run dev` | Inicia o servidor de desenvolvimento (`localhost:4321`) |
+| `npm run build` | Gera o site estático na pasta `./dist/` |
+| `npm run preview` | Visualiza o build localmente |
 
-## 🧞 Commands
+## 📈 Estratégia de SEO
 
-All commands are run from the root of the project, from a terminal:
+O projeto utiliza **Programmatic SEO** para gerar páginas específicas para cada bairro de Salvador:
+- As rotas são geradas automaticamente baseadas em `src/data/neighborhoods.json`.
+- Cada página possui Schema Markup de `LocalBusiness` e `Service`.
+- Sitemap automático gerado em cada build.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📦 Deploy (Hostinger)
 
-## 👀 Want to learn more?
+1. Execute `npm run build`.
+2. Carregue o conteúdo da pasta `dist/` para a pasta `public_html` via FTP ou Gerenciador de Arquivos do Hostinger.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+Desenvolvido por **Antigravity AI** para **O Rei da Tela**.
