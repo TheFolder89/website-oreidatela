@@ -1,85 +1,212 @@
 ---
-import neighborhoods from '../data/neighborhoods.json';
-import { MapPin, Phone, Mail, Facebook, Instagram, Clock } from 'lucide-react';
+import neighborhoods from "../data/neighborhoods.json";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  Clock,
+  Crown,
+} from "lucide-react";
 
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-brand-dark text-gray-300 pt-16 pb-8 border-t border-gray-800">
+<footer class="bg-brand-dark text-gray-400 pt-20 pb-10 border-t border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-      
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
       <!-- Brand & About -->
       <div>
-        <h3 class="text-white text-xl font-bold mb-6 flex items-center gap-2">
-            <span class="text-brand-blue">●</span> O Rei da Tela
-        </h3>
-        <p class="text-sm leading-relaxed mb-6 text-gray-400">
-          Referência em assistência técnica Apple em Salvador. Qualidade premium, transparência e agilidade que seu dispositivo merece.
+        <div class="flex items-center gap-3 mb-8 group">
+          <div
+            class="w-12 h-12 rounded-lg group-hover:rotate-12 transition-transform duration-300"
+          >
+            <img
+              src="/website-oreidatela/logo-oficial.png"
+              alt="Logo"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <h3
+            class="text-white text-xl font-black tracking-tighter uppercase leading-none"
+          >
+            O REI DA <span class="text-brand-gold">TELA</span>
+          </h3>
+        </div>
+        <p class="text-sm leading-relaxed mb-8 font-medium">
+          Referência absoluta em assistência técnica Apple em Salvador desde
+          2014. Especialistas em microsoldagem e troca de vidro original.
         </p>
         <div class="flex gap-4">
-          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all text-gray-400">
-            <Instagram class="w-5 h-5" />
+          <a
+            href="#"
+            class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition-all text-white border border-white/10 group"
+          >
+            <Instagram
+              className="w-5 h-5 group-hover:scale-110 transition-transform"
+            />
           </a>
-          <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all text-gray-400">
-            <Facebook class="w-5 h-5" />
+          <a
+            href="#"
+            class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-brand-gold hover:text-brand-navy transition-all text-white border border-white/10 group"
+          >
+            <Facebook
+              className="w-5 h-5 group-hover:scale-110 transition-transform"
+            />
           </a>
         </div>
       </div>
 
       <!-- Services -->
       <div>
-        <h4 class="text-white font-bold mb-6">Serviços</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a href="/servicos/conserto-iphone" class="hover:text-brand-blue transition-colors flex items-center gap-2">› Conserto de iPhone</a></li>
-          <li><a href="/servicos/conserto-apple-watch" class="hover:text-brand-blue transition-colors flex items-center gap-2">› Apple Watch</a></li>
-          <li><a href="/servicos/conserto-ipad" class="hover:text-brand-blue transition-colors flex items-center gap-2">› iPad</a></li>
-          <li><a href="/status-os" class="hover:text-brand-blue transition-colors flex items-center gap-2">› Status de OS</a></li>
+        <h4
+          class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8 border-b border-brand-gold/20 pb-2"
+        >
+          Serviços Premium
+        </h4>
+        <ul class="space-y-4 text-sm font-bold">
+          <li>
+            <a
+              href="/servicos/conserto-iphone"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Conserto
+              de iPhone
+            </a>
+          </li>
+          <li>
+            <a
+              href="/servicos/conserto-apple-watch"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Apple
+              Watch
+            </a>
+          </li>
+          <li>
+            <a
+              href="/servicos/conserto-samsung"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Samsung
+              Galaxy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/servicos/conserto-xiaomi"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Xiaomi
+              / Redmi
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Blog &
+              Notícias
+            </a>
+          </li>
+          <!-- Status OS - Temporarily hidden
+          <li>
+            <a
+              href="/status-os"
+              class="hover:text-brand-gold transition-colors flex items-center gap-3"
+            >
+              <div class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full"></div> Consultar Ordem
+            </a>
+          </li>
+          -->
         </ul>
       </div>
 
       <!-- Contact -->
       <div>
-        <h4 class="text-white font-bold mb-6">Contato</h4>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-start gap-4">
-            <MapPin class="w-5 h-5 text-brand-blue mt-1 shrink-0" />
-            <span>Av. Antônio Carlos Magalhães, 1234 - Pituba, Salvador - BA</span>
+        <h4
+          class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8 border-b border-brand-gold/20 pb-2"
+        >
+          Central Atendimento
+        </h4>
+        <ul class="space-y-6 text-sm">
+          <li class="flex items-start gap-4 group">
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/30 transition-colors"
+            >
+              <MapPin className="w-5 h-5 text-brand-gold" />
+            </div>
+            <span class="font-medium text-white/70"
+              >Av. Antônio Carlos Magalhães, 1234<br />Edf. Executive Center,
+              Salvador - BA</span
+            >
           </li>
-          <li class="flex items-center gap-4">
-            <Phone class="w-5 h-5 text-brand-blue shrink-0" />
-            <a href="tel:+5571999999999" class="hover:text-white">(71) 99999-9999</a>
+          <li class="flex items-center gap-4 group">
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/30 transition-colors"
+            >
+              <Phone className="w-5 h-5 text-brand-gold" />
+            </div>
+            <a
+              href="tel:+5571999999999"
+              class="font-black text-white hover:text-brand-gold transition-colors"
+              >(71) 99999-9999</a
+            >
           </li>
-          <li class="flex items-center gap-4">
-            <Mail class="w-5 h-5 text-brand-blue shrink-0" />
-            <a href="mailto:contato@oreidatela.com.br" class="hover:text-white">contato@oreidatela.com.br</a>
-          </li>
-          <li class="flex items-start gap-4">
-            <Clock class="w-5 h-5 text-brand-blue mt-1 shrink-0" />
-             <div class="flex flex-col">
-                <span>Seg - Sex: 09:00 - 18:00</span>
-                <span>Sáb: 09:00 - 13:00</span>
-             </div>
+          <li class="flex items-start gap-4 group">
+            <div
+              class="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center shrink-0 border border-white/10 group-hover:border-brand-gold/30 transition-colors"
+            >
+              <Clock className="w-5 h-5 text-brand-gold" />
+            </div>
+            <div class="flex flex-col font-medium text-white/70">
+              <span class="text-white font-bold">Seg - Sex: 09h às 18h</span>
+              <span>Sábado: 09h às 13h</span>
+            </div>
           </li>
         </ul>
       </div>
 
       <!-- Quick Areas -->
       <div>
-        <h4 class="text-white font-bold mb-6">Áreas de Coleta</h4>
-        <div class="flex flex-wrap gap-2 text-xs">
-          {neighborhoods.slice(0, 12).map((bairro) => (
-            <a href={`/unidades/${bairro.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-')}`} class="bg-gray-800 px-2 py-1 rounded hover:bg-brand-blue hover:text-white transition-colors">
-              {bairro}
-            </a>
-          ))}
+        <h4
+          class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8 border-b border-brand-gold/20 pb-2"
+        >
+          Coleta por Bairro
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          {
+            neighborhoods.slice(0, 15).map((bairro) => (
+              <a
+                href={`/unidades/${bairro
+                  .toLowerCase()
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+                  .replace(/\s+/g, "-")}`}
+                class="text-[10px] font-bold uppercase tracking-wider bg-white/5 px-3 py-2 rounded-lg hover:bg-brand-gold hover:text-brand-navy transition-all border border-white/5"
+              >
+                {bairro}
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
 
-    <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-      <p>&copy; {currentYear} O Rei da Tela. Todos os direitos reservados.</p>
-      <p>Desenvolvido com Tecnologia Astro</p>
+    <div
+      class="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-[0.2em] text-gray-600"
+    >
+      <div class="flex items-center gap-4">
+        <p>&copy; {currentYear} O REI DA TELA</p>
+        <span class="w-1 h-1 bg-gray-800 rounded-full"></span>
+        <p>CNPJ: 00.000.000/0000-00</p>
+      </div>
+      <div class="flex items-center gap-2 group">
+        <span>TECNOLOGIA</span>
+        <span class="text-brand-gold group-hover:animate-pulse">ASTRO 5.0</span>
+      </div>
     </div>
   </div>
 </footer>

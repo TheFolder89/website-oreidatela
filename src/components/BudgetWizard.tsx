@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Smartphone, Watch, ArrowRight, CheckCircle, ChevronRight } from 'lucide-react';
+import { Smartphone, Watch, ArrowRight, CheckCircle, ChevronRight, Calculator, Zap } from 'lucide-react';
 
 const devices = [
     { id: 'iphone', name: 'iPhone', icon: Smartphone },
@@ -21,12 +21,28 @@ const problems = [
 export default function BudgetWizard() {
     const [step, setStep] = useState(1);
     const [selection, setSelection] = useState({ device: '', model: '', problem: '' });
+    const [isCalculating, setIsCalculating] = useState(false);
 
-    const handleNext = () => setStep(step + 1);
+    const haptic = (type: 'success' | 'click' = 'click') => {
+        if (typeof navigator !== 'undefined' && navigator.vibrate) {
+            navigator.vibrate(type === 'success' ? 100 : 30);
+        }
+    };
+
+    const handleNext = async () => {
+        haptic();
+        if (step === 3) {
+            setIsCalculating(true);
+            await new Promise(r => setTimeout(r, 1500));
+            setIsCalculating(false);
+            haptic('success');
+        }
+        setStep(step + 1);
+    };
 
     const getPriceEstimate = () => {
         if (selection.device === 'watch') return 'R$ 499';
-        if (selection.device === 'iphone' && selection.problem === 'tela') return 'R$ 299';
+        if (selection.device === 'iphone' && selection.problem === 'Tela Quebrada (Vidro)') return 'R$ 299';
         return 'Sob Consulta';
     };
 
@@ -36,95 +52,120 @@ export default function BudgetWizard() {
     };
 
     return (
-        <div className="bg-white rounded-xl shadow-2xl p-6 md:p-10 max-w-2xl mx-auto relative z-20">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-t-xl"></div>
+        <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 md:p-12 max-w-2xl mx-auto relative z-20 overflow-hidden border border-gray-100 animate-fade-scale">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-navy via-brand-gold to-brand-navy"></div>
 
-            <div className="flex justify-between items-center mb-10">
-                <h3 className="text-xl font-bold text-gray-800">Orçamento Rápido</h3>
-                <div className="flex gap-1">
+            <div className="flex justify-between items-center mb-12">
+                <div>
+                    <h3 className="text-3xl font-black text-brand-navy leading-tight uppercase tracking-tighter">Budget Wizard</h3>
+                    <p className="text-[10px] text-brand-gold font-black uppercase tracking-[0.3em]">Passo {step} de 4</p>
+                </div>
+                <div className="flex gap-2">
                     {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className={`h-1.5 w-8 rounded-full transition-all ${i <= step ? 'bg-brand-blue' : 'bg-gray-100'}`} />
+                        <div key={i} className={`h-2.5 rounded-full transition-all duration-700 ${i <= step ? 'bg-brand-gold w-10 shadow-lg shadow-brand-gold/20' : 'bg-gray-100 w-6'}`} />
                     ))}
                 </div>
             </div>
 
-            <div className="min-h-[250px]">
-                {step === 1 && (
-                    <div className="animate-fade-in">
-                        <h4 className="text-2xl font-bold mb-8 text-center text-gray-900">Selecione o Dispositivo</h4>
-                        <div className="grid grid-cols-2 gap-6">
-                            {devices.map((d) => (
-                                <button
-                                    key={d.id}
-                                    onClick={() => { setSelection({ ...selection, device: d.id }); handleNext(); }}
-                                    className="flex flex-col items-center p-8 bg-gray-50 rounded-2xl hover:bg-blue-50 hover:shadow-lg transition-all group border-2 border-transparent hover:border-brand-blue relative overflow-hidden"
-                                >
-                                    <d.icon className="w-14 h-14 text-gray-400 group-hover:text-brand-blue mb-4 transition-colors" />
-                                    <span className="font-bold text-lg text-gray-700 group-hover:text-brand-blue">{d.name}</span>
+            <div className="min-h-[350px] flex flex-col justify-center">
+                {isCalculating ? (
+                    <div className="text-center py-10 animate-pulse">
+                        <div className="relative w-28 h-28 mx-auto mb-8">
+                            <Calculator className="w-full h-full text-brand-gold" />
+                            <div className="absolute inset-0 border-4 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
+                        </div>
+                        <h4 className="text-2xl font-black text-brand-navy uppercase tracking-tight">Otimizando Orçamento...</h4>
+                        <p className="text-xs text-brand-gold font-bold mt-2 uppercase tracking-widest">Consultando Tabela Premium 2025</p>
+                    </div>
+                ) : (
+                    <>
+                        {step === 1 && (
+                            <div className="animate-slide-up">
+                                <h4 className="text-2xl font-black mb-10 text-center text-brand-navy uppercase tracking-tight">Qual seu dispositivo?</h4>
+                                <div className="grid grid-cols-2 gap-8">
+                                    {devices.map((d, i) => (
+                                        <button
+                                            key={d.id}
+                                            onClick={() => { setSelection({ ...selection, device: d.id }); handleNext(); }}
+                                            className="flex flex-col items-center p-10 bg-brand-navy/5 rounded-[2rem] hover:bg-brand-navy transition-all group border border-transparent hover:shadow-2xl hover:-translate-y-2"
+                                        >
+                                            <d.icon className="w-20 h-20 text-brand-navy group-hover:text-brand-gold mb-6 transition-all group-hover:scale-110" />
+                                            <span className="font-black text-xl text-brand-navy group-hover:text-white uppercase tracking-tighter">{d.name}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {step === 2 && (
+                            <div className="animate-slide-up">
+                                <h4 className="text-2xl font-black mb-10 text-center text-brand-navy uppercase tracking-tight">Identifique o Modelo</h4>
+                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {models[selection.device as keyof typeof models].map((m, i) => (
+                                        <button
+                                            key={m}
+                                            onClick={() => { setSelection({ ...selection, model: m }); handleNext(); }}
+                                            className="py-5 px-4 bg-brand-navy/5 rounded-2xl hover:bg-brand-navy hover:text-white transition-all font-black text-brand-navy text-xs uppercase tracking-widest shadow-sm hover:shadow-xl hover:-translate-y-1"
+                                        >
+                                            {m}
+                                        </button>
+                                    ))}
+                                </div>
+                                <button onClick={() => setStep(1)} className="mt-12 text-[10px] text-gray-400 hover:text-brand-gold font-black flex items-center gap-2 mx-auto tracking-[0.3em]">
+                                    <ChevronRight className="w-3 h-3 rotate-180" /> VOLTAR
                                 </button>
-                            ))}
-                        </div>
-                    </div>
-                )}
+                            </div>
+                        )}
 
-                {step === 2 && (
-                    <div className="animate-fade-in">
-                        <h4 className="text-2xl font-bold mb-6 text-center text-gray-900">Qual o modelo?</h4>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                            {models[selection.device as keyof typeof models].map((m) => (
-                                <button
-                                    key={m}
-                                    onClick={() => { setSelection({ ...selection, model: m }); handleNext(); }}
-                                    className="py-3 px-4 bg-gray-50 rounded-lg hover:bg-brand-blue hover:text-white transition-all font-medium text-gray-600 text-sm shadow-sm hover:shadow-md"
-                                >
-                                    {m}
+                        {step === 3 && (
+                            <div className="animate-slide-up">
+                                <h4 className="text-2xl font-black mb-10 text-center text-brand-navy uppercase tracking-tight">Qual o problema?</h4>
+                                <div className="flex flex-col gap-4">
+                                    {problems.map((p, i) => (
+                                        <button
+                                            key={p.id}
+                                            onClick={() => { setSelection({ ...selection, problem: p.name }); handleNext(); }}
+                                            className="p-6 bg-brand-navy/5 rounded-2xl hover:bg-brand-navy hover:text-white transition-all flex justify-between items-center group shadow-sm border border-transparent"
+                                        >
+                                            <span className="font-black text-brand-navy group-hover:text-white uppercase tracking-tight">{p.name}</span>
+                                            <ChevronRight className="w-5 h-5 text-brand-gold group-hover:translate-x-1 transition-transform" />
+                                        </button>
+                                    ))}
+                                </div>
+                                <button onClick={() => setStep(2)} className="mt-12 text-[10px] text-gray-400 hover:text-brand-gold font-black flex items-center gap-2 mx-auto tracking-[0.3em]">
+                                    <ChevronRight className="w-3 h-3 rotate-180" /> VOLTAR
                                 </button>
-                            ))}
-                        </div>
-                        <button onClick={() => setStep(1)} className="mt-8 text-sm text-gray-400 hover:text-brand-blue font-medium flex items-center gap-1">
-                            <ChevronRight className="w-4 h-4 rotate-180" /> Voltar
-                        </button>
-                    </div>
-                )}
+                            </div>
+                        )}
 
-                {step === 3 && (
-                    <div className="animate-fade-in">
-                        <h4 className="text-2xl font-bold mb-6 text-center text-gray-900">Qual o defeito?</h4>
-                        <div className="flex flex-col gap-3">
-                            {problems.map((p) => (
+                        {step === 4 && (
+                            <div className="text-center animate-fade-scale">
+                                <div className="relative w-28 h-28 mx-auto mb-10">
+                                    <div className="absolute inset-0 bg-brand-gold/20 rounded-full animate-ping"></div>
+                                    <div className="relative z-10 w-full h-full bg-brand-navy rounded-full flex items-center justify-center border-4 border-white shadow-2xl">
+                                        <CheckCircle className="w-14 h-14 text-brand-gold" />
+                                    </div>
+                                </div>
+
+                                <h3 className="text-[10px] font-black text-brand-gold uppercase tracking-[0.4em] mb-4">Estimativa de Laboratório</h3>
+                                <div className="text-7xl font-black text-brand-navy mb-6 tracking-tighter">{getPriceEstimate()}</div>
+                                <p className="text-gray-400 mb-12 max-w-sm mx-auto text-sm font-medium leading-relaxed uppercase tracking-tight">
+                                    Valor aproximado para pecas <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Oficiais</span> e técnico <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Certificado</span>.
+                                </p>
+
                                 <button
-                                    key={p.id}
-                                    onClick={() => { setSelection({ ...selection, problem: p.name }); handleNext(); }}
-                                    className="p-4 bg-gray-50 rounded-xl hover:bg-red-50 hover:text-red-600 border border-transparent hover:border-red-200 text-left font-medium transition-all flex justify-between items-center group"
+                                    onClick={handleWhatsAppRedirect}
+                                    className="group w-full bg-[#25D366] text-white py-7 rounded-[2rem] font-black text-2xl hover:bg-[#1dbf57] transition-all flex items-center justify-center gap-4 shadow-[0_20px_40px_rgba(37,211,102,0.3)] hover:scale-[1.02] active:scale-95"
                                 >
-                                    {p.name}
-                                    <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-red-400" />
+                                    AGENDAR AGORA <Zap className="w-8 h-8 fill-current group-hover:animate-pulse" />
                                 </button>
-                            ))}
-                        </div>
-                        <button onClick={() => setStep(2)} className="mt-8 text-sm text-gray-400 hover:text-brand-blue font-medium flex items-center gap-1">
-                            <ChevronRight className="w-4 h-4 rotate-180" /> Voltar
-                        </button>
-                    </div>
-                )}
 
-                {step === 4 && (
-                    <div className="text-center animate-fade-in py-2">
-                        <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <CheckCircle className="w-10 h-10 text-green-500" />
-                        </div>
-                        <h3 className="text-3xl font-bold text-gray-900 mb-2">Orçamento Prévio</h3>
-                        <div className="text-5xl font-bold text-brand-blue mb-2 tracking-tight">{getPriceEstimate()}</div>
-                        <p className="text-gray-500 mb-8 max-w-xs mx-auto">Valor estimado para pagamento à vista. Consulte condições de parcelamento.</p>
-
-                        <button
-                            onClick={handleWhatsAppRedirect}
-                            className="w-full bg-[#25D366] text-white py-4 rounded-xl font-bold text-lg hover:bg-[#1dbf57] transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-500/20 hover:scale-[1.02]"
-                        >
-                            Confirmar no WhatsApp <ArrowRight className="w-5 h-5" />
-                        </button>
-                        <p className="text-xs text-gray-400 mt-4">Atendimento humano em horário comercial</p>
-                    </div>
+                                <p className="text-[10px] text-gray-400 mt-8 font-black uppercase tracking-[0.4em]">
+                                    Sem cobrança de taxa de análise em caso de reparo
+                                </p>
+                            </div>
+                        )}
+                    </>
                 )}
             </div>
         </div>

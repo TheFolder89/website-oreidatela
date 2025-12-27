@@ -1,13 +1,13 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import WhatsAppFloatingButton from '../../components/WhatsAppFloatingButton';
-import services from '../../data/services.json';
-import { Check, Clock, Shield } from 'lucide-react';
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import services from "../../data/services.json";
+import { Check, Clock, Shield, Zap, Crown } from "lucide-react";
 
 export function getStaticPaths() {
-  return services.map(service => ({
+  return services.map((service) => ({
     params: { slug: service.slug },
     props: { service },
   }));
@@ -19,155 +19,300 @@ const { service } = Astro.props;
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": service.name,
-  "provider": {
+  name: service.name,
+  provider: {
     "@type": "LocalBusiness",
-    "name": "O Rei da Tela"
+    name: "O Rei da Tela",
   },
-  "areaServed": {
+  areaServed: {
     "@type": "City",
-    "name": "Salvador"
+    name: "Salvador",
   },
-  "description": service.description,
-  "offers": service.subServices.map(s => ({
+  description: service.description,
+  offers: service.subServices.map((s) => ({
     "@type": "Offer",
-    "itemOffered": {
+    itemOffered: {
       "@type": "Service",
-      "name": s.name
+      name: s.name,
     },
-    "priceCurrency": "BRL",
-    "price": s.price.replace(/[^0-9,]/g, '').replace(',', '.'), // Basic cleanup
-    "priceSpecification": {
-       "@type": "PriceSpecification",
-       "price": s.price.replace(/[^0-9,]/g, '').replace(',', '.'),
-       "priceCurrency": "BRL"
-    }
-  }))
+    priceCurrency: "BRL",
+    price: s.price.replace(/[^0-9,]/g, "").replace(",", "."), // Basic cleanup
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      price: s.price.replace(/[^0-9,]/g, "").replace(",", "."),
+      priceCurrency: "BRL",
+    },
+  })),
 };
 ---
 
-<Layout title={`${service.name} em Salvador | O Rei da Tela`} description={`Especialistas em ${service.name} em Salvador. ${service.description} Atendemos em domicílio.`}>
+<Layout
+  title={`${service.name} em Salvador | O Rei da Tela`}
+  description={`Especialistas em ${service.name} em Salvador. ${service.description} Atendemos em domicílio.`}
+>
   <Header />
 
   <main>
     <!-- Header Service -->
-    <section class="bg-brand-dark text-white py-24 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-brand-blue/20 to-transparent"></div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight">{service.name}</h1>
-        <p class="text-xl text-blue-100 max-w-2xl mx-auto font-light">{service.description}</p>
+    <section class="bg-brand-dark text-white py-32 relative overflow-hidden">
+      <!-- Background pattern -->
+      <div
+        class="absolute inset-0 opacity-[0.03]"
+        style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"
+      >
+      </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-brand-navy/60 to-transparent"
+      >
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-slide-up"
+      >
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-[10px] font-black uppercase tracking-[0.3em] mb-8"
+        >
+          <Crown class="w-3 h-3 fill-current" />
+          Serviço Especializado
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase"
+        >
+          {service.name}
+        </h1>
+        <p
+          class="text-xl text-white/60 max-w-2xl mx-auto font-light leading-relaxed"
+        >
+          {service.description}
+        </p>
       </div>
     </section>
 
     <!-- Pricing Table -->
-    <section class="py-20 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-          <div class="p-8 bg-white border-b border-gray-100 flex justify-between items-end">
-            <div>
-              <h2 class="text-2xl font-bold text-gray-900">Tabela de Preços</h2>
-              <p class="text-sm text-gray-500 mt-1">Valores transparentes e parcelamento facilitado.</p>
+    <section class="py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden animate-fade-scale"
+        >
+          <div
+            class="p-10 bg-brand-navy border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
+          >
+            <div class="text-center md:text-left">
+              <h2 class="text-3xl font-black text-white tracking-tight">
+                Tabela de <span class="text-brand-gold">Preços</span>
+              </h2>
+              <p
+                class="text-sm text-white/40 mt-1 font-medium uppercase tracking-widest"
+              >
+                Valores para 2025 • Parcelamento em até 12x
+              </p>
             </div>
-            <div class="hidden md:block text-right">
-                <span class="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wider">Tabela Atualizada 2025</span>
+            <div>
+              <a
+                href="https://wa.me/5571999999999"
+                class="inline-flex items-center gap-2 bg-brand-gold text-brand-navy px-8 py-4 rounded-2xl font-black text-xs uppercase hover:bg-white transition-all shadow-xl shadow-brand-gold/20"
+              >
+                <Zap class="w-4 h-4 fill-current" /> Agendar Agora
+              </a>
             </div>
           </div>
           <div class="divide-y divide-gray-50">
-            {service.subServices.map((sub) => (
-              <div class="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-blue-50/50 transition-colors group">
-                <div>
-                  <h3 class="font-bold text-xl text-gray-900 group-hover:text-brand-blue transition-colors">{sub.name}</h3>
-                  <div class="flex items-center gap-3 text-sm text-gray-500 mt-2">
-                    <span class="flex items-center gap-1"><Clock className="w-4 h-4" /> {sub.duration}</span>
-                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                    <span>Peça Original ou Premium</span>
+            {
+              service.subServices.map((sub) => (
+                <div class="p-10 flex flex-col md:flex-row md:items-center justify-between gap-8 hover:bg-gray-50 transition-all group">
+                  <div>
+                    <h3 class="font-black text-2xl text-brand-navy group-hover:text-brand-gold transition-colors tracking-tight uppercase">
+                      {sub.name}
+                    </h3>
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mt-3 font-bold uppercase tracking-widest">
+                      <span class="flex items-center gap-1.5">
+                        <Clock className="w-4 h-4 text-brand-gold" />{" "}
+                        {sub.duration}
+                      </span>
+                      <span class="w-1.5 h-1.5 bg-brand-gold/30 rounded-full" />
+                      <span>Peça Premium AAA+</span>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-4xl font-black text-brand-navy tracking-tighter mb-1">
+                      {sub.price}
+                    </div>
+                    <div class="text-[10px] text-gray-400 font-black uppercase tracking-widest">
+                      à vista ou 12x no cartão
+                    </div>
                   </div>
                 </div>
-                <div class="text-right">
-                  <div class="text-3xl font-black text-brand-blue tracking-tight">{sub.price}</div>
-                  <div class="text-xs text-gray-400 font-medium uppercase tracking-wide">em até 12x no cartão</div>
-                </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
 
         <!-- Benefits -->
-        <div class="grid md:grid-cols-3 gap-6 mt-12">
-           <div class="flex items-start gap-4 p-4 rounded-xl bg-gray-50">
-              <div class="bg-green-100 p-2 rounded-lg">
-                <Shield className="w-6 h-6 text-green-600" />
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-900">Garantia de 6 Meses</h4>
-                <p class="text-sm text-gray-600">Cobrimos qualquer defeito de peça ou mão de obra.</p>
-              </div>
-           </div>
-           <div class="flex items-start gap-4 p-4 rounded-xl bg-gray-50">
-              <div class="bg-blue-100 p-2 rounded-lg">
-                <Check className="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-900">Peças Premium</h4>
-                <p class="text-sm text-gray-600">Qualidade original para manter cores e sensibilidade.</p>
-              </div>
-           </div>
-           <div class="flex items-start gap-4 p-4 rounded-xl bg-gray-50">
-              <div class="bg-purple-100 p-2 rounded-lg">
-                <Clock className="w-6 h-6 text-purple-600" />
-              </div>
-              <div>
-                <h4 class="font-bold text-gray-900">Reparo Rápido</h4>
-                <p class="text-sm text-gray-600">A maioria dos serviços é feito na hora em nossa loja.</p>
-              </div>
-           </div>
+        <div class="grid md:grid-cols-3 gap-8 mt-20">
+          <div
+            class="group p-8 rounded-[2rem] bg-gray-50 border border-gray-100 hover:bg-brand-navy hover:text-white transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors"
+            >
+              <Shield className="w-7 h-7 text-brand-navy" />
+            </div>
+            <h4 class="font-black text-xl mb-3 tracking-tight">
+              6 Meses de Garantia
+            </h4>
+            <p class="text-sm opacity-60 font-medium leading-relaxed">
+              Proteção total contra defeitos técnicos em peças e serviços
+              efetuados.
+            </p>
+          </div>
+          <div
+            class="group p-8 rounded-[2rem] bg-gray-50 border border-gray-100 hover:bg-brand-navy hover:text-white transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors"
+            >
+              <Check className="w-7 h-7 text-brand-navy" />
+            </div>
+            <h4 class="font-black text-xl mb-3 tracking-tight">
+              Qualidade Apple
+            </h4>
+            <p class="text-sm opacity-60 font-medium leading-relaxed">
+              Componentes de alta performance que mantêm o True Tone e FaceID
+              originais.
+            </p>
+          </div>
+          <div
+            class="group p-8 rounded-[2rem] bg-gray-50 border border-gray-100 hover:bg-brand-navy hover:text-white transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors"
+            >
+              <Clock className="w-7 h-7 text-brand-navy" />
+            </div>
+            <h4 class="font-black text-xl mb-3 tracking-tight">
+              Reparo Express
+            </h4>
+            <p class="text-sm opacity-60 font-medium leading-relaxed">
+              Fique pouco tempo sem seu dispositivo. Maioria dos casos pronta em
+              40 minutos.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
-       <div class="max-w-3xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">Perguntas Frequentes</h2>
-          
-          <div class="space-y-4">
-            <details class="group bg-white rounded-xl shadow-sm border border-gray-200">
-              <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-gray-800">
-                <span>Perco meus dados durante o conserto?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                </span>
-              </summary>
-              <div class="text-gray-600 px-6 pb-6">
-                Não! Na troca de tela, bateria ou vidro, seus dados permanecem intactos. Apenas em casos de reparo avançado de placa ou software pode haver risco, mas avisamos antes e fazemos backup se possível.
-              </div>
-            </details>
-
-            <details class="group bg-white rounded-xl shadow-sm border border-gray-200">
-              <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-gray-800">
-                <span>A peça é original?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                </span>
-              </summary>
-              <div class="text-gray-600 px-6 pb-6">
-                Trabalhamos com peças de Qualidade Original (OEM) e também opcionais Premium. Todas possuem garantia e mantêm as funcionalidades como True Tone (em modelos compatíveis).
-              </div>
-            </details>
-
-            <details class="group bg-white rounded-xl shadow-sm border border-gray-200">
-              <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-6 text-lg text-gray-800">
-                <span>Vocês buscam o aparelho?</span>
-                <span class="transition group-open:rotate-180">
-                  <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                </span>
-              </summary>
-              <div class="text-gray-600 px-6 pb-6">
-                Sim! Temos serviço de delivery seguro para diversos bairros de Salvador. O motoboy busca, traz para o laboratório e devolvemos pronto.
-              </div>
-            </details>
+    <section class="py-32 bg-brand-gray/30">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-20">
+          <div
+            class="text-brand-gold font-black text-[10px] uppercase tracking-[0.4em] mb-4"
+          >
+            Dúvidas Frequentes
           </div>
-       </div>
+          <h2 class="text-5xl font-black text-brand-navy tracking-tighter">
+            Temos a <span class="text-brand-gold">Resposta</span>
+          </h2>
+        </div>
+
+        <div class="grid gap-6">
+          <details
+            class="group bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden open:shadow-xl transition-all duration-300"
+          >
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none p-8"
+            >
+              <span
+                class="text-lg font-black text-brand-navy tracking-tight uppercase"
+                >Perco meus dados durante o conserto?</span
+              >
+              <span
+                class="transition-transform group-open:rotate-180 p-2 bg-gray-50 rounded-full"
+              >
+                <svg
+                  fill="none"
+                  class="w-6 h-6 text-brand-gold"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg
+                >
+              </span>
+            </summary>
+            <div class="px-8 pb-8 text-gray-500 font-medium leading-relaxed">
+              Não! Em reparos de tela, bateria ou vidro, seus dados permanecem
+              100% seguros. Para reparos de placa, recomendamos backup prévio
+              caso o aparelho ligue.
+            </div>
+          </details>
+
+          <details
+            class="group bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden open:shadow-xl transition-all duration-300"
+          >
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none p-8"
+            >
+              <span
+                class="text-lg font-black text-brand-navy tracking-tight uppercase"
+                >Qual a origem das peças?</span
+              >
+              <span
+                class="transition-transform group-open:rotate-180 p-2 bg-gray-50 rounded-full"
+              >
+                <svg
+                  fill="none"
+                  class="w-6 h-6 text-brand-gold"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg
+                >
+              </span>
+            </summary>
+            <div class="px-8 pb-8 text-gray-500 font-medium leading-relaxed">
+              Trabalhamos exclusivamente com peças de Qualidade Premium (AAA+) e
+              Recondicionadas Originais. Isso garante brilho, toque e resolução
+              idênticos ao novo.
+            </div>
+          </details>
+
+          <details
+            class="group bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden open:shadow-xl transition-all duration-300"
+          >
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none p-8"
+            >
+              <span
+                class="text-lg font-black text-brand-navy tracking-tight uppercase"
+                >Atendem via delivery hoje?</span
+              >
+              <span
+                class="transition-transform group-open:rotate-180 p-2 bg-gray-50 rounded-full"
+              >
+                <svg
+                  fill="none"
+                  class="w-6 h-6 text-brand-gold"
+                  shape-rendering="geometricPrecision"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg
+                >
+              </span>
+            </summary>
+            <div class="px-8 pb-8 text-gray-500 font-medium leading-relaxed">
+              Sim! Possuímos motoboys exclusivos para coleta e entrega em toda
+              Salvador e Lauro de Freitas. Agendando pela manhã, entregamos à
+              tarde.
+            </div>
+          </details>
+        </div>
+      </div>
     </section>
 
     <!-- Schema Injection -->

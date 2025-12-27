@@ -1,62 +1,145 @@
 ---
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from "lucide-react";
 ---
 
-<header class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100" id="main-header">
+<header
+  class="fixed w-full z-50 transition-all duration-300 bg-brand-navy border-b border-white/10"
+  id="main-header"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      
+    <div class="flex justify-between items-center h-28">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
-        <div class="bg-brand-blue p-2 rounded-lg group-hover:bg-blue-600 transition-colors">
-            <!-- Icone de coroa/celular simplificado -->
-             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/><path d="m9 7 3-2 3 2"/></svg>
+      <a href="/" class="flex items-center gap-3 group">
+        <div
+          class="w-20 h-20 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="/website-oreidatela/logo-oficial.png"
+            alt="O Rei da Tela Logo"
+            class="w-full h-full object-contain"
+          />
         </div>
-        <div class="flex flex-col">
-            <span class="font-bold text-lg leading-tight text-gray-900">O REI DA TELA</span>
-            <span class="text-[10px] tracking-widest text-brand-blue font-semibold uppercase">Assistência Premium</span>
+        <div class="hidden sm:flex flex-col">
+          <span
+            class="font-black text-xl leading-none text-white tracking-tighter"
+            >O REI DA TELA</span
+          >
+          <span
+            class="text-[10px] tracking-[0.3em] text-brand-gold font-bold uppercase"
+            >Assistência Premium</span
+          >
         </div>
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href="/" class="text-gray-600 hover:text-brand-blue font-medium transition-colors text-sm uppercase tracking-wide">Home</a>
-        <a href="/servicos/conserto-iphone" class="text-gray-600 hover:text-brand-blue font-medium transition-colors text-sm uppercase tracking-wide">iPhone</a>
-        <a href="/servicos/conserto-apple-watch" class="text-gray-600 hover:text-brand-blue font-medium transition-colors text-sm uppercase tracking-wide">Apple Watch</a>
-        <a href="/status-os" class="text-gray-600 hover:text-brand-blue font-medium transition-colors text-sm uppercase tracking-wide">Status OS</a>
-        <a href="https://wa.me/5571999999999" class="bg-brand-blue text-white px-6 py-2.5 rounded-full font-bold text-sm uppercase hover:bg-black transition-all shadow-lg shadow-blue-500/30 flex items-center gap-2">
-          <MessageCircle class="w-4 h-4" />
+      <nav class="hidden lg:flex items-center gap-6">
+        <a
+          href="/"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Home</a
+        >
+        <a
+          href="/servicos/conserto-iphone"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >iPhone</a
+        >
+        <a
+          href="/servicos/conserto-apple-watch"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Apple Watch</a
+        >
+        <a
+          href="/servicos/conserto-samsung"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Samsung</a
+        >
+        <a
+          href="/servicos/conserto-xiaomi"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Xiaomi</a
+        >
+        <a
+          href="/blog"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Blog</a
+        >
+        <!-- Status OS - Temporarily hidden
+        <a
+          href="/status-os"
+          class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
+          >Status OS</a
+        >
+        -->
+        <a
+          href="https://wa.me/5571999999999"
+          class="bg-brand-gold text-brand-navy px-12 py-4 rounded-full font-black text-sm uppercase hover:bg-white hover:scale-105 transition-all shadow-[0_0_40px_rgba(197,160,89,0.3)] flex items-center gap-3 group"
+        >
+          <MessageCircle
+            className="w-5 h-5 fill-current group-hover:rotate-12 transition-transform"
+          />
           Orçamento
         </a>
       </nav>
 
       <!-- Mobile Toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 hover:text-brand-blue">
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden p-2 text-white hover:text-brand-gold transition-colors"
+      >
         <Menu className="w-8 h-8" />
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 lg:hidden bg-white">
-    <div class="p-6 flex flex-col h-full">
-      <div class="flex justify-between items-center mb-8">
-        <span class="font-bold text-xl text-brand-blue">Menu</span>
-        <button id="close-menu-btn" class="p-2 text-gray-500 hover:text-red-500">
-            <X className="w-8 h-8" />
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 lg:hidden bg-brand-navy"
+  >
+    <div class="p-8 flex flex-col h-full">
+      <div class="flex justify-between items-center mb-12">
+        <div class="flex items-center gap-3">
+          <img
+            src="/website-oreidatela/logo-oficial.png"
+            alt="Logo"
+            class="w-14 h-14 object-contain"
+          />
+          <span class="font-black text-lg text-white">O REI DA TELA</span>
+        </div>
+        <button id="close-menu-btn" class="p-2 text-white/50 hover:text-white">
+          <X className="w-8 h-8" />
         </button>
       </div>
 
-      <div class="flex flex-col gap-6 text-lg font-medium">
-        <a href="/" class="border-b border-gray-100 pb-4 text-gray-800 hover:text-brand-blue">Home</a>
-        <a href="/servicos/conserto-iphone" class="border-b border-gray-100 pb-4 text-gray-800 hover:text-brand-blue">iPhone</a>
-        <a href="/servicos/conserto-apple-watch" class="border-b border-gray-100 pb-4 text-gray-800 hover:text-brand-blue">Apple Watch</a>
-        <a href="/status-os" class="border-b border-gray-100 pb-4 text-gray-800 hover:text-brand-blue">Consultar OS</a>
+      <div class="flex flex-col gap-8 text-xl font-black">
+        <a
+          href="/"
+          class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
+          >HOME</a
+        >
+        <a
+          href="/servicos/conserto-iphone"
+          class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
+          >IPHONE</a
+        >
+        <a
+          href="/servicos/conserto-apple-watch"
+          class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
+          >APPLE WATCH</a
+        >
+        <a
+          href="/status-os"
+          class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
+          >CONSULTAR OS</a
+        >
       </div>
 
       <div class="mt-auto">
-        <a href="https://wa.me/5571999999999" class="flex justify-center items-center gap-2 bg-brand-blue text-white py-4 rounded-xl font-bold uppercase shadow-lg">
-            <MessageCircle class="w-5 h-5" /> Falar no WhatsApp
+        <a
+          href="https://wa.me/5571999999999"
+          class="flex justify-center items-center gap-3 bg-brand-gold text-brand-navy py-5 rounded-2xl font-black uppercase text-lg shadow-2xl"
+        >
+          <MessageCircle className="w-6 h-6 fill-current" /> Falar no WhatsApp
         </a>
       </div>
     </div>
@@ -64,15 +147,15 @@ import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 </header>
 
 <script>
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const closeBtn = document.getElementById('close-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  menuBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.remove('translate-x-full');
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const closeBtn = document.getElementById("close-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn?.addEventListener("click", () => {
+    mobileMenu?.classList.remove("translate-x-full");
   });
 
-  closeBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.add('translate-x-full');
+  closeBtn?.addEventListener("click", () => {
+    mobileMenu?.classList.add("translate-x-full");
   });
 </script>

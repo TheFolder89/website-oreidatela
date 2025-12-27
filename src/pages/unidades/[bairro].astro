@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppFloatingButton from '../../components/WhatsAppFloatingButton';
 import neighborhoods from '../../data/neighborhoods.json';
-import { MapPin, Truck, Clock, Phone } from 'lucide-react';
+import { MapPin, Truck, Clock, Phone, Crown, Zap } from 'lucide-react';
 
 export function getStaticPaths() {
   return neighborhoods.map(bairro => ({
@@ -52,95 +52,107 @@ const schema = {
 
   <main>
     <!-- Geometric Hero -->
-    <section class="bg-brand-dark text-white py-24 relative overflow-hidden">
+    <section class="bg-brand-dark text-white py-32 relative overflow-hidden">
       <!-- Overlay Pattern -->
-      <div class="absolute inset-0 bg-brand-blue opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+      <div class="absolute inset-0 opacity-[0.05]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-navy/80 to-transparent"></div>
       
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div class="inline-flex items-center gap-2 px-6 py-2 bg-white/5 rounded-full text-sm font-bold uppercase tracking-wider mb-8 border border-white/10 text-brand-blue">
-          <MapPin className="w-4 h-4" /> Atendimento Exclusivo
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-slide-up">
+        <div class="inline-flex items-center gap-3 px-6 py-2 bg-brand-gold/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-10 border border-brand-gold/20 text-brand-gold backdrop-blur-md">
+          <MapPin className="w-4 h-4" /> Coleta Técnica em {bairro}
         </div>
-        <h1 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
-          Assistência Apple no <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-200">{bairro}</span>
+        <h1 class="text-5xl md:text-8xl font-black mb-10 leading-none tracking-tighter uppercase">
+          ASSISTÊNCIA APPLE <br/>
+          <span class="text-brand-gold">EM {bairro}</span>
         </h1>
-        <p class="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
-          A conveniência que o {bairro} exige. Buscamos seu iPhone ou Apple Watch em domicílio com segurança total.
+        <p class="text-xl text-white/50 max-w-2xl mx-auto font-light leading-relaxed mb-12">
+          A exclusividade que o <strong class="text-white">{bairro}</strong> merece. Buscamos seu iPhone ou Watch em domicílio com laboratório móvel e segurança total.
         </p>
-        <div>
-            <a href="https://wa.me/5571999999999" class="bg-brand-blue hover:bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-blue-500/50 inline-flex items-center gap-3">
-                <Truck class="w-5 h-5" /> Agendar Coleta no {bairro}
+        <div class="flex justify-center flex-col sm:flex-row gap-6">
+            <a href="https://wa.me/5571999999999" class="bg-brand-gold hover:bg-white text-brand-navy px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-2xl shadow-brand-gold/20 flex items-center justify-center gap-3 active:scale-95">
+                <Truck class="w-6 h-6 fill-current" /> AGENDAR COLETA HOJE
+            </a>
+            <a href="/#orcamento" class="bg-white/5 border border-white/20 text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-white/10 transition-all backdrop-blur-md">
+                TABELA DE PREÇOS
             </a>
         </div>
       </div>
     </section>
 
     <!-- Value Props for Location -->
-    <section class="py-16 bg-white">
+    <section class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Truck className="w-8 h-8 text-blue-600" />
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="group p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:bg-brand-navy transition-all duration-500">
+                    <div class="w-16 h-16 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-gold">
+                        <Truck className="w-8 h-8 text-brand-navy group-hover:text-brand-navy" />
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Delivery Seguro</h3>
-                    <p class="text-gray-600">Nosso motoboy credenciado vai até seu endereço em {bairro} com segurança total e seguro de transporte.</p>
+                    <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-white uppercase transition-colors leading-none">Logística em {bairro}</h3>
+                    <p class="text-gray-500 group-hover:text-white/60 font-medium leading-relaxed">Nossos motoboys especializados atendem o {bairro} em janelas de 30 minutos para sua máxima conveniência.</p>
                 </div>
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Clock className="w-8 h-8 text-purple-600" />
+                <div class="group p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:bg-brand-navy transition-all duration-500">
+                    <div class="w-16 h-16 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-gold">
+                        <Clock className="w-8 h-8 text-brand-navy" />
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Rapidez</h3>
-                    <p class="text-gray-600">Para moradores de {bairro}, oferecemos prazos expressos. Seu aparelho volta novo em poucas horas.</p>
+                    <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-white uppercase transition-colors leading-none">Prazo Prioritário</h3>
+                    <p class="text-gray-500 group-hover:text-white/60 font-medium leading-relaxed">Aparelhos coletados no {bairro} possuem prioridade em nossa bancada para entrega no mesmo dia.</p>
                 </div>
-                <div class="p-6">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Phone className="w-8 h-8 text-green-600" />
+                <div class="group p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 hover:bg-brand-navy transition-all duration-500">
+                    <div class="w-16 h-16 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-gold">
+                        <Zap className="w-8 h-8 text-brand-navy" />
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Suporte Local</h3>
-                    <p class="text-gray-600">Dúvidas? Fale direto com um técnico que conhece sua região e entende sua urgência.</p>
+                    <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-white uppercase transition-colors leading-none">Técnico Local</h3>
+                    <p class="text-gray-500 group-hover:text-white/60 font-medium leading-relaxed">Suporte humanizado por quem conhece os principais condomínios e rotas da região do {bairro}.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-32 bg-brand-gray/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
                 <div>
-                   <h2 class="text-3xl font-bold text-gray-900 mb-6">Localização da Nossa Loja Central</h2>
-                   <p class="text-gray-600 mb-6">
-                    Embora atendamos {bairro} via delivery, nosso laboratório central está estrategicamente localizado para atender toda Salvador rapidamente.
+                   <div class="text-brand-gold font-black text-[10px] uppercase tracking-[0.4em] mb-6">Unidade Central</div>
+                   <h2 class="text-5xl font-black text-brand-navy mb-10 tracking-tighter uppercase leading-none">O Hub de <span class="text-brand-gold">Precisão</span> em Salvador</h2>
+                   <p class="text-gray-500 text-xl font-light mb-12 leading-relaxed">
+                    Nossa unidade na Pituba funciona como o centro nervoso para todas as coletas de {bairro}. Tecnologia de ponta com laboratório visível aos clientes.
                    </p>
-                   <ul class="space-y-4 mb-8">
-                       <li class="flex items-start gap-3">
-                           <div class="mt-1"><MapPin className="w-5 h-5 text-blue-600"/></div>
+                   <ul class="space-y-8 mb-12">
+                       <li class="flex items-start gap-5">
+                           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg shrink-0">
+                               <MapPin className="w-6 h-6 text-brand-gold"/>
+                           </div>
                            <div>
-                               <strong>Endereço:</strong><br>
-                               Av. Antônio Carlos Magalhães, 1234 - Pituba, Salvador - BA
+                               <div class="text-xs font-black uppercase tracking-widest text-brand-navy mb-1">Endereço Principal</div>
+                               <span class="text-gray-500 font-bold">Av. ACM, 1234 - Executive Center<br>Pituba, Salvador - BA</span>
                            </div>
                        </li>
-                       <li class="flex items-start gap-3">
-                           <div class="mt-1"><Clock className="w-5 h-5 text-blue-600"/></div>
+                       <li class="flex items-start gap-5">
+                           <div class="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg shrink-0">
+                               <Clock className="w-6 h-6 text-brand-gold"/>
+                           </div>
                            <div>
-                               <strong>Horário:</strong><br>
-                               Seg a Sex: 09:00 - 18:00<br>Sáb: 09:00 - 13:00
+                               <div class="text-xs font-black uppercase tracking-widest text-brand-navy mb-1">Horário Especial</div>
+                               <span class="text-gray-500 font-bold">Segunda à Sexta: 09h às 18h<br>Sábados: 09h às 13h</span>
                            </div>
                        </li>
                    </ul>
-                   <a href="https://maps.google.com" target="_blank" class="text-blue-600 font-semibold hover:underline">Ver rota no Google Maps →</a>
+                   <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 group text-brand-navy font-black uppercase tracking-widest text-xs border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-colors">
+                     VER NO GOOGLE MAPS <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                   </a>
                 </div>
-                <div class="h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-lg border border-gray-300 relative">
-                     <!-- Placeholder map due to lack of API Key in prompt env -->
-                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=Salvador,BA&zoom=13&size=600x400&key=YOUR_API_KEY_HERE" 
-                          alt="Mapa Salvador" 
-                          class="w-full h-full object-cover opacity-50 block"
-                          onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Salvador_in_Brazil.svg/2560px-Salvador_in_Brazil.svg.png'"
-                     />
-                     <div class="absolute inset-0 flex items-center justify-center bg-black/5">
-                        <span class="bg-white px-4 py-2 rounded-lg shadow font-medium">Mapa Interativo (Simulação)</span>
-                     </div>
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-brand-navy/5 rounded-[3rem] blur-2xl group-hover:bg-brand-gold/10 transition-colors"></div>
+                    <div class="relative h-[500px] bg-white rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white p-4">
+                        <div class="w-full h-full bg-gray-100 rounded-[2.5rem] flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2066&auto=format&fit=crop" alt="Salvador Map View" class="w-full h-full object-cover opacity-80" />
+                            <div class="absolute inset-0 bg-brand-navy/20"></div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <MapPin className="w-16 h-16 text-brand-gold animate-bounce" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,3 +165,22 @@ const schema = {
   <WhatsAppFloatingButton client:idle />
   <Footer />
 </Layout>
+
+function ChevronRight(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m9 18 6-6-6-6" />
+    </svg>
+  )
+}

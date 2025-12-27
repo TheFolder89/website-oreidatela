@@ -1,13 +1,16 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import '../styles/global.css';
+import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
 
 interface Props {
 	title: string;
 	description?: string;
 }
 
-const { title, description = "Assistência Técnica Apple Especializada em Salvador. Troca de tela, bateria e reparos em iPhone, Apple Watch e iPad em 40 minutos." } = Astro.props;
+const {
+	title,
+	description = "Assistência Técnica Apple Especializada em Salvador. Troca de tela, bateria e reparos em iPhone, Apple Watch e iPad em 40 minutos.",
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -18,46 +21,108 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/website-oreidatela/favicon.svg"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalURL} />
 		<title>{title} | O Rei da Tela</title>
-		
+
 		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
 
 		<ViewTransitions />
+
+		<!-- Google Analytics (GA4) -->
+		{import.meta.env.PUBLIC_GA_ID && (
+			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA_ID}`}></script>
+			<script is:inline define:vars={{ gaId: import.meta.env.PUBLIC_GA_ID }}>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', gaId);
+			</script>
+		)}
+
+		<!-- Meta Pixel -->
+		{import.meta.env.PUBLIC_META_PIXEL_ID && (
+			<script is:inline define:vars={{ pixelId: import.meta.env.PUBLIC_META_PIXEL_ID }}>
+				!function(f,b,e,v,n,t,s)
+				{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', pixelId);
+				fbq('track', 'PageView');
+			</script>
+			<noscript>
+				<img height="1" width="1" style="display:none"
+					src={`https://www.facebook.com/tr?id=${import.meta.env.PUBLIC_META_PIXEL_ID}&ev=PageView&noscript=1`}
+				/>
+			</noscript>
+		)}
+
+		<script>
+			declare const gtag: any;
+			declare const fbq: any;
+
+			document.addEventListener('astro:page-load', () => {
+				// WhatsApp Click Tracking
+				const trackWhatsAppClick = (href: string) => {
+					// GA4 Event
+					if (typeof gtag === 'function') {
+						gtag('event', 'whatsapp_contact', {
+							'event_category': 'conversion',
+							'event_label': href,
+							'value': 1
+						});
+					}
+					// Meta Pixel Event
+					if (typeof fbq === 'function') {
+						fbq('track', 'Contact', {
+							content_name: 'WhatsApp Redirect',
+							content_category: 'Lead'
+						});
+					}
+				};
+
+				// Delegate click events for all WhatsApp links
+				document.addEventListener('click', (e) => {
+					const el = e.target as HTMLElement;
+					const target = el?.closest('a[href*="wa.me"]') as HTMLAnchorElement;
+					if (target) {
+						trackWhatsAppClick(target.href);
+					}
+				});
+			});
+		</script>
 	</head>
-	<body class="font-sans antialiased bg-gray-50 text-gray-900">
+	<body
+		class="font-sans antialiased bg-white text-gray-900 overflow-x-hidden"
+	>
 		<slot />
 		<style is:global>
 			:root {
-				--accent: 136, 58, 234;
-				--accent-light: 224, 204, 250;
-				--accent-dark: 49, 10, 101;
-				--accent-gradient: linear-gradient(
-					45deg,
-					rgb(var(--accent)),
-					rgb(var(--accent-light)) 30%,
-					white 60%
-				);
+				--brand-navy: #1b365d;
+				--brand-gold: #c5a059;
 			}
 			html {
-				font-family: 'Inter', sans-serif;
+				font-family: "Poppins", sans-serif;
 				scroll-behavior: smooth;
 			}
-			code {
-				font-family:
-					Menlo,
-					Monaco,
-					Lucida Console,
-					Liberation Mono,
-					DejaVu Sans Mono,
-					Bitstream Vera Sans Mono,
-					Courier New,
-					monospace;
+			body {
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 		</style>
 	</body>

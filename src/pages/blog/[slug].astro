@@ -1,0 +1,190 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import blogPosts from "../../data/blog-posts.json";
+import { Calendar, ArrowLeft, Tag } from "lucide-react";
+
+export function getStaticPaths() {
+    return blogPosts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+
+// Posts relacionados (mesma categoria)
+const relatedPosts = blogPosts
+    .filter((p) => p.category === post.category && p.id !== post.id)
+    .slice(0, 2);
+---
+
+<Layout title={`${post.title} | O Rei da Tela`} description={post.excerpt}>
+    <Header />
+
+    <main class="pt-32">
+        <!-- Hero do Artigo -->
+        <section class="bg-brand-dark py-16 relative overflow-hidden">
+            <div
+                class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(#C5A059 1px, transparent 1px); background-size: 30px 30px;"
+            >
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <a
+                    href="/blog"
+                    class="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors mb-8"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Voltar para o Blog
+                </a>
+                <div class="flex items-center gap-4 mb-6">
+                    <span
+                        class="px-4 py-1 bg-brand-gold text-brand-navy text-xs font-black uppercase rounded-full"
+                    >
+                        {post.category}
+                    </span>
+                    <div class="flex items-center gap-2 text-white/50 text-sm">
+                        <Calendar className="w-4 h-4" />
+                        <span
+                            >{
+                                new Date(post.date).toLocaleDateString("pt-BR")
+                            }</span
+                        >
+                    </div>
+                </div>
+                <h1
+                    class="text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight leading-tight"
+                >
+                    {post.title}
+                </h1>
+                <p class="text-xl text-white/60">
+                    {post.excerpt}
+                </p>
+            </div>
+        </section>
+
+        <!-- Imagem Principal -->
+        <section class="bg-white py-0">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8">
+                <img
+                    src={post.image}
+                    alt={post.title}
+                    class="w-full aspect-video object-cover rounded-3xl shadow-2xl"
+                />
+            </div>
+        </section>
+
+        <!-- Conteúdo -->
+        <section class="py-16 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <article class="prose prose-lg prose-gray max-w-none">
+                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                        {post.content}
+                    </p>
+
+                    <h2 class="text-2xl font-black text-brand-navy mt-12 mb-6">
+                        Por que escolher O Rei da Tela?
+                    </h2>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="w-2 h-2 bg-brand-gold rounded-full mt-2"
+                            ></span>
+                            <span
+                                ><strong>Garantia de 6 meses</strong> em todos os
+                                reparos</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="w-2 h-2 bg-brand-gold rounded-full mt-2"
+                            ></span>
+                            <span
+                                ><strong>Técnicos certificados</strong> com anos de
+                                experiência</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="w-2 h-2 bg-brand-gold rounded-full mt-2"
+                            ></span>
+                            <span
+                                ><strong>Delivery grátis</strong> em Salvador e região</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span
+                                class="w-2 h-2 bg-brand-gold rounded-full mt-2"
+                            ></span>
+                            <span
+                                ><strong>Peças premium</strong> de alta qualidade</span
+                            >
+                        </li>
+                    </ul>
+
+                    <div
+                        class="mt-12 p-8 bg-brand-navy rounded-3xl text-center"
+                    >
+                        <h3 class="text-2xl font-black text-white mb-4">
+                            Precisa de Reparo?
+                        </h3>
+                        <p class="text-white/60 mb-6">
+                            Entre em contato e receba um orçamento gratuito em
+                            minutos.
+                        </p>
+                        <a
+                            href="https://wa.me/5571999999999?text=Olá, li o artigo sobre {post.title} e gostaria de um orçamento"
+                            class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-8 py-4 rounded-full font-black hover:bg-white transition-all"
+                        >
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Posts Relacionados -->
+        {
+            relatedPosts.length > 0 && (
+                <section class="py-16 bg-gray-50">
+                    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-2xl font-black text-brand-navy mb-8 text-center">
+                            Artigos Relacionados
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            {relatedPosts.map((related) => (
+                                <a
+                                    href={`/blog/${related.slug}`}
+                                    class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group"
+                                >
+                                    <div class="aspect-video overflow-hidden">
+                                        <img
+                                            src={related.image}
+                                            alt={related.title}
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </div>
+                                    <div class="p-6">
+                                        <span class="text-xs font-bold text-brand-gold uppercase">
+                                            {related.category}
+                                        </span>
+                                        <h3 class="text-lg font-black text-brand-navy mt-2 group-hover:text-brand-gold transition-colors">
+                                            {related.title}
+                                        </h3>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )
+        }
+    </main>
+
+    <WhatsAppFloatingButton client:idle />
+    <Footer />
+</Layout>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Package, CheckCircle, AlertCircle, Clock } from 'lucide-react';
+import { Search, Package, CheckCircle, AlertCircle, Clock, Zap, Wrench, RefreshCw } from 'lucide-react';
 
 export default function StatusForm() {
     const [osNumber, setOsNumber] = useState('');
@@ -32,95 +32,125 @@ export default function StatusForm() {
                     date: '23/12/2025',
                     description: 'O técnico está trabalhando no seu aparelho neste momento.'
                 });
+            } else if (osNumber === '9999') {
+                setResult({
+                    status: 'Aguardando Peça',
+                    device: 'iPad Air 5',
+                    service: 'Reparo de Placa',
+                    date: '22/12/2025',
+                    description: 'Peça original solicitada ao fornecedor. Previsão: 2 dias.'
+                });
             } else {
-                setError('Ordem de Serviço não encontrada. Verifique o número e tente novamente.');
+                setError('Ordem de Serviço não encontrada em nossa base de dados.');
             }
         }, 1500);
     };
 
     return (
-        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 max-w-xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Consultar Status de OS</h2>
+        <div className="bg-white p-8 md:p-14 rounded-[3rem] shadow-2xl border border-gray-100 max-w-2xl mx-auto overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-2 bg-brand-navy"></div>
 
-            <form onSubmit={handleSearch} className="mb-8">
-                <div className="relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <h2 className="text-4xl font-black text-brand-navy mb-10 text-center tracking-tighter uppercase leading-none">Status de <span className="text-brand-gold">Laboratório</span></h2>
+
+            <form onSubmit={handleSearch} className="mb-12">
+                <div className="relative group">
+                    <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-300 w-7 h-7 group-focus-within:text-brand-gold transition-colors" />
                     <input
                         type="text"
                         value={osNumber}
                         onChange={(e) => setOsNumber(e.target.value)}
-                        placeholder="Digite o número da OS (ex: 1234)"
-                        className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-lg font-medium"
+                        placeholder="NÚMERO DA OS (EX: 1234)"
+                        className="w-full pl-16 pr-6 py-6 bg-brand-navy/5 border-2 border-transparent rounded-[2rem] focus:bg-white focus:border-brand-gold outline-none transition-all text-2xl font-black text-brand-navy placeholder:text-gray-200 shadow-inner tracking-widest"
                         required
                     />
                 </div>
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full mt-4 bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full mt-6 bg-brand-navy text-white py-6 rounded-[2rem] font-black text-xl hover:bg-black transition-all shadow-2xl shadow-brand-navy/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-4 active:scale-95 uppercase tracking-widest"
                 >
                     {loading ? (
                         <>
-                            <div className="w-5 h-5 border-2 border-white/50 border-t-white rounded-full animate-spin"></div>
-                            Consultando...
+                            <RefreshCw className="w-7 h-7 animate-spin" />
+                            BUSCANDO...
                         </>
                     ) : (
-                        'Verificar Status'
+                        <>
+                            LOCALIZAR EQUIPAMENTO <Zap className="w-6 h-6 fill-current text-brand-gold" />
+                        </>
                     )}
                 </button>
             </form>
 
             {error && (
-                <div className="bg-red-50 text-red-600 p-4 rounded-xl flex items-center gap-3 animate-fade-in">
-                    <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                    {error}
+                <div className="bg-red-50 text-red-600 p-6 rounded-[2rem] flex items-center gap-5 animate-fade-scale border border-red-100">
+                    <AlertCircle className="w-8 h-8 flex-shrink-0" />
+                    <span className="font-black text-sm uppercase tracking-tight">{error}</span>
                 </div>
             )}
 
             {result && (
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 animate-fade-in">
-                    <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-200">
-                        <div className={`w-12 h-12 rounded-full flex items-center justify-center ${result.status === 'Pronto' ? 'bg-green-100' : 'bg-yellow-100'}`}>
-                            {result.status === 'Pronto' ? <CheckCircle className="w-6 h-6 text-green-600" /> : <Clock className="w-6 h-6 text-yellow-600" />}
+                <div className="bg-brand-navy rounded-[2.5rem] p-10 border border-white/10 animate-slide-up relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-6 opacity-10">
+                        <Wrench className="w-32 h-32 text-white" />
+                    </div>
+
+                    <div className="flex items-center gap-6 mb-10 pb-10 border-b border-white/10">
+                        <div className={`w-20 h-20 rounded-[1.5rem] flex items-center justify-center relative shadow-2xl ${result.status === 'Pronto' ? 'bg-green-500 text-white' :
+                                result.status === 'Aguardando Peça' ? 'bg-brand-gold text-brand-navy' : 'bg-white text-brand-navy'
+                            }`}>
+                            {result.status === 'Pronto' ? <CheckCircle className="w-10 h-10" /> :
+                                result.status === 'Aguardando Peça' ? <Package className="w-10 h-10" /> : <Clock className="w-10 h-10 animate-pulse" />}
                         </div>
                         <div>
-                            <div className="text-sm text-gray-500 uppercase tracking-wide font-semibold">Status Atual</div>
-                            <div className={`text-xl font-bold ${result.status === 'Pronto' ? 'text-green-600' : 'text-yellow-600'}`}>{result.status}</div>
+                            <div className="text-[10px] text-white/40 uppercase tracking-[0.4em] font-black mb-1">Status Atualizado</div>
+                            <div className={`text-4xl font-black tracking-tighter uppercase ${result.status === 'Pronto' ? 'text-green-400' :
+                                    result.status === 'Aguardando Peça' ? 'text-brand-gold' : 'text-white'
+                                }`}>{result.status}</div>
                         </div>
                     </div>
 
-                    <div className="space-y-3 text-sm text-gray-600">
-                        <div className="flex justify-between">
-                            <span className="font-medium">Aparelho:</span>
-                            <span>{result.device}</span>
+                    <div className="grid grid-cols-2 gap-y-8 gap-x-6 mb-10">
+                        <div>
+                            <div className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Dispositivo</div>
+                            <div className="font-black text-white text-lg tracking-tight uppercase leading-none">{result.device}</div>
                         </div>
-                        <div className="flex justify-between">
-                            <span className="font-medium">Serviço:</span>
-                            <span>{result.service}</span>
+                        <div>
+                            <div className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Serviço</div>
+                            <div className="font-black text-white text-lg tracking-tight uppercase leading-none">{result.service}</div>
                         </div>
-                        <div className="flex justify-between">
-                            <span className="font-medium">Entrada:</span>
-                            <span>{result.date}</span>
+                        <div>
+                            <div className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Data de Entrada</div>
+                            <div className="font-black text-white text-lg tracking-tight uppercase leading-none">{result.date}</div>
+                        </div>
+                        <div>
+                            <div className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Previsão</div>
+                            <div className="font-black text-brand-gold text-lg tracking-tight uppercase leading-none">URGENTE</div>
                         </div>
                     </div>
 
-                    <div className="mt-4 pt-4 border-t border-gray-200 text-sm text-gray-500">
-                        {result.description}
+                    <div className="p-6 bg-white/5 rounded-2xl border border-white/5 text-sm text-white/60 font-medium italic mb-10 leading-relaxed">
+                        "{result.description}"
                     </div>
 
-                    {result.status === 'Pronto' && (
-                        <div className="mt-6">
-                            <a href="https://wa.me/5571999999999?text=Ol%C3%A1%2C%20vi%20que%20minha%20OS%20est%C3%A1%20pronta.%20Gostaria%20de%20combinar%20a%20entrega." className="block w-full bg-green-500 text-white text-center py-3 rounded-lg font-bold hover:bg-green-600 transition-colors">
-                                Agendar Entrega / Retirada
-                            </a>
-                        </div>
+                    {result.status === 'Pronto' ? (
+                        <a href="https://wa.me/5571999999999?text=Olá, vi que minha OS está pronta. Gostaria de combinar a entrega." className="block w-full bg-green-500 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-green-600 shadow-2xl shadow-green-500/30 transition-all active:scale-95 uppercase tracking-widest">
+                            LIBERAR ENTREGA AGORA
+                        </a>
+                    ) : (
+                        <a href="https://wa.me/5571999999999" className="block w-full bg-white/10 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-white/20 transition-all uppercase tracking-widest">
+                            FALAR COM TÉCNICO
+                        </a>
                     )}
                 </div>
             )}
 
-            <p className="text-center text-gray-400 text-sm mt-6">
-                Não sabe seu número de OS? <a href="https://wa.me/5571999999999" className="text-blue-600 underline">Fale conosco no WhatsApp</a>.
-            </p>
+            <div className="mt-12 text-center">
+                <p className="text-[10px] text-gray-300 font-black uppercase tracking-[0.3em] mb-3">Problemas com a Ordem?</p>
+                <a href="https://wa.me/5571999999999" className="text-brand-navy font-black hover:text-brand-gold transition-colors tracking-widest text-[10px] uppercase border-b-2 border-brand-gold pb-1 leading-none">
+                    OUVIDORIA E RECLAMAÇÕES →
+                </a>
+            </div>
         </div>
     );
 }

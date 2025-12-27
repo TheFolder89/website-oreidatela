@@ -1,166 +1,726 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import BudgetWizard from '../components/BudgetWizard';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
-import ReviewsCarousel from '../components/ReviewsCarousel';
-import { ShieldCheck, Clock, MapPin, Truck, CheckCircle2, Star } from 'lucide-react';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BudgetWizard from "../components/BudgetWizard";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatingButton";
+import ReviewsCarousel from "../components/ReviewsCarousel";
+import RepairSimulator from "../components/RepairSimulator";
+import LiveStats from "../components/LiveStats";
+import BeforeAfterGallery from "../components/BeforeAfterGallery";
+import {
+	ShieldCheck,
+	Clock,
+	MapPin,
+	Truck,
+	CheckCircle2,
+	Star,
+	Zap,
+	Wrench,
+	Crown,
+	MessageCircle,
+} from "lucide-react";
 ---
 
-<Layout title="Assistência Técnica Apple em Salvador | O Rei da Tela" description="Troca de vidro e bateria de iPhone e Apple Watch em Salvador. Delivery rápido, garantia de 6 meses e técnicos especialistas.">
+<Layout
+	title="Assistência Técnica Apple em Salvador | O Rei da Tela"
+	description="Troca de vidro e bateria de iPhone e Apple Watch em Salvador. Delivery rápido, garantia de 6 meses e técnicos especialistas."
+>
 	<Header />
-	
+
 	<main>
+		<!-- Live Indicators Floating -->
+		<div
+			class="fixed top-32 right-6 z-[60] space-y-2 pointer-events-none hidden sm:flex flex-col items-end"
+		>
+			<div
+				class="bg-brand-gold/90 backdrop-blur-md text-brand-navy px-4 py-2 rounded-full text-[10px] flex items-center gap-2 shadow-2xl border border-white/20 animate-fade-scale"
+			>
+				<div class="w-2 h-2 bg-brand-navy rounded-full animate-pulse">
+				</div>
+				<span class="font-black uppercase tracking-widest text-[9px]"
+					>Laboratório Online em Salvador</span
+				>
+			</div>
+			<div
+				class="bg-white/90 backdrop-blur-md text-brand-navy px-4 py-2 rounded-full text-xs flex items-center gap-2 shadow-lg border border-gray-100 animate-fade-scale animate-delay-200"
+			>
+				<Zap className="w-3 h-3 text-brand-gold fill-current" />
+				<span class="font-bold text-[10px]">Espera média: 15 min</span>
+			</div>
+		</div>
+
 		<!-- Hero Section -->
-		<section class="relative bg-brand-dark overflow-hidden min-h-[90vh] flex items-center pt-20">
+		<section
+			class="relative bg-brand-dark overflow-hidden min-h-[95vh] flex items-center pt-20"
+		>
 			<!-- Background Image with Overlay -->
 			<div class="absolute inset-0 z-0">
-				<img 
-					src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?q=80&w=2080&auto=format&fit=crop" 
-					alt="Técnico reparando smartphone" 
-					class="w-full h-full object-cover opacity-40 mix-blend-luminosity"
+				<img
+					src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2070&auto=format&fit=crop&fm=webp"
+					alt="Apple devices repair"
+					class="w-full h-full object-cover opacity-20 mix-blend-overlay"
 				/>
-				<div class="absolute inset-0 bg-gradient-to-r from-[#0088cc]/90 to-[#1d2124]/80"></div>
+				<div
+					class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-brand-dark/95 to-brand-navy/60"
+				>
+				</div>
+				<!-- Decorative Tech Pattern -->
+				<div
+					class="absolute inset-0 opacity-[0.05]"
+					style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"
+				>
+				</div>
 			</div>
 
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-20">
-				<div class="grid lg:grid-cols-2 gap-16 items-center">
+			<div
+				class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-20"
+			>
+				<div class="grid lg:grid-cols-2 gap-20 items-center">
 					<div class="text-center lg:text-left">
-						<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold mb-8 backdrop-blur-sm shadow-lg">
-							<span class="flex h-3 w-3 relative">
-								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-								<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-							</span>
-							Atendimento Imediato em Salvador
+						<div
+							class="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-brand-gold text-[11px] font-black uppercase tracking-[0.4em] mb-10 backdrop-blur-sm animate-slide-up"
+						>
+							<img
+								src="/website-oreidatela/logo-oficial.png"
+								alt="O Rei da Tela"
+								class="w-8 h-8 object-contain"
+							/>
+							Excelência e Qualidade
 						</div>
-						
-						<h1 class="text-4xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
-							ESPECIALISTAS EM <br>
-							<span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">APPLE WATCH & iPHONE</span>
+
+						<h1
+							class="text-6xl lg:text-8xl font-black text-white leading-[0.95] mb-10 tracking-tighter animate-slide-up animate-delay-100"
+						>
+							O REI DA <br />
+							<span class="text-brand-gold">TELA</span>
+							<br />
+							<span
+								class="text-2xl lg:text-3xl font-bold tracking-[0.2em] text-white/50 block mt-4 ml-2"
+								>ASSISTÊNCIA PREMIUM</span
+							>
 						</h1>
-						
-						<p class="text-lg text-blue-100 mb-10 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-							Recuperamos a originalidade do seu dispositivo com tecnologia de ponta. Troca de vidro, bateria e reparos avançados com <strong>Delivery Seguro</strong>.
+
+						<p
+							class="text-xl text-blue-100/60 mb-12 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed animate-slide-up animate-delay-200"
+						>
+							Recuperamos a originalidade do seu Apple com
+							tecnologia de ponta e laboratório certificado. <strong
+								class="text-white">Troca de vidro</strong
+							> com preservação do display original.
 						</p>
-						
-						<div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-							<a href="#orcamento" class="bg-white text-brand-blue px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
+
+						<div
+							class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start animate-slide-up animate-delay-300"
+						>
+							<a
+								href="#orcamento"
+								class="group bg-brand-gold text-brand-navy px-12 py-6 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition-all shadow-2xl shadow-brand-gold/20 text-center flex items-center justify-center gap-2"
+							>
 								Orçamento Rápido
+								<Zap
+									className="w-4 h-4 group-hover:animate-pulse"
+								/>
 							</a>
-							<a href="https://wa.me/5571999999999" class="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all text-center">
+							<a
+								href="https://wa.me/5571999999999"
+								class="bg-white/5 border border-white/20 text-white px-12 py-6 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white/10 transition-all text-center backdrop-blur-md"
+							>
 								Falar com Técnico
 							</a>
 						</div>
 
-						<div class="mt-12 flex items-center gap-8 justify-center lg:justify-start text-white/80 text-sm font-medium">
-							<div class="flex items-center gap-2">
-								<CheckCircle2 class="w-5 h-5 text-green-400" /> +10 Anos de Mercado
+						<div
+							class="mt-20 pt-10 border-t border-white/10 flex items-center gap-12 animate-slide-up animate-delay-500 justify-center lg:justify-start"
+						>
+							<div class="flex -space-x-4">
+								<img
+									src="https://i.pravatar.cc/100?u=1"
+									class="w-12 h-12 rounded-full border-4 border-brand-dark"
+								/>
+								<img
+									src="https://i.pravatar.cc/100?u=2"
+									class="w-12 h-12 rounded-full border-4 border-brand-dark"
+								/>
+								<img
+									src="https://i.pravatar.cc/100?u=3"
+									class="w-12 h-12 rounded-full border-4 border-brand-dark"
+								/>
+								<div
+									class="w-12 h-12 rounded-full border-4 border-brand-dark bg-brand-navy flex items-center justify-center text-[10px] font-bold text-white tracking-tighter"
+								>
+									+5k
+								</div>
 							</div>
-							<div class="flex items-center gap-2">
-								<Star class="w-5 h-5 text-yellow-400" /> 5.0 no Google
+							<div>
+								<div class="flex gap-1 text-brand-gold mb-1">
+									<Star className="w-4 h-4 fill-current" />
+									<Star className="w-4 h-4 fill-current" />
+									<Star className="w-4 h-4 fill-current" />
+									<Star className="w-4 h-4 fill-current" />
+									<Star className="w-4 h-4 fill-current" />
+								</div>
+								<div
+									class="text-xs text-white/40 font-bold uppercase tracking-widest"
+								>
+									A melhor de Salvador
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="relative transform hover:scale-[1.01] transition-transform duration-500" id="orcamento">
+					<div
+						class="relative animate-fade-scale animate-delay-200"
+						id="orcamento"
+					>
+						<!-- Glow Effect behind Wizard -->
+						<div
+							class="absolute -inset-10 bg-brand-gold/10 blur-[120px] rounded-full"
+						>
+						</div>
 						<BudgetWizard client:load />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Features Grid (White Cards) -->
-		<section class="py-24 bg-gray-50">
+		<!-- Live Stats & Repair Simulator -->
+		<section class="py-32 bg-white relative">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center max-w-3xl mx-auto mb-20">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Por que somos o <span class="text-brand-blue">Rei da Tela</span>?</h2>
-					<p class="text-gray-500 text-lg">Unimos a conveniência do delivery com a qualidade técnica de laboratório. Seu aparelho em boas mãos.</p>
-				</div>
-
-				<div class="grid md:grid-cols-3 gap-8">
-					<!-- Card 1 -->
-					<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-brand-blue group">
-						<div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue transition-colors">
-							<Clock className="w-8 h-8 text-brand-blue group-hover:text-white transition-colors" />
+				<div class="grid lg:grid-cols-2 gap-24 items-center">
+					<div class="space-y-16">
+						<div>
+							<div
+								class="text-brand-blue font-black text-xs uppercase tracking-[0.4em] mb-6"
+							>
+								Tecnologia Certificada
+							</div>
+							<h2
+								class="text-5xl font-black text-brand-navy mb-8 tracking-tighter leading-none"
+							>
+								A Ciência por trás da <span
+									class="text-brand-gold">Perfeição</span
+								>
+							</h2>
+							<p
+								class="text-gray-500 text-xl leading-relaxed font-light"
+							>
+								Diferente de assistências comuns, utilizamos
+								maquinário de laminação a vácuo e sala limpa
+								para garantir que seu dispositivo volte a ter a
+								mesma selagem de fábrica.
+							</p>
 						</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">Reparo Express</h3>
-						<p class="text-gray-600 leading-relaxed">
-							Sabemos que você não pode ficar sem celular. 80% dos nossos serviços são concluídos em menos de 1 hora.
-						</p>
+
+						<div class="space-y-6 lg:space-y-8">
+							<LiveStats client:visible />
+
+							<div class="grid grid-cols-2 gap-4 lg:gap-8">
+								<div
+									class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-5 p-6 lg:p-8 bg-brand-navy/5 rounded-[2rem] border border-brand-navy/5 group hover:bg-brand-navy transition-all duration-300"
+								>
+									<div
+										class="w-12 h-12 lg:w-16 lg:h-16 shrink-0 bg-brand-navy text-white rounded-2xl group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors flex items-center justify-center"
+									>
+										<Wrench
+											className="w-6 h-6 lg:w-8 lg:h-8"
+										/>
+									</div>
+									<div class="space-y-1">
+										<span
+											class="block font-black text-brand-navy group-hover:text-white transition-colors tracking-tight text-lg lg:text-xl"
+											>Vácuo e Pressão</span
+										>
+										<span
+											class="block text-[10px] text-gray-400 group-hover:text-white/50 font-bold uppercase tracking-widest leading-tight"
+											>Selagem de Fábrica</span
+										>
+									</div>
+								</div>
+								<div
+									class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 lg:gap-5 p-6 lg:p-8 bg-brand-navy/5 rounded-[2rem] border border-brand-navy/5 group hover:bg-brand-navy transition-all duration-300"
+								>
+									<div
+										class="w-12 h-12 lg:w-16 lg:h-16 shrink-0 bg-brand-navy text-white rounded-2xl group-hover:bg-brand-gold group-hover:text-brand-navy transition-colors flex items-center justify-center"
+									>
+										<ShieldCheck
+											className="w-6 h-6 lg:w-8 lg:h-8"
+										/>
+									</div>
+									<div class="space-y-1">
+										<span
+											class="block font-black text-brand-navy group-hover:text-white transition-colors tracking-tight text-lg lg:text-xl"
+											>Proteção ESD</span
+										>
+										<span
+											class="block text-[10px] text-gray-400 group-hover:text-white/50 font-bold uppercase tracking-widest leading-tight"
+											>Anti-Estática</span
+										>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
-					<!-- Card 2 -->
-					<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-brand-blue group">
-						<div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue transition-colors">
-							<Truck className="w-8 h-8 text-brand-blue group-hover:text-white transition-colors" />
+					<div class="relative">
+						<!-- Fancy Frame for Simulator -->
+						<div
+							class="absolute -inset-1 bg-gradient-to-tr from-brand-navy to-brand-gold rounded-[2rem] blur opacity-20"
+						>
 						</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">Logística Segura</h3>
-						<p class="text-gray-600 leading-relaxed">
-							Nosso delivery atende Barra, Pituba, Horto e toda Salvador com motoboys exclusivos e seguro de transporte.
-						</p>
-					</div>
-
-					<!-- Card 3 -->
-					<div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-brand-blue group">
-						<div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand-blue transition-colors">
-							<ShieldCheck className="w-8 h-8 text-brand-blue group-hover:text-white transition-colors" />
-						</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">Garantia Estendida</h3>
-						<p class="text-gray-600 leading-relaxed">
-							Confiança total. Oferecemos 6 meses de garantia em peças e mão de obra, o dobro da concorrência.
-						</p>
+						<RepairSimulator client:load />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Reviews Section -->
-		<section class="py-24 bg-white border-t border-gray-100">
+		<!-- Success Cases (Before/After Gallery) -->
+		<section class="py-32 bg-brand-dark overflow-hidden">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid lg:grid-cols-2 gap-16 items-center">
-					<div>
-						<h2 class="text-4xl font-bold text-gray-900 mb-6">O que Salvador diz sobre nós</h2>
-						<p class="text-lg text-gray-500 mb-8">
-							Já recuperamos mais de 5.000 dispositivos na capital baiana. A satisfação dos nossos clientes é nosso maior patrimônio.
-						</p>
-						<div class="flex gap-4">
-							<div class="bg-gray-50 px-6 py-4 rounded-xl text-center">
-								<span class="block text-3xl font-bold text-brand-blue">5k+</span>
-								<span class="text-sm text-gray-500 font-medium">Clientes</span>
+				<div class="text-center max-w-3xl mx-auto mb-24">
+					<div
+						class="text-brand-gold font-black text-[10px] uppercase tracking-[0.5em] mb-6"
+					>
+						Resultados Reais
+					</div>
+					<h2
+						class="text-5xl lg:text-6xl font-black text-white mb-8 tracking-tighter"
+					>
+						O Fim das <span class="text-brand-gold">Trincas</span>
+					</h2>
+					<p class="text-gray-400 text-xl font-light">
+						Acompanhe o renascimento de dispositivos que pareciam
+						perdidos. Originalidade preservada em cada detalhe.
+					</p>
+				</div>
+
+				<BeforeAfterGallery client:visible />
+			</div>
+		</section>
+
+		<!-- Core Values Grid -->
+		<section class="py-32 bg-brand-gray/50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center max-w-3xl mx-auto mb-24">
+					<h2
+						class="text-5xl font-black text-brand-navy mb-8 tracking-tighter"
+					>
+						O Padrão <span class="text-brand-gold">Rei da Tela</span
+						>
+					</h2>
+					<p class="text-gray-500 text-xl font-light">
+						Compromisso inegociável com a satisfação do cliente e a
+						longevidade do aparelho.
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-10">
+					<!-- Card 1 -->
+					<div
+						class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-gray-100 group relative overflow-hidden"
+					>
+						<div
+							class="absolute top-0 right-0 w-32 h-32 bg-brand-navy/5 rounded-full -mr-16 -mt-16 group-hover:bg-brand-navy/10 transition-colors"
+						>
+						</div>
+						<div class="relative z-10">
+							<div
+								class="w-16 h-16 bg-brand-navy/5 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-navy transition-colors"
+							>
+								<Clock
+									className="w-8 h-8 text-brand-navy group-hover:text-white transition-colors"
+								/>
 							</div>
-							<div class="bg-gray-50 px-6 py-4 rounded-xl text-center">
-								<span class="block text-3xl font-bold text-brand-blue">4.9/5</span>
-								<span class="text-sm text-gray-500 font-medium">Avaliação</span>
+							<h3
+								class="text-3xl font-black text-brand-navy mb-6 tracking-tight"
+							>
+								Express
+							</h3>
+							<p
+								class="text-gray-500 leading-relaxed font-medium"
+							>
+								Seu tempo é prioridade. Reparos de tela em 40
+								minutos com agendamento prévio.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div
+						class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-gray-100 group relative overflow-hidden"
+					>
+						<div
+							class="absolute top-0 right-0 w-32 h-32 bg-brand-gold/5 rounded-full -mr-16 -mt-16 group-hover:bg-brand-gold/10 transition-colors"
+						>
+						</div>
+						<div class="relative z-10">
+							<div
+								class="w-16 h-16 bg-brand-gold/10 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-brand-gold transition-colors"
+							>
+								<Truck
+									className="w-8 h-8 text-brand-gold group-hover:text-brand-navy transition-colors"
+								/>
+							</div>
+							<h3
+								class="text-3xl font-black text-brand-navy mb-6 tracking-tight"
+							>
+								Logística
+							</h3>
+							<p
+								class="text-gray-500 leading-relaxed font-medium"
+							>
+								Buscamos e entregamos em toda Salvador com
+								segurança total e rastreamento em tempo real.
+							</p>
+						</div>
+					</div>
+
+					<!-- Card 3 -->
+					<div
+						class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-gray-100 group relative overflow-hidden"
+					>
+						<div
+							class="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full -mr-16 -mt-16 group-hover:bg-green-500/10 transition-colors"
+						>
+						</div>
+						<div class="relative z-10">
+							<div
+								class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-10 group-hover:bg-green-500 transition-colors"
+							>
+								<ShieldCheck
+									className="w-8 h-8 text-green-500 group-hover:text-white transition-colors"
+								/>
+							</div>
+							<h3
+								class="text-3xl font-black text-brand-navy mb-6 tracking-tight"
+							>
+								Garantia
+							</h3>
+							<p
+								class="text-gray-500 leading-relaxed font-medium"
+							>
+								6 meses de cobertura total. Confiança de quem
+								utiliza apenas os melhores componentes do
+								mercado.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Social Proof Section -->
+		<section class="py-32 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid lg:grid-cols-2 gap-24 items-center">
+					<div>
+						<div
+							class="text-brand-navy font-black text-xs uppercase tracking-[0.5em] mb-6"
+						>
+							Testemunhos Reais
+						</div>
+						<h2
+							class="text-5xl lg:text-7xl font-black text-brand-navy mb-10 tracking-tighter leading-none"
+						>
+							O que Salvador <br /><span class="text-brand-gold"
+								>Diz Sobre Nós</span
+							>
+						</h2>
+						<p
+							class="text-xl text-gray-400 mb-12 font-light leading-relaxed"
+						>
+							A satisfação dos nossos clientes é o motor de nossa
+							evolução contínua. Cada reparo é uma nova história
+							de sucesso.
+						</p>
+						<div class="flex gap-16">
+							<div>
+								<span
+									class="block text-5xl font-black text-brand-navy mb-2"
+									>12k+</span
+								>
+								<span
+									class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]"
+									>Clientes em Salvador</span
+								>
+							</div>
+							<div>
+								<span
+									class="block text-5xl font-black text-brand-gold mb-2"
+									>4.9</span
+								>
+								<div class="flex gap-1 text-brand-gold">
+									<Star className="w-3 h-3 fill-current" />
+									<Star className="w-3 h-3 fill-current" />
+									<Star className="w-3 h-3 fill-current" />
+									<Star className="w-3 h-3 fill-current" />
+									<Star className="w-3 h-3 fill-current" />
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="relative">
-						<!-- Decorative Elements -->
-						<div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-100 rounded-full opacity-50 blur-xl"></div>
-						<div class="absolute -bottom-10 -left-10 w-32 h-32 bg-green-100 rounded-full opacity-50 blur-xl"></div>
+					<div class="relative group">
+						<!-- Glow Pattern -->
+						<div
+							class="absolute -inset-10 bg-brand-gold/5 rounded-full blur-[100px] group-hover:bg-brand-gold/10 transition-colors"
+						>
+						</div>
 						<ReviewsCarousel client:visible />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- CTA Banner -->
-		<section class="py-20 relative overflow-hidden">
-			<div class="absolute inset-0 bg-brand-blue">
-				<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+		<!-- FAQ Section -->
+		<section class="py-24 bg-gray-50">
+			<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2
+						class="text-4xl font-black text-brand-navy mb-4 tracking-tight"
+					>
+						Dúvidas <span class="text-brand-gold">Frequentes</span>
+					</h2>
+					<p class="text-gray-500 text-lg">
+						Tire suas dúvidas sobre nossos serviços de reparo
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<!-- Coluna 1 -->
+					<div class="space-y-4">
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Quanto custa trocar a tela do iPhone?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								O valor varia conforme o modelo. Para iPhone 15
+								Pro Max, a troca de tela sai a partir de R$ 899.
+								Já para modelos mais antigos como iPhone 11, a
+								partir de R$ 299. Solicite um orçamento via
+								WhatsApp para preço exato.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Vocês consertam Samsung e Xiaomi?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Sim! Somos especialistas em Apple, mas também
+								atendemos toda linha Samsung Galaxy (incluindo
+								dobráveis Z Fold e Z Flip) e Xiaomi (Redmi, POCO
+								e linha Mi). Trabalhamos com peças de alta
+								qualidade para todas as marcas.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Quanto tempo demora o reparo?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								A maioria dos reparos é concluída em 30 minutos
+								a 2 horas. Troca de tela e bateria são serviços
+								rápidos. Reparos de placa e desoxidação podem
+								levar de 1 a 3 dias úteis.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Qual a garantia dos reparos?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Todos os nossos reparos têm garantia de 6 meses.
+								Se houver qualquer problema relacionado ao
+								serviço realizado, fazemos a correção sem custo
+								adicional.
+							</p>
+						</details>
+					</div>
+
+					<!-- Coluna 2 -->
+					<div class="space-y-4">
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Vocês buscam e entregam em casa?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Sim! Oferecemos serviço de delivery gratuito em
+								Salvador e região metropolitana. Buscamos seu
+								aparelho no local de sua preferência e
+								entregamos após o reparo com toda segurança.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Vocês usam peças originais?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Trabalhamos com peças premium de alta qualidade
+								que mantêm todas as funcionalidades originais do
+								seu aparelho. Para Apple Watch, realizamos a
+								troca de vidro mantendo o display original de
+								fábrica.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Quais formas de pagamento aceitam?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Aceitamos Pix, cartões de crédito (até 12x sem
+								juros), débito e dinheiro. Para compras acima de
+								R$ 500, oferecemos condições especiais de
+								parcelamento.
+							</p>
+						</details>
+						<details
+							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+						>
+							<summary
+								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+							>
+								Meu celular caiu na água. O que fazer?
+								<span
+									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+									>+</span
+								>
+							</summary>
+							<p class="mt-4 text-gray-600">
+								Desligue imediatamente e NÃO tente ligar ou
+								carregar. Não use secador de cabelo. Entre em
+								contato conosco o mais rápido possível para
+								realizar a desoxidação. Quanto antes o
+								tratamento, maior a chance de recuperação.
+							</p>
+						</details>
+					</div>
+				</div>
 			</div>
-			
-			<div class="max-w-4xl mx-auto px-4 text-center relative z-10 text-white">
-				<h2 class="text-3xl md:text-5xl font-bold mb-8">Dispositivo quebrado? Resolvemos hoje.</h2>
-				<p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Não deixe seu trabalho parar. Agende agora e tenha seu iPhone novo em 40 minutos.</p>
-				<a href="https://wa.me/5571999999999" class="inline-flex items-center gap-3 bg-white text-brand-blue px-10 py-5 rounded-full font-bold text-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
-					<span class="relative flex h-3 w-3">
-						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-						<span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-					</span>
-					Falar com Especialista
-				</a>
+		</section>
+
+		<!-- Final CTA Section -->
+		<section class="py-32 relative overflow-hidden">
+			<div class="absolute inset-0 bg-brand-dark">
+				<!-- Animated Mesh Background -->
+				<div
+					class="absolute inset-0 opacity-20"
+					style="background-image: radial-gradient(#1B365D 2px, transparent 2px); background-size: 50px 50px;"
+				>
+				</div>
+				<div
+					class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 to-transparent"
+				>
+				</div>
+			</div>
+
+			<div
+				class="max-w-5xl mx-auto px-4 text-center relative z-10 text-white"
+			>
+				<div
+					class="w-32 h-32 rounded-3xl mx-auto mb-10 relative group overflow-hidden"
+				>
+					<div
+						class="absolute inset-0 bg-brand-gold rounded-3xl blur-2xl opacity-10 group-hover:opacity-30 transition-opacity"
+					>
+					</div>
+					<img
+						src="/website-oreidatela/logo-oficial.png"
+						alt="Logo"
+						class="w-full h-full object-contain relative z-10"
+					/>
+				</div>
+				<h2
+					class="text-6xl lg:text-8xl font-black mb-10 tracking-tighter"
+				>
+					PRONTO PARA <br /><span class="text-brand-gold"
+						>AGENDAR?</span
+					>
+				</h2>
+				<p
+					class="text-2xl text-white/50 mb-16 max-w-3xl mx-auto font-light leading-relaxed"
+				>
+					Não permita que um dano físico interrompa sua produtividade. <br
+					/>Buscamos seu aparelho em casa hoje mesmo.
+				</p>
+				<div
+					class="flex flex-col sm:flex-row gap-8 justify-center items-center"
+				>
+					<a
+						href="https://wa.me/5571999999999"
+						class="group w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-brand-gold text-brand-navy px-12 py-7 rounded-full font-black text-xl shadow-2xl shadow-brand-gold/20 hover:bg-white hover:scale-105 transition-all"
+					>
+						<MessageCircle
+							className="w-8 h-8 fill-current group-hover:animate-bounce"
+						/>
+						FALAR NO WHATSAPP
+					</a>
+					<a
+						href="#orcamento"
+						class="text-white hover:text-brand-gold font-black text-sm uppercase tracking-[0.3em] transition-colors border-b-2 border-transparent hover:border-brand-gold pb-1"
+					>
+						SIMULAR ORÇAMENTO →
+					</a>
+				</div>
+				<div
+					class="mt-16 text-white/20 text-[10px] font-black uppercase tracking-[0.5em]"
+				>
+					Atendendo em Salvador, Lauro de Freitas e Vilas do Atlântico
+				</div>
 			</div>
 		</section>
 	</main>

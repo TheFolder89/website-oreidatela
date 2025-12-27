@@ -9,8 +9,8 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap()],
-  site: 'https://TheFolder89.github.io',
-  base: '/website-oreidatela',
+  site: 'https://whitesmoke-snail-585456.hostingersite.com',
+  base: '/',
   output: 'static',
   build: {
     format: 'file'

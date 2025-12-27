@@ -1,0 +1,141 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import blogPosts from "../../data/blog-posts.json";
+import { Calendar, Tag, ArrowRight } from "lucide-react";
+
+// Ordenar posts por data (mais recentes primeiro)
+const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
+
+const categories = [...new Set(blogPosts.map((post) => post.category))];
+---
+
+<Layout
+    title="Blog | O Rei da Tela"
+    description="Dicas, notícias e tutoriais sobre reparo de smartphones. iPhone, Samsung, Xiaomi e Apple Watch. Conteúdo exclusivo de especialistas em assistência técnica."
+>
+    <Header />
+
+    <main class="pt-32">
+        <!-- Hero do Blog -->
+        <section class="bg-brand-dark py-16 relative overflow-hidden">
+            <div
+                class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(#C5A059 1px, transparent 1px); background-size: 30px 30px;"
+            >
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <h1
+                        class="text-5xl lg:text-6xl font-black text-white mb-4 tracking-tighter"
+                    >
+                        Blog & <span class="text-brand-gold">Notícias</span>
+                    </h1>
+                    <p class="text-xl text-white/60 max-w-2xl mx-auto">
+                        Dicas de especialistas, notícias do mundo tech e
+                        tutoriais para cuidar melhor do seu smartphone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorias -->
+        <section class="bg-white border-b border-gray-100 py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a
+                        href="/blog"
+                        class="px-5 py-2 bg-brand-navy text-white rounded-full text-sm font-bold hover:bg-brand-gold hover:text-brand-navy transition-all"
+                    >
+                        Todos
+                    </a>
+                    {
+                        categories.map((cat) => (
+                            <span class="px-5 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-bold hover:bg-brand-gold hover:text-brand-navy transition-all cursor-pointer">
+                                {cat}
+                            </span>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid de Posts -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {
+                        sortedPosts.map((post) => (
+                            <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                                <div class="aspect-video overflow-hidden relative">
+                                    <img
+                                        src={post.image}
+                                        alt={post.title}
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                    <div class="absolute top-4 left-4">
+                                        <span class="px-4 py-1 bg-brand-gold text-brand-navy text-xs font-black uppercase rounded-full">
+                                            {post.category}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="p-8">
+                                    <div class="flex items-center gap-4 text-gray-400 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <Calendar className="w-4 h-4" />
+                                            <span>
+                                                {new Date(
+                                                    post.date,
+                                                ).toLocaleDateString("pt-BR")}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h2 class="text-xl font-black text-brand-navy mb-3 group-hover:text-brand-gold transition-colors">
+                                        {post.title}
+                                    </h2>
+                                    <p class="text-gray-500 mb-6 line-clamp-3">
+                                        {post.excerpt}
+                                    </p>
+                                    <a
+                                        href={`/blog/${post.slug}`}
+                                        class="inline-flex items-center gap-2 text-brand-navy font-bold hover:text-brand-gold transition-colors"
+                                    >
+                                        Ler Mais{" "}
+                                        <ArrowRight className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            </article>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Newsletter -->
+        <section class="py-20 bg-brand-navy">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-black text-white mb-4">
+                    Receba Dicas Exclusivas
+                </h2>
+                <p class="text-white/60 mb-8">
+                    Cadastre-se e receba conteúdo sobre tecnologia e manutenção
+                    de smartphones diretamente no seu WhatsApp.
+                </p>
+                <a
+                    href="https://wa.me/5571999999999?text=Olá, quero receber dicas de manutenção de smartphones"
+                    class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-5 rounded-full font-black text-lg hover:bg-white transition-all"
+                >
+                    Receber Dicas
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <WhatsAppFloatingButton client:idle />
+    <Footer />
+</Layout>

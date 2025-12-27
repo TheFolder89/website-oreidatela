@@ -1,25 +1,80 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import StatusForm from '../components/StatusForm';
-import WhatsAppFloatingButton from '../components/WhatsAppFloatingButton';
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import StatusForm from "../components/StatusForm";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatingButton";
+import { Crown } from "lucide-react";
 ---
 
-<Layout title="Status do Reparo - O Rei da Tela" description="Consulte o status da sua ordem de serviço em tempo real.">
+<Layout
+    title="Status do Reparo - O Rei da Tela"
+    description="Consulte o status da sua ordem de serviço em tempo real."
+>
     <Header />
-    
-    <main class="bg-gray-50 min-h-screen py-10 md:py-20">
+
+    <main class="bg-brand-gray/30 min-h-screen py-24 md:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Acompanhe seu Reparo</h1>
-                <p class="text-gray-500 max-w-xl mx-auto">
-                    Digite o número da sua Ordem de Serviço (OS) para ver em que etapa do processo seu dispositivo está.
+            <div class="text-center mb-16 animate-slide-up">
+                <div
+                    class="inline-flex items-center gap-3 px-6 py-2 bg-brand-navy rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-brand-gold shadow-xl"
+                >
+                    <Crown class="w-4 h-4 fill-current" />
+                    Transparência Total
+                </div>
+                <h1
+                    class="text-5xl md:text-7xl font-black text-brand-navy mb-8 tracking-tighter uppercase leading-none"
+                >
+                    Acompanhe seu <br /><span class="text-brand-gold"
+                        >Dispositivo</span>
+                </h1>
+                <p
+                    class="text-xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed"
+                >
+                    Utilizamos rastreamento de laboratório em tempo real. Digite
+                    sua OS abaixo para ver o progresso imediato.
                 </p>
             </div>
-            
-            <StatusForm client:load />
+
+            <div class="animate-fade-scale animate-delay-200">
+                <StatusForm client:load />
+            </div>
+
+            <!-- Trust Badges -->
+            <div
+                class="mt-24 grid md:grid-cols-3 gap-10 max-w-4xl mx-auto opacity-50 grayscale hover:grayscale-0 transition-all duration-700"
+            >
+                <div class="text-center">
+                    <div
+                        class="text-xs font-black uppercase tracking-widest text-brand-navy"
+                    >
+                        Segurança
+                    </div>
+                    <div class="text-sm font-light mt-1 text-gray-400">
+                        Dados 100% Protegidos
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="text-xs font-black uppercase tracking-widest text-brand-navy"
+                    >
+                        Originalidade
+                    </div>
+                    <div class="text-sm font-light mt-1 text-gray-400">
+                        Peças Homologadas
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="text-xs font-black uppercase tracking-widest text-brand-navy"
+                    >
+                        Garantia
+                    </div>
+                    <div class="text-sm font-light mt-1 text-gray-400">
+                        Certificado de 6 Meses
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 

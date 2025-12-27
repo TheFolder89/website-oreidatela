@@ -1,0 +1,309 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import WhatsAppFloatingButton from "../../../components/WhatsAppFloatingButton";
+import services from "../../../data/services.json";
+import {
+    ShieldCheck,
+    Clock,
+    Zap,
+    CheckCircle,
+    Wrench,
+    MessageCircle,
+} from "lucide-react";
+
+// Função para gerar slug do modelo
+function slugify(text: string): string {
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/[^\w\-]+/g, "")
+        .replace(/\-\-+/g, "-");
+}
+
+export function getStaticPaths() {
+    const paths: any[] = [];
+
+    services.forEach((service) => {
+        if (service.models) {
+            service.models.forEach((model: string) => {
+                paths.push({
+                    params: {
+                        marca: service.slug.replace("conserto-", ""),
+                        modelo: slugify(model),
+                    },
+                    props: { service, model },
+                });
+            });
+        }
+    });
+
+    return paths;
+}
+
+const { service, model } = Astro.props;
+const modelSlug = slugify(model);
+
+// Determinar marca para SEO
+const brandNames: { [key: string]: string } = {
+    iphone: "iPhone",
+    "apple-watch": "Apple Watch",
+    ipad: "iPad",
+    samsung: "Samsung",
+    xiaomi: "Xiaomi",
+};
+const brandKey = service.slug.replace("conserto-", "");
+const brandName = brandNames[brandKey] || service.name;
+
+// Schema JSON-LD
+const schema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `Conserto de ${model}`,
+    brand: {
+        "@type": "Brand",
+        name: brandName,
+    },
+    offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "BRL",
+        lowPrice: "149",
+        highPrice: "1500",
+        offerCount: service.subServices.length,
+    },
+    provider: {
+        "@type": "LocalBusiness",
+        name: "O Rei da Tela",
+        areaServed: "Salvador, BA",
+    },
+};
+---
+
+<Layout
+    title={`Conserto de ${model} em Salvador | O Rei da Tela`}
+    description={`Reparo especializado para ${model} em Salvador. Troca de tela, bateria e mais. Garantia de 6 meses, delivery grátis. Orçamento rápido pelo WhatsApp.`}
+>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <Header />
+
+    <main class="pt-32">
+        <!-- Hero do Modelo -->
+        <section class="bg-brand-dark py-20 relative overflow-hidden">
+            <div
+                class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(#C5A059 1px, transparent 1px); background-size: 30px 30px;"
+            >
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <div
+                        class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-gold/20 text-brand-gold text-sm font-black uppercase tracking-widest mb-8"
+                    >
+                        <Wrench className="w-5 h-5" />
+                        Reparo Especializado
+                    </div>
+                    <h1
+                        class="text-5xl lg:text-7xl font-black text-white mb-6 tracking-tighter"
+                    >
+                        Conserto de <span class="text-brand-gold">{model}</span>
+                    </h1>
+                    <p class="text-xl text-white/60 max-w-3xl mx-auto mb-10">
+                        Assistência técnica premium para seu {model} em Salvador.
+                        Técnicos certificados, peças de qualidade e garantia de 6
+                        meses.
+                    </p>
+                    <a
+                        href={`https://wa.me/5571999999999?text=Olá, preciso de orçamento para conserto do meu ${model}`}
+                        class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-5 rounded-full font-black text-lg hover:bg-white transition-all shadow-2xl"
+                    >
+                        <MessageCircle className="w-6 h-6 fill-current" />
+                        Solicitar Orçamento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Disponíveis -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2
+                        class="text-4xl font-black text-brand-navy mb-4 tracking-tight"
+                    >
+                        Serviços para {model}
+                    </h2>
+                    <p class="text-gray-500 text-lg">
+                        Confira os reparos disponíveis e valores estimados
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {
+                        service.subServices.map((sub: any) => (
+                            <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                <div class="w-14 h-14 bg-brand-navy rounded-2xl flex items-center justify-center mb-6">
+                                    <Wrench className="w-7 h-7 text-brand-gold" />
+                                </div>
+                                <h3 class="text-2xl font-black text-brand-navy mb-3">
+                                    {sub.name}
+                                </h3>
+                                <p class="text-brand-gold text-3xl font-black mb-2">
+                                    {sub.price}
+                                </p>
+                                <div class="flex items-center gap-2 text-gray-500">
+                                    <Clock className="w-4 h-4" />
+                                    <span class="text-sm font-bold">
+                                        {sub.duration}
+                                    </span>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a
+                        href={`https://wa.me/5571999999999?text=Olá, quero orçamento de conserto para ${model}`}
+                        class="inline-flex items-center gap-3 bg-brand-navy text-white px-12 py-6 rounded-full font-black text-lg hover:bg-black transition-all shadow-xl"
+                    >
+                        <Zap className="w-6 h-6 text-brand-gold" />
+                        Orçamento Instantâneo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diferenciais -->
+        <section class="py-24 bg-brand-navy/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl font-black text-brand-navy text-center mb-16 tracking-tight"
+                >
+                    Por que escolher O Rei da Tela para seu {model}?
+                </h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center mx-auto mb-4"
+                        >
+                            <ShieldCheck className="w-8 h-8 text-brand-navy" />
+                        </div>
+                        <h3 class="font-black text-brand-navy mb-2">
+                            Garantia 6 Meses
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            Cobertura total em todos os reparos
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center mx-auto mb-4"
+                        >
+                            <Clock className="w-8 h-8 text-brand-navy" />
+                        </div>
+                        <h3 class="font-black text-brand-navy mb-2">
+                            Reparo Express
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            A maioria dos reparos em até 1 hora
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center mx-auto mb-4"
+                        >
+                            <Zap className="w-8 h-8 text-brand-navy" />
+                        </div>
+                        <h3 class="font-black text-brand-navy mb-2">
+                            Delivery Grátis
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            Buscamos e entregamos em Salvador
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-brand-gold rounded-2xl flex items-center justify-center mx-auto mb-4"
+                        >
+                            <CheckCircle className="w-8 h-8 text-brand-navy" />
+                        </div>
+                        <h3 class="font-black text-brand-navy mb-2">
+                            Peças Premium
+                        </h3>
+                        <p class="text-gray-500 text-sm">
+                            Componentes de alta qualidade
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2
+                    class="text-3xl font-black text-brand-navy text-center mb-12 tracking-tight"
+                >
+                    Dúvidas Frequentes sobre {model}
+                </h2>
+                <div class="space-y-4">
+                    <details class="bg-gray-50 rounded-2xl p-6 group">
+                        <summary
+                            class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+                        >
+                            Quanto tempo demora o conserto do {model}?
+                            <span
+                                class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+                                >+</span
+                            >
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            A maioria dos reparos do {model} são concluídos em 30
+                            minutos a 2 horas, dependendo do serviço. Reparos de placa
+                            podem levar de 1 a 3 dias.
+                        </p>
+                    </details>
+                    <details class="bg-gray-50 rounded-2xl p-6 group">
+                        <summary
+                            class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+                        >
+                            Vocês usam peças originais no {model}?
+                            <span
+                                class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+                                >+</span
+                            >
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            Trabalhamos com peças premium de alta qualidade que
+                            mantêm as funcionalidades originais do seu {model}.
+                            Oferecemos garantia de 6 meses em todos os reparos.
+                        </p>
+                    </details>
+                    <details class="bg-gray-50 rounded-2xl p-6 group">
+                        <summary
+                            class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+                        >
+                            Vocês buscam e entregam o {model}?
+                            <span
+                                class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+                                >+</span
+                            >
+                        </summary>
+                        <p class="mt-4 text-gray-600">
+                            Sim! Oferecemos serviço de delivery gratuito em
+                            Salvador e região. Buscamos seu {model} no local de sua
+                            preferência e entregamos após o reparo.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <WhatsAppFloatingButton client:idle />
+    <Footer />
+</Layout>

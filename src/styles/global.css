@@ -1,9 +1,12 @@
 @import "tailwindcss";
 
 @theme {
+    --color-brand-navy: #1B365D;
+    --color-brand-gold: #C5A059;
+    --color-brand-dark: #0D1B2A;
+    /* Even darker navy for backgrounds */
     --color-brand-blue: #0088cc;
-    --color-brand-dark: #1d2124;
-    --color-brand-gray: #f4f6f9;
+    /* Keeping for some accents if needed */
 
     --font-sans: 'Poppins', system-ui, sans-serif;
 }
@@ -15,6 +18,94 @@
     }
 
     body {
-        @apply bg-white text-gray-700;
+        @apply bg-white text-gray-700 overflow-x-hidden;
+    }
+}
+
+@layer utilities {
+    .animate-delay-100 {
+        animation-delay: 100ms;
+    }
+
+    .animate-delay-200 {
+        animation-delay: 200ms;
+    }
+
+    .animate-delay-300 {
+        animation-delay: 300ms;
+    }
+
+    .animate-delay-500 {
+        animation-delay: 500ms;
+    }
+
+    @keyframes slideInUp {
+        from {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInScale {
+        from {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: #C5A059
+        }
+    }
+
+    .animate-slide-up {
+        animation: slideInUp 0.8s ease-out both;
+    }
+
+    .animate-fade-scale {
+        animation: fadeInScale 1s ease-out both;
+    }
+
+    .animate-slide-left {
+        animation: slideInLeft 0.8s ease-out both;
     }
 }
