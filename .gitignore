@@ -1,5 +1,5 @@
-# build output
-dist/
+# build output (keeping dist/ for Hostinger deploy)
+# dist/
 # generated types
 .astro/
 
@@ -33,8 +33,8 @@ pnpm-debug.log*
 # Local History for Visual Studio Code
 .history/
 
-# Built files
-dist/
+# Built files (keeping dist/ for Hostinger deploy)
+# dist/
 dist-native/
 bin/
 obj/

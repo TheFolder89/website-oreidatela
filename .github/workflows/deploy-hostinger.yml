@@ -1,9 +1,9 @@
-name: Deploy to Hostinger
+name: Deploy to Hostinger via SSH
 
 on:
   push:
     branches:
-      - master # Altere para 'main' se for o nome da sua branch principal
+      - master
 
 jobs:
   build_deploy:
@@ -28,13 +28,13 @@ jobs:
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
           PUBLIC_META_PIXEL_ID: ${{ secrets.PUBLIC_META_PIXEL_ID }}
 
-      - name: 🚀 Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: ./public_html/ # Caminho padrão na Hostinger, ajuste se necessário
-          protocol: ftp # Ou 'ftps' se tiver suporte
-          port: 21
+      - name: 📁 Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: 🚀 Deploy via Rsync
+        run: |
+          rsync -avz --delete ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/public_html/
