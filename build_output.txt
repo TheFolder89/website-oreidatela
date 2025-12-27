@@ -1,0 +1,123 @@
+﻿
+> callous-corot@0.0.1 build
+> astro build
+
+[2m10:41:56[22m [34m[content][39m Syncing content
+[2m10:41:56[22m [34m[content][39m Synced content
+[2m10:41:56[22m [34m[types][39m Generated [2m52ms[22m
+[2m10:41:56[22m [34m[build][39m output: [34m"static"[39m
+[2m10:41:56[22m [34m[build][39m mode: [34m"static"[39m
+[2m10:41:56[22m [34m[build][39m directory: [34mC:\Users\marce\.gemini\antigravity\scratch\Website_OREIDATELA\dist\[39m
+[2m10:41:56[22m [34m[build][39m Collecting build info...
+[2m10:41:56[22m [34m[build][39m [32mΓ£ô Completed in 79ms.[39m
+[2m10:41:56[22m [34m[build][39m Building static entrypoints...
+[33m[1m10:41:57[22m [WARN] [vite][39m [33m"isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".[39m
+[2m10:41:57[22m [34m[vite][39m [32mΓ£ô built in 1.11s[39m
+[2m10:41:57[22m [34m[build][39m [32mΓ£ô Completed in 1.15s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m10:41:57[22m [34m[vite][39m transforming...
+[2m10:42:00[22m [34m[vite][39m [32mΓ£ô[39m 1727 modules transformed.
+[2m10:42:00[22m [34m[vite][39m rendering chunks...
+[2m10:42:00[22m [34m[vite][39m computing gzip size...
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/chevron-right.BsumYf6z.js                                      [39m[1m[2m  0.31 kB[22m[1m[22m[2m Γöé gzip:  0.25 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/chevron-left.Cs-M-WC2.js                                       [39m[1m[2m  0.31 kB[22m[1m[22m[2m Γöé gzip:  0.26 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/clock.MX7LW-DG.js                                              [39m[1m[2m  0.35 kB[22m[1m[22m[2m Γöé gzip:  0.28 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/circle-check-big.BkhJOZ-I.js                                   [39m[1m[2m  0.37 kB[22m[1m[22m[2m Γöé gzip:  0.29 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/smartphone.CPZOE_wK.js                                         [39m[1m[2m  0.38 kB[22m[1m[22m[2m Γöé gzip:  0.29 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/zap.DTfoeOy5.js                                                [39m[1m[2m  0.45 kB[22m[1m[22m[2m Γöé gzip:  0.32 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/wrench.Da-FRHR7.js                                             [39m[1m[2m  1.23 kB[22m[1m[22m[2m Γöé gzip:  0.53 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/createLucideIcon.D3P4DdDc.js                                   [39m[1m[2m  2.57 kB[22m[1m[22m[2m Γöé gzip:  1.13 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/WhatsAppFloatingButton.BaWMVQ9s.js                             [39m[1m[2m  2.71 kB[22m[1m[22m[2m Γöé gzip:  1.37 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/ReviewsCarousel.qrsAQ4DW.js                                    [39m[1m[2m  3.00 kB[22m[1m[22m[2m Γöé gzip:  1.48 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/RepairSimulator.BpCuDEdL.js                                    [39m[1m[2m  3.30 kB[22m[1m[22m[2m Γöé gzip:  1.45 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/LiveStats.WctcS6Ch.js                                          [39m[1m[2m  3.69 kB[22m[1m[22m[2m Γöé gzip:  1.18 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/BeforeAfterGallery.CTJDiEYu.js                                 [39m[1m[2m  3.70 kB[22m[1m[22m[2m Γöé gzip:  1.34 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/StatusForm.Bfb0cFhq.js                                         [39m[1m[2m  7.28 kB[22m[1m[22m[2m Γöé gzip:  2.52 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/index.WFquGv8Z.js                                              [39m[1m[2m  7.85 kB[22m[1m[22m[2m Γöé gzip:  3.05 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/BudgetWizard.BMHNbrv-.js                                       [39m[1m[2m  8.24 kB[22m[1m[22m[2m Γöé gzip:  2.76 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js  [39m[1m[2m 15.33 kB[22m[1m[22m[2m Γöé gzip:  5.27 kB[22m
+[2m10:42:00[22m [34m[vite][39m [2mdist/[22m[36m_astro/client.9unXo8s5.js                                             [39m[1m[2m186.62 kB[22m[1m[22m[2m Γöé gzip: 58.54 kB[22m
+[2m10:42:00[22m [34m[vite][39m [32mΓ£ô built in 2.41s[39m
+
+[42m[30m generating static routes [39m[49m
+[2m10:42:00[22m [32mΓû╢[39m src/pages/blog/[slug].astro
+[2m10:42:00[22m   [34mΓö£ΓöÇ[39m [2m/blog/como-saber-se-tela-iphone-original.html[22m [2m(+25ms)[22m 
+[2m10:42:00[22m   [34mΓö£ΓöÇ[39m [2m/blog/galaxy-s24-ultra-vale-trocar-tela.html[22m [2m(+10ms)[22m 
+[2m10:42:00[22m   [34mΓö£ΓöÇ[39m [2m/blog/apple-watch-vidro-quebrado-display-funciona.html[22m [2m(+7ms)[22m 
+[2m10:42:00[22m   [34mΓö£ΓöÇ[39m [2m/blog/xiaomi-redmi-note-13-pro-dicas-manutencao.html[22m [2m(+5ms)[22m 
+[2m10:42:00[22m   [34mΓö£ΓöÇ[39m [2m/blog/iphone-caiu-na-agua-o-que-fazer.html[22m [2m(+7ms)[22m 
+[2m10:42:00[22m   [34mΓööΓöÇ[39m [2m/blog/galaxy-z-fold-tela-dobravel-cuidados.html[22m [2m(+4ms)[22m 
+[2m10:42:00[22m [32mΓû╢[39m src/pages/blog/index.astro
+[2m10:42:00[22m   [34mΓööΓöÇ[39m [2m/blog.html[22m [2m(+6ms)[22m 
+node.exe : 
+[31m[1m10:42:00[22m 
+[ERROR] [build][39m 
+Failed to call 
+getStaticPaths for src/p
+ages/modelos/[marca]/[mo
+delo].astro
+At line:1 char:1
++ & "C:\nvm4w\nodejs/nod
+e.exe" "C:\nvm4w\nodejs/
+node_modules/npm/bin/np 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo      
+        : NotSpecified  
+  : ([31m[1m10:42:.   
+ ../[modelo].astro:S    
+tring) [], RemoteEx    
+ception
+    + FullyQualifiedErr 
+   orId : NativeComman  
+  dError
+ 
+[2m10:42:00[22m [32mΓû╢[39m src/pages/modelos/[marca]/[modelo].astro
+slugify is not defined
+  [1mLocation:[22m
+    [4mC:\Users\marce\.
+gemini\antigravity\scrat
+ch\Website_OREIDATELA\no
+de_modules\astro\dist\co
+re\render\route-cache.js
+:29:27[24m
+  [1mStack trace:[22m
+[2m    at file:///C:/Us
+ers/marce/.gemini/antigr
+avity/scratch/Website_OR
+EIDATELA/dist/pages/mode
+los/_marca_/_modelo_.ast
+ro.mjs?time=176684292057
+5:21:21
+    at file:///C:/Users/
+marce/.gemini/antigravit
+y/scratch/Website_OREIDA
+TELA/dist/pages/modelos/
+_marca_/_modelo_.astro.m
+js?time=1766842920575:17
+:22
+    at 
+Module.getStaticPaths (f
+ile:///C:/Users/marce/.g
+emini/antigravity/scratc
+h/Website_OREIDATELA/dis
+t/pages/modelos/_marca_/
+_modelo_.astro.mjs?time=
+1766842920575:15:12)
+    at getPathsForRoute 
+(file:///C:/Users/marce/
+.gemini/antigravity/scra
+tch/Website_OREIDATELA/n
+ode_modules/astro/dist/c
+ore/build/generate.js:21
+3:31)
+    at async 
+generatePages (file:///C
+:/Users/marce/.gemini/an
+tigravity/scratch/Websit
+e_OREIDATELA/node_module
+s/astro/dist/core/build/
+generate.js:99:7)[22m

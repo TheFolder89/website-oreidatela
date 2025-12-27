@@ -1,0 +1,163 @@
+﻿
+> callous-corot@0.0.1 build
+> astro build
+
+[2m10:46:44[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m10:46:44[22m [34m[content][39m Syncing content
+[2m10:46:44[22m [34m[content][39m Synced content
+[2m10:46:44[22m [34m[types][39m Generated [2m334ms[22m
+[2m10:46:44[22m [34m[build][39m output: [34m"static"[39m
+[2m10:46:44[22m [34m[build][39m mode: [34m"static"[39m
+[2m10:46:44[22m [34m[build][39m directory: [34mC:\Users\marce\.gemini\antigravity\scratch\Website_OREIDATELA\dist\[39m
+[2m10:46:44[22m [34m[build][39m Collecting build info...
+[2m10:46:44[22m [34m[build][39m [32mΓ£ô Completed in 363ms.[39m
+[2m10:46:44[22m [34m[build][39m Building static entrypoints...
+[33m[1m10:46:45[22m [WARN] [vite][39m [33m"isRemoteAllowed", "matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js".[39m
+[2m10:46:45[22m [34m[vite][39m [32mΓ£ô built in 1.15s[39m
+[2m10:46:45[22m [34m[build][39m [32mΓ£ô Completed in 1.20s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m10:46:45[22m [34m[vite][39m transforming...
+[2m10:46:49[22m [34m[vite][39m [32mΓ£ô[39m 1727 modules transformed.
+[2m10:46:49[22m [34m[vite][39m rendering chunks...
+[2m10:46:49[22m [34m[vite][39m computing gzip size...
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/chevron-right.BsumYf6z.js                                      [39m[1m[2m  0.31 kB[22m[1m[22m[2m Γöé gzip:  0.25 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/chevron-left.Cs-M-WC2.js                                       [39m[1m[2m  0.31 kB[22m[1m[22m[2m Γöé gzip:  0.26 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/clock.MX7LW-DG.js                                              [39m[1m[2m  0.35 kB[22m[1m[22m[2m Γöé gzip:  0.28 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/circle-check-big.BkhJOZ-I.js                                   [39m[1m[2m  0.37 kB[22m[1m[22m[2m Γöé gzip:  0.29 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/smartphone.CPZOE_wK.js                                         [39m[1m[2m  0.38 kB[22m[1m[22m[2m Γöé gzip:  0.29 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/zap.DTfoeOy5.js                                                [39m[1m[2m  0.45 kB[22m[1m[22m[2m Γöé gzip:  0.32 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/wrench.Da-FRHR7.js                                             [39m[1m[2m  1.23 kB[22m[1m[22m[2m Γöé gzip:  0.53 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/createLucideIcon.D3P4DdDc.js                                   [39m[1m[2m  2.57 kB[22m[1m[22m[2m Γöé gzip:  1.13 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/WhatsAppFloatingButton.BaWMVQ9s.js                             [39m[1m[2m  2.71 kB[22m[1m[22m[2m Γöé gzip:  1.37 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/ReviewsCarousel.qrsAQ4DW.js                                    [39m[1m[2m  3.00 kB[22m[1m[22m[2m Γöé gzip:  1.48 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/RepairSimulator.BpCuDEdL.js                                    [39m[1m[2m  3.30 kB[22m[1m[22m[2m Γöé gzip:  1.45 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/LiveStats.WctcS6Ch.js                                          [39m[1m[2m  3.69 kB[22m[1m[22m[2m Γöé gzip:  1.18 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/BeforeAfterGallery.CTJDiEYu.js                                 [39m[1m[2m  3.70 kB[22m[1m[22m[2m Γöé gzip:  1.34 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/StatusForm.Bfb0cFhq.js                                         [39m[1m[2m  7.28 kB[22m[1m[22m[2m Γöé gzip:  2.52 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/index.WFquGv8Z.js                                              [39m[1m[2m  7.85 kB[22m[1m[22m[2m Γöé gzip:  3.05 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/BudgetWizard.BMHNbrv-.js                                       [39m[1m[2m  8.24 kB[22m[1m[22m[2m Γöé gzip:  2.76 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/ClientRouter.astro_astro_type_script_index_0_lang.QW52Ox2j.js  [39m[1m[2m 15.33 kB[22m[1m[22m[2m Γöé gzip:  5.27 kB[22m
+[2m10:46:49[22m [34m[vite][39m [2mdist/[22m[36m_astro/client.9unXo8s5.js                                             [39m[1m[2m186.62 kB[22m[1m[22m[2m Γöé gzip: 58.54 kB[22m
+[2m10:46:49[22m [34m[vite][39m [32mΓ£ô built in 3.63s[39m
+
+[42m[30m generating static routes [39m[49m
+[2m10:46:49[22m [32mΓû╢[39m src/pages/blog/[slug].astro
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/como-saber-se-tela-iphone-original.html[22m [2m(+23ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/galaxy-s24-ultra-vale-trocar-tela.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/apple-watch-vidro-quebrado-display-funciona.html[22m [2m(+8ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/xiaomi-redmi-note-13-pro-dicas-manutencao.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/blog/iphone-caiu-na-agua-o-que-fazer.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓööΓöÇ[39m [2m/blog/galaxy-z-fold-tela-dobravel-cuidados.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m [32mΓû╢[39m src/pages/blog/index.astro
+[2m10:46:49[22m   [34mΓööΓöÇ[39m [2m/blog.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m [32mΓû╢[39m src/pages/modelos/[marca]/[modelo].astro
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-15-pro-max.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-15-pro.html[22m [2m(+8ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-15.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-14-pro-max.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-14-pro.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-14.html[22m [2m(+8ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-13-pro-max.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-13-pro.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-13.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-12-pro-max.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-12-pro.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-12.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-11-pro-max.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-11-pro.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-11.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-xs-max.html[22m [2m(+7ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-xs.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-xr.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-x.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-8-plus.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/iphone/iphone-8.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-ultra-2.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-ultra.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-9.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-8.html[22m [2m(+9ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-7.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-6.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-se-2-geracao.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-se.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-5.html[22m [2m(+3ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-4.html[22m [2m(+3ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/apple-watch/apple-watch-series-3.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-pro-129-m2.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-pro-11-m2.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-air-m1.html[22m [2m(+3ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-10-geracao.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-mini-6.html[22m [2m(+5ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/ipad/ipad-9-geracao.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s24-ultra.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s24.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s24.html[22m [2m(+3ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s23-ultra.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s23.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s23.html[22m [2m(+6ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-z-fold-5.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-z-fold-4.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-z-flip-5.html[22m [2m(+4ms)[22m 
+[2m10:46:49[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-z-flip-4.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-a54.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-a34.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-a14.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s22-ultra.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s22.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s22.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s21-ultra.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s21.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/samsung/galaxy-s21.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/xiaomi-14-ultra.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/xiaomi-14.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/xiaomi-13-ultra.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/xiaomi-13.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-13-pro.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-13-pro.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-13.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-12-pro.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-12-pro.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-note-12.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/poco-x6-pro.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/poco-x6.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/poco-f5-pro.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/poco-f5.html[22m [2m(+6ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/modelos/xiaomi/redmi-13c.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓööΓöÇ[39m [2m/modelos/xiaomi/redmi-12.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m [32mΓû╢[39m src/pages/servicos/[slug].astro
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/servicos/conserto-iphone.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/servicos/conserto-apple-watch.html[22m [2m(+7ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/servicos/conserto-ipad.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/servicos/conserto-samsung.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓööΓöÇ[39m [2m/servicos/conserto-xiaomi.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m [32mΓû╢[39m src/pages/status-os.astro
+[2m10:46:50[22m   [34mΓööΓöÇ[39m [2m/status-os.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m [32mΓû╢[39m src/pages/unidades/[bairro].astro
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/barra.html[22m [2m(+7ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/ondina.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/rio-vermelho.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/pituba.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/itaigara.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/caminho-das-arvores.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/horto-florestal.html[22m [2m(+6ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/graca.html[22m [2m(+8ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/vitoria.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/canela.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/campo-grande.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/imbui.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/costa-azul.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/armacao.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/boca-do-rio.html[22m [2m(+4ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/patamares.html[22m [2m(+3ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/piata.html[22m [2m(+5ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/itapua.html[22m [2m(+7ms)[22m 
+[2m10:46:50[22m   [34mΓö£ΓöÇ[39m [2m/unidades/stella-maris.html[22m [2m(+7ms)[22m 
+[2m10:46:50[22m   [34mΓööΓöÇ[39m [2m/unidades/vilas-do-atlantico.html[22m [2m(+7ms)[22m 
+[2m10:46:50[22m [32mΓû╢[39m src/pages/index.astro
+[2m10:46:50[22m   [34mΓööΓöÇ[39m [2m/index.html[22m [2m(+8ms)[22m 
+[2m10:46:50[22m [32mΓ£ô Completed in 724ms.
+[39m
+[2m10:46:50[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m10:46:50[22m [34m[build][39m 107 page(s) built in [1m6.11s[22m
+[2m10:46:50[22m [34m[build][39m [1mComplete![22m
