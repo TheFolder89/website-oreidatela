@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import { Smartphone, Watch, ArrowRight, CheckCircle, ChevronRight, Calculator, Zap } from 'lucide-react';
+import modelsData from '../data/models.json';
 
 const devices = [
     { id: 'iphone', name: 'iPhone', icon: Smartphone },
-    { id: 'watch', name: 'Apple Watch', icon: Watch },
+    { id: 'apple-watch', name: 'Apple Watch', icon: Watch },
+    { id: 'samsung', name: 'Samsung', icon: Smartphone },
+    { id: 'xiaomi', name: 'Xiaomi', icon: Smartphone },
 ];
-
-const models = {
-    iphone: ['iPhone 15 Pro Max', 'iPhone 15 Pro', 'iPhone 14 Pro Max', 'iPhone 13', 'iPhone 12', 'iPhone 11'],
-    watch: ['Series 9', 'Series 8', 'Ultra', 'Series 7', 'SE'],
-};
 
 const problems = [
     { id: 'tela', name: 'Tela Quebrada (Vidro)' },
@@ -41,14 +39,21 @@ export default function BudgetWizard() {
     };
 
     const getPriceEstimate = () => {
-        if (selection.device === 'watch') return 'R$ 499';
+        if (selection.device === 'apple-watch') return 'R$ 499';
         if (selection.device === 'iphone' && selection.problem === 'Tela Quebrada (Vidro)') return 'R$ 299';
         return 'Sob Consulta';
     };
 
     const handleWhatsAppRedirect = () => {
-        const text = `Olá! Gostaria de um orçamento para *${selection.device} ${selection.model}* com problema de *${selection.problem}*. Vi a estimativa de ${getPriceEstimate()} no site.`;
+        const text = `Olá! Gostaria de um orçamento para *${selection.device.toUpperCase()} ${selection.model}* com problema de *${selection.problem}*. Vi a estimativa de ${getPriceEstimate()} no site.`;
         window.open(`https://wa.me/5571999999999?text=${encodeURIComponent(text)}`, '_blank');
+    };
+
+    const getModelsForDevice = () => {
+        if (selection.device && selection.device in modelsData) {
+            return modelsData[selection.device as keyof typeof modelsData] || [];
+        }
+        return [];
     };
 
     return (
@@ -57,7 +62,7 @@ export default function BudgetWizard() {
 
             <div className="flex justify-between items-center mb-12">
                 <div>
-                    <h3 className="text-3xl font-black text-brand-navy leading-tight uppercase tracking-tighter">Budget Wizard</h3>
+                    <h3 className="text-3xl font-black text-brand-navy leading-tight uppercase tracking-tighter">ORÇAMENTO</h3>
                     <p className="text-[10px] text-brand-gold font-black uppercase tracking-[0.3em]">Passo {step} de 4</p>
                 </div>
                 <div className="flex gap-2">
@@ -87,10 +92,10 @@ export default function BudgetWizard() {
                                         <button
                                             key={d.id}
                                             onClick={() => { setSelection({ ...selection, device: d.id }); handleNext(); }}
-                                            className="flex flex-col items-center p-10 bg-brand-navy/5 rounded-[2rem] hover:bg-brand-navy transition-all group border border-transparent hover:shadow-2xl hover:-translate-y-2"
+                                            className="flex flex-col items-center p-8 bg-brand-navy/5 rounded-[2rem] hover:bg-brand-navy transition-all group border border-transparent hover:shadow-2xl hover:-translate-y-2"
                                         >
-                                            <d.icon className="w-20 h-20 text-brand-navy group-hover:text-brand-gold mb-6 transition-all group-hover:scale-110" />
-                                            <span className="font-black text-xl text-brand-navy group-hover:text-white uppercase tracking-tighter">{d.name}</span>
+                                            <d.icon className="w-16 h-16 text-brand-navy group-hover:text-brand-gold mb-6 transition-all group-hover:scale-110" />
+                                            <span className="font-black text-lg text-brand-navy group-hover:text-white uppercase tracking-tighter">{d.name}</span>
                                         </button>
                                     ))}
                                 </div>
@@ -100,8 +105,8 @@ export default function BudgetWizard() {
                         {step === 2 && (
                             <div className="animate-slide-up">
                                 <h4 className="text-2xl font-black mb-10 text-center text-brand-navy uppercase tracking-tight">Identifique o Modelo</h4>
-                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {models[selection.device as keyof typeof models].map((m, i) => (
+                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                                    {getModelsForDevice().map((m, i) => (
                                         <button
                                             key={m}
                                             onClick={() => { setSelection({ ...selection, model: m }); handleNext(); }}
@@ -111,7 +116,13 @@ export default function BudgetWizard() {
                                         </button>
                                     ))}
                                 </div>
-                                <button onClick={() => setStep(1)} className="mt-12 text-[10px] text-gray-400 hover:text-brand-gold font-black flex items-center gap-2 mx-auto tracking-[0.3em]">
+                                <style>{`
+                                    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+                                    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+                                    .custom-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+                                    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+                                `}</style>
+                                <button onClick={() => setStep(1)} className="mt-8 text-[10px] text-gray-400 hover:text-brand-gold font-black flex items-center gap-2 mx-auto tracking-[0.3em]">
                                     <ChevronRight className="w-3 h-3 rotate-180" /> VOLTAR
                                 </button>
                             </div>
@@ -163,6 +174,9 @@ export default function BudgetWizard() {
                                 <p className="text-[10px] text-gray-400 mt-8 font-black uppercase tracking-[0.4em]">
                                     Sem cobrança de taxa de análise em caso de reparo
                                 </p>
+                                <button onClick={() => setStep(1)} className="mt-6 text-[10px] text-gray-400 hover:text-brand-gold font-black uppercase tracking-[0.2em] underline decoration-gray-200 underline-offset-4">
+                                    Fazer novo orçamento
+                                </button>
                             </div>
                         )}
                     </>
