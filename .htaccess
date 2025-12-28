@@ -1,12 +1,28 @@
-# Redirect all requests to the dist folder
+
 RewriteEngine On
 RewriteBase /
 
-# If the request is not for a file/directory in the root, serve from dist/
-RewriteCond %{REQUEST_URI} !^/dist/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /dist/$1 [L]
+# 1. Redirect root to dist/index.html
+RewriteRule ^$ dist/index.html [L]
 
-# If requesting root, serve dist/index.html
-RewriteRule ^$ /dist/index.html [L]
+# 2. Check if the request points to a file that exists in /dist/
+# If request is /foo.css and /dist/foo.css exists, rewrite to /dist/foo.css
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI} -f
+RewriteRule ^(.*)$ dist/$1 [L]
+
+# 3. Clean URLs: Check if request + .html exists in /dist/
+# If request is /servicos/conserto-iphone and /dist/servicos/conserto-iphone.html exists
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI}.html -f
+RewriteRule ^(.*)$ dist/$1.html [L]
+
+# 4. Check if request points to a directory in /dist/ that has index.html
+# If request is /blog/ and /dist/blog/index.html exists
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteCond %{DOCUMENT_ROOT}/dist%{REQUEST_URI}/index.html -f
+RewriteRule ^(.*)$ dist/$1/index.html [L]
+
+# 5. Fallback for everything else (e.g. 404s handled by Astro or generic assets)
+# Just define that anything starting with dist/ is served as is if it exists
+# Otherwise let it pass through (which will likely 404 naturally)
