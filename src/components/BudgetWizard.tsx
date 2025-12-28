@@ -46,7 +46,7 @@ export default function BudgetWizard() {
 
     const handleWhatsAppRedirect = () => {
         const text = `Olá! Gostaria de um orçamento para *${selection.device.toUpperCase()} ${selection.model}* com problema de *${selection.problem}*. Vi a estimativa de ${getPriceEstimate()} no site.`;
-        window.open(`https://wa.me/5571999999999?text=${encodeURIComponent(text)}`, '_blank');
+        window.open(`https://wa.me/557194142627?text=${encodeURIComponent(text)}`, '_blank');
     };
 
     const getModelsForDevice = () => {

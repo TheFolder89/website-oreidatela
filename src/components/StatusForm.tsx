@@ -134,11 +134,11 @@ export default function StatusForm() {
                     </div>
 
                     {result.status === 'Pronto' ? (
-                        <a href="https://wa.me/5571999999999?text=Olá, vi que minha OS está pronta. Gostaria de combinar a entrega." className="block w-full bg-green-500 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-green-600 shadow-2xl shadow-green-500/30 transition-all active:scale-95 uppercase tracking-widest">
+                        <a href="https://wa.me/557194142627?text=Olá, vi que minha OS está pronta. Gostaria de combinar a entrega." className="block w-full bg-green-500 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-green-600 shadow-2xl shadow-green-500/30 transition-all active:scale-95 uppercase tracking-widest">
                             LIBERAR ENTREGA AGORA
                         </a>
                     ) : (
-                        <a href="https://wa.me/5571999999999" className="block w-full bg-white/10 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-white/20 transition-all uppercase tracking-widest">
+                        <a href="https://wa.me/557194142627" className="block w-full bg-white/10 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-white/20 transition-all uppercase tracking-widest">
                             FALAR COM TÉCNICO
                         </a>
                     )}
@@ -147,7 +147,7 @@ export default function StatusForm() {
 
             <div className="mt-12 text-center">
                 <p className="text-[10px] text-gray-300 font-black uppercase tracking-[0.3em] mb-3">Problemas com a Ordem?</p>
-                <a href="https://wa.me/5571999999999" className="text-brand-navy font-black hover:text-brand-gold transition-colors tracking-widest text-[10px] uppercase border-b-2 border-brand-gold pb-1 leading-none">
+                <a href="https://wa.me/557194142627" className="text-brand-navy font-black hover:text-brand-gold transition-colors tracking-widest text-[10px] uppercase border-b-2 border-brand-gold pb-1 leading-none">
                     OUVIDORIA E RECLAMAÇÕES →
                 </a>
             </div>
