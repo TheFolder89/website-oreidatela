@@ -34,7 +34,12 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          # Remove any potential protocol prefix from SSH_HOST
+          CLEAN_HOST=$(echo "${{ secrets.SSH_HOST }}" | sed -e 's|^[^/]*//||' -e 's|/.*$||')
+          echo "Connecting to $CLEAN_HOST"
+          ssh-keyscan -H $CLEAN_HOST >> ~/.ssh/known_hosts
+          # Test connection
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@$CLEAN_HOST "ls -la"
 
       - name: 🚀 Deploy via Rsync
         run: |
