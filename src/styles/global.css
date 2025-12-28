@@ -15,10 +15,16 @@
     html {
         font-family: 'Poppins', system-ui, sans-serif;
         scroll-behavior: smooth;
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-text-size-adjust: 100%;
     }
 
     body {
-        @apply bg-white text-gray-700 overflow-x-hidden;
+        @apply bg-white text-gray-700;
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
     }
 }
 
