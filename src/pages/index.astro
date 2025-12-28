@@ -19,7 +19,7 @@ import {
 	Wrench,
 	Crown,
 	MessageCircle,
-} from "lucide-react";
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -86,7 +86,7 @@ import {
 							class="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-brand-gold text-[11px] font-black uppercase tracking-[0.4em] mb-10 backdrop-blur-sm animate-slide-up"
 						>
 							<img
-								src="/logo-oficial.png"
+								src={`${base}logo-oficial.png`}
 								alt="O Rei da Tela"
 								class="w-8 h-8 object-contain"
 								fetchpriority="high"
@@ -684,7 +684,7 @@ import {
 					>
 					</div>
 					<img
-						src="/logo-oficial.png"
+						src={`${base}logo-oficial.png`}
 						alt="Logo"
 						class="w-full h-full object-contain relative z-10"
 					/>

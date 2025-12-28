@@ -1,5 +1,5 @@
----
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
+const base = import.meta.env.BASE_URL;
 ---
 
 <header
@@ -9,12 +9,12 @@ import { Menu, X, Phone, MessageCircle } from "lucide-react";
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-28">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group">
+      <a href={base} class="flex items-center gap-3 group">
         <div
           class="w-20 h-20 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300"
         >
           <img
-            src="/logo-oficial.png"
+            src={`${base}logo-oficial.png`}
             alt="O Rei da Tela Logo"
             class="w-full h-full object-contain"
           />
@@ -34,32 +34,32 @@ import { Menu, X, Phone, MessageCircle } from "lucide-react";
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-6">
         <a
-          href="/"
+          href={base}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >Home</a
         >
         <a
-          href="/servicos/conserto-iphone"
+          href={`${base}servicos/conserto-iphone`}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >iPhone</a
         >
         <a
-          href="/servicos/conserto-apple-watch"
+          href={`${base}servicos/conserto-apple-watch`}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >Apple Watch</a
         >
         <a
-          href="/servicos/conserto-samsung"
+          href={`${base}servicos/conserto-samsung`}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >Samsung</a
         >
         <a
-          href="/servicos/conserto-xiaomi"
+          href={`${base}servicos/conserto-xiaomi`}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >Xiaomi</a
         >
         <a
-          href="/blog"
+          href={`${base}blog`}
           class="text-white/80 hover:text-brand-gold font-bold transition-all text-xs uppercase tracking-widest"
           >Blog</a
         >
@@ -100,7 +100,7 @@ import { Menu, X, Phone, MessageCircle } from "lucide-react";
       <div class="flex justify-between items-center mb-12">
         <div class="flex items-center gap-3">
           <img
-            src="/logo-oficial.png"
+            src={`${base}logo-oficial.png`}
             alt="Logo"
             class="w-14 h-14 object-contain"
           />
@@ -113,22 +113,22 @@ import { Menu, X, Phone, MessageCircle } from "lucide-react";
 
       <div class="flex flex-col gap-8 text-xl font-black">
         <a
-          href="/"
+          href={base}
           class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
           >HOME</a
         >
         <a
-          href="/servicos/conserto-iphone"
+          href={`${base}servicos/conserto-iphone`}
           class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
           >IPHONE</a
         >
         <a
-          href="/servicos/conserto-apple-watch"
+          href={`${base}servicos/conserto-apple-watch`}
           class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
           >APPLE WATCH</a
         >
         <a
-          href="/status-os"
+          href={`${base}status-os`}
           class="text-white hover:text-brand-gold transition-colors border-b border-white/5 pb-4"
           >CONSULTAR OS</a
         >
