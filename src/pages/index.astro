@@ -467,271 +467,278 @@ const base = import.meta.env.BASE_URL;
 						</div>
 					</div>
 					<div class="relative group">
-						<!-- Glow Pattern -->
-						<div
-							class="absolute -inset-10 bg-brand-gold/5 rounded-full blur-[100px] group-hover:bg-brand-gold/10 transition-colors"
-						>
+						<div class="relative group h-full overflow-hidden">
+							<div
+								class="absolute -inset-10 bg-brand-gold/5 rounded-full blur-[100px] group-hover:bg-brand-gold/10 transition-colors pointer-events-none"
+							>
+							</div>
+							<ReviewsCarousel client:visible />
 						</div>
-						<ReviewsCarousel client:visible />
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<!-- FAQ Section -->
-		<section class="py-24 bg-gray-50">
-			<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2
-						class="text-4xl font-black text-brand-navy mb-4 tracking-tight"
+			<!-- FAQ Section -->
+			<section class="py-24 bg-gray-50">
+				<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center mb-16">
+						<h2
+							class="text-4xl font-black text-brand-navy mb-4 tracking-tight"
+						>
+							Dúvidas <span class="text-brand-gold"
+								>Frequentes</span
+							>
+						</h2>
+						<p class="text-gray-500 text-lg">
+							Tire suas dúvidas sobre nossos serviços de reparo
+						</p>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-8">
+						<!-- Coluna 1 -->
+						<div class="space-y-4">
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Quanto custa trocar a tela do iPhone?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									O valor varia conforme o modelo. Para iPhone
+									15 Pro Max, a troca de tela sai a partir de
+									R$ 899. Já para modelos mais antigos como
+									iPhone 11, a partir de R$ 299. Solicite um
+									orçamento via WhatsApp para preço exato.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Vocês consertam Samsung e Xiaomi?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Sim! Somos especialistas em Apple, mas
+									também atendemos toda linha Samsung Galaxy
+									(incluindo dobráveis Z Fold e Z Flip) e
+									Xiaomi (Redmi, POCO e linha Mi). Trabalhamos
+									com peças de alta qualidade para todas as
+									marcas.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Quanto tempo demora o reparo?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									A maioria dos reparos é concluída em 30
+									minutos a 2 horas. Troca de tela e bateria
+									são serviços rápidos. Reparos de placa e
+									desoxidação podem levar de 1 a 3 dias úteis.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Qual a garantia dos reparos?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Todos os nossos reparos têm garantia de 6
+									meses. Se houver qualquer problema
+									relacionado ao serviço realizado, fazemos a
+									correção sem custo adicional.
+								</p>
+							</details>
+						</div>
+
+						<!-- Coluna 2 -->
+						<div class="space-y-4">
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Vocês buscam e entregam em casa?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Sim! Oferecemos serviço de delivery gratuito
+									em Salvador e região metropolitana. Buscamos
+									seu aparelho no local de sua preferência e
+									entregamos após o reparo com toda segurança.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Vocês usam peças originais?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Trabalhamos com peças premium de alta
+									qualidade que mantêm todas as
+									funcionalidades originais do seu aparelho.
+									Para Apple Watch, realizamos a troca de
+									vidro mantendo o display original de
+									fábrica.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Quais formas de pagamento aceitam?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Aceitamos Pix, cartões de crédito (até 12x
+									sem juros), débito e dinheiro. Para compras
+									acima de R$ 500, oferecemos condições
+									especiais de parcelamento.
+								</p>
+							</details>
+							<details
+								class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
+							>
+								<summary
+									class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
+								>
+									Meu celular caiu na água. O que fazer?
+									<span
+										class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
+										>+</span
+									>
+								</summary>
+								<p class="mt-4 text-gray-600">
+									Desligue imediatamente e NÃO tente ligar ou
+									carregar. Não use secador de cabelo. Entre
+									em contato conosco o mais rápido possível
+									para realizar a desoxidação. Quanto antes o
+									tratamento, maior a chance de recuperação.
+								</p>
+							</details>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Final CTA Section -->
+			<section class="py-32 relative overflow-hidden">
+				<div class="absolute inset-0 bg-brand-dark">
+					<!-- Animated Mesh Background -->
+					<div
+						class="absolute inset-0 opacity-20"
+						style="background-image: radial-gradient(#1B365D 2px, transparent 2px); background-size: 50px 50px;"
 					>
-						Dúvidas <span class="text-brand-gold">Frequentes</span>
-					</h2>
-					<p class="text-gray-500 text-lg">
-						Tire suas dúvidas sobre nossos serviços de reparo
-					</p>
-				</div>
-
-				<div class="grid md:grid-cols-2 gap-8">
-					<!-- Coluna 1 -->
-					<div class="space-y-4">
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Quanto custa trocar a tela do iPhone?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								O valor varia conforme o modelo. Para iPhone 15
-								Pro Max, a troca de tela sai a partir de R$ 899.
-								Já para modelos mais antigos como iPhone 11, a
-								partir de R$ 299. Solicite um orçamento via
-								WhatsApp para preço exato.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Vocês consertam Samsung e Xiaomi?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Sim! Somos especialistas em Apple, mas também
-								atendemos toda linha Samsung Galaxy (incluindo
-								dobráveis Z Fold e Z Flip) e Xiaomi (Redmi, POCO
-								e linha Mi). Trabalhamos com peças de alta
-								qualidade para todas as marcas.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Quanto tempo demora o reparo?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								A maioria dos reparos é concluída em 30 minutos
-								a 2 horas. Troca de tela e bateria são serviços
-								rápidos. Reparos de placa e desoxidação podem
-								levar de 1 a 3 dias úteis.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Qual a garantia dos reparos?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Todos os nossos reparos têm garantia de 6 meses.
-								Se houver qualquer problema relacionado ao
-								serviço realizado, fazemos a correção sem custo
-								adicional.
-							</p>
-						</details>
 					</div>
-
-					<!-- Coluna 2 -->
-					<div class="space-y-4">
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Vocês buscam e entregam em casa?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Sim! Oferecemos serviço de delivery gratuito em
-								Salvador e região metropolitana. Buscamos seu
-								aparelho no local de sua preferência e
-								entregamos após o reparo com toda segurança.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Vocês usam peças originais?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Trabalhamos com peças premium de alta qualidade
-								que mantêm todas as funcionalidades originais do
-								seu aparelho. Para Apple Watch, realizamos a
-								troca de vidro mantendo o display original de
-								fábrica.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Quais formas de pagamento aceitam?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Aceitamos Pix, cartões de crédito (até 12x sem
-								juros), débito e dinheiro. Para compras acima de
-								R$ 500, oferecemos condições especiais de
-								parcelamento.
-							</p>
-						</details>
-						<details
-							class="bg-white rounded-2xl p-6 shadow-sm group border border-gray-100"
-						>
-							<summary
-								class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
-							>
-								Meu celular caiu na água. O que fazer?
-								<span
-									class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
-									>+</span
-								>
-							</summary>
-							<p class="mt-4 text-gray-600">
-								Desligue imediatamente e NÃO tente ligar ou
-								carregar. Não use secador de cabelo. Entre em
-								contato conosco o mais rápido possível para
-								realizar a desoxidação. Quanto antes o
-								tratamento, maior a chance de recuperação.
-							</p>
-						</details>
+					<div
+						class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 to-transparent"
+					>
 					</div>
 				</div>
-			</div>
-		</section>
 
-		<!-- Final CTA Section -->
-		<section class="py-32 relative overflow-hidden">
-			<div class="absolute inset-0 bg-brand-dark">
-				<!-- Animated Mesh Background -->
 				<div
-					class="absolute inset-0 opacity-20"
-					style="background-image: radial-gradient(#1B365D 2px, transparent 2px); background-size: 50px 50px;"
-				>
-				</div>
-				<div
-					class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-brand-navy/40 to-transparent"
-				>
-				</div>
-			</div>
-
-			<div
-				class="max-w-5xl mx-auto px-4 text-center relative z-10 text-white"
-			>
-				<div
-					class="w-32 h-32 rounded-3xl mx-auto mb-10 relative group overflow-hidden"
+					class="max-w-5xl mx-auto px-4 text-center relative z-10 text-white"
 				>
 					<div
-						class="absolute inset-0 bg-brand-gold rounded-3xl blur-2xl opacity-10 group-hover:opacity-30 transition-opacity"
+						class="w-32 h-32 rounded-3xl mx-auto mb-10 relative group overflow-hidden"
 					>
-					</div>
-					<img
-						src={`${base}logo-oficial.png`}
-						alt="Logo"
-						class="w-full h-full object-contain relative z-10"
-					/>
-				</div>
-				<h2
-					class="text-6xl lg:text-8xl font-black mb-10 tracking-tighter"
-				>
-					PRONTO PARA <br /><span class="text-brand-gold"
-						>AGENDAR?</span
-					>
-				</h2>
-				<p
-					class="text-2xl text-white/50 mb-16 max-w-3xl mx-auto font-light leading-relaxed"
-				>
-					Não permita que um dano físico interrompa sua produtividade. <br
-					/>Buscamos seu aparelho em casa hoje mesmo.
-				</p>
-				<div
-					class="flex flex-col sm:flex-row gap-8 justify-center items-center"
-				>
-					<a
-						href="https://wa.me/557194142627"
-						class="group w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-brand-gold text-brand-navy px-12 py-7 rounded-full font-black text-xl shadow-2xl shadow-brand-gold/20 hover:bg-white hover:scale-105 transition-all"
-					>
-						<MessageCircle
-							className="w-8 h-8 fill-current group-hover:animate-bounce"
+						<div
+							class="absolute inset-0 bg-brand-gold rounded-3xl blur-2xl opacity-10 group-hover:opacity-30 transition-opacity"
+						>
+						</div>
+						<img
+							src={`${base}logo-oficial.png`}
+							alt="Logo"
+							class="w-full h-full object-contain relative z-10"
 						/>
-						FALAR NO WHATSAPP
-					</a>
-					<a
-						href="#orcamento"
-						class="text-white hover:text-brand-gold font-black text-sm uppercase tracking-[0.3em] transition-colors border-b-2 border-transparent hover:border-brand-gold pb-1"
+					</div>
+					<h2
+						class="text-6xl lg:text-8xl font-black mb-10 tracking-tighter"
 					>
-						SIMULAR ORÇAMENTO →
-					</a>
+						PRONTO PARA <br /><span class="text-brand-gold"
+							>AGENDAR?</span
+						>
+					</h2>
+					<p
+						class="text-2xl text-white/50 mb-16 max-w-3xl mx-auto font-light leading-relaxed"
+					>
+						Não permita que um dano físico interrompa sua
+						produtividade. <br />Buscamos seu aparelho em casa hoje
+						mesmo.
+					</p>
+					<div
+						class="flex flex-col sm:flex-row gap-8 justify-center items-center"
+					>
+						<a
+							href="https://wa.me/557194142627"
+							class="group w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-brand-gold text-brand-navy px-12 py-7 rounded-full font-black text-xl shadow-2xl shadow-brand-gold/20 hover:bg-white hover:scale-105 transition-all"
+						>
+							<MessageCircle
+								className="w-8 h-8 fill-current group-hover:animate-bounce"
+							/>
+							FALAR NO WHATSAPP
+						</a>
+						<a
+							href="#orcamento"
+							class="text-white hover:text-brand-gold font-black text-sm uppercase tracking-[0.3em] transition-colors border-b-2 border-transparent hover:border-brand-gold pb-1"
+						>
+							SIMULAR ORÇAMENTO →
+						</a>
+					</div>
+					<div
+						class="mt-16 text-white/20 text-[10px] font-black uppercase tracking-[0.5em]"
+					>
+						Atendendo em Salvador, Lauro de Freitas e Vilas do
+						Atlântico
+					</div>
 				</div>
-				<div
-					class="mt-16 text-white/20 text-[10px] font-black uppercase tracking-[0.5em]"
-				>
-					Atendendo em Salvador, Lauro de Freitas e Vilas do Atlântico
-				</div>
-			</div>
+			</section>
 		</section>
-	</main>
 
-	<WhatsAppFloatingButton client:idle />
-	<Footer />
+		<WhatsAppFloatingButton client:idle />
+		<Footer />
+	</main>
 </Layout>
