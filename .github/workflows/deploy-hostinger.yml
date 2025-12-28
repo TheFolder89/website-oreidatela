@@ -27,6 +27,7 @@ jobs:
         env:
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
           PUBLIC_META_PIXEL_ID: ${{ secrets.PUBLIC_META_PIXEL_ID }}
+          PUBLIC_GTM_ID: ${{ secrets.PUBLIC_GTM_ID }}
 
       - name: 📁 Setup SSH Key
         run: |
