@@ -29,7 +29,7 @@ export default function WhatsAppFloatingButton() {
       href={`https://wa.me/557194142627?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group flex items-center gap-3 transition-all duration-500 hover:-translate-y-2 active:scale-90"
+      className="fixed bottom-6 right-4 z-50 group flex items-center gap-3 transition-all duration-500 hover:-translate-y-2 active:scale-90"
       aria-label="Falar no WhatsApp"
     >
       {/* Dynamic Tooltip */}
