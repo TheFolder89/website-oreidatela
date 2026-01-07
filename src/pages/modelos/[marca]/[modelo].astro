@@ -4,6 +4,7 @@ import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../../components/WhatsAppFloatingButton";
 import services from "../../../data/services.json";
+import pricesData from "../../../data/prices.json";
 import {
     ShieldCheck,
     Clock,
@@ -54,8 +55,8 @@ const brandNames: { [key: string]: string } = {
     samsung: "Samsung",
     xiaomi: "Xiaomi",
 };
-const brandKey = service.slug.replace("conserto-", "");
-const brandName = brandNames[brandKey] || service.name;
+const brandSlug = service.slug.replace("conserto-", "");
+const brandName = brandNames[brandSlug] || service.name;
 
 // Schema JSON-LD
 const schema = {
@@ -78,6 +79,39 @@ const schema = {
         name: "O Rei da Tela",
         areaServed: "Salvador, BA",
     },
+};
+
+const normalizeModelName = (text: string): string => {
+    if (!text) return "";
+    let t = text.toLowerCase();
+    // Remove brand names that might be inconsistent
+    t = t.replace(/\biphone\b/g, "");
+    t = t.replace(/\bgalaxy\b/g, "");
+    t = t.replace(/\bredmi\b/g, "");
+    t = t.replace(/\bpoco\b/g, "");
+    t = t.replace(/\bmoto\b/g, "");
+    t = t.replace(/\bapple watch\b/g, "");
+
+    t = t.replace(/pmx/g, "pro max");
+    t = t.replace(/\bpl\b/g, "plus");
+    t = t.replace(/(\d+)\s*pl\b/g, "$1 plus");
+    t = t.replace(/\s+/g, " ");
+    return t.trim();
+};
+
+const normalizedModel = normalizeModelName(model);
+const priceBrandKey = service.slug.includes("apple-watch")
+    ? "apple-watch"
+    : service.brand;
+const priceKey = `${priceBrandKey}:${normalizedModel}`;
+const modelPrices = (pricesData as any)[priceKey] || {};
+
+const getPrice = (subServiceName: string, defaultPrice: string) => {
+    const price = modelPrices[subServiceName];
+    if (typeof price === "number") {
+        return `A partir de R$ ${price}`;
+    }
+    return defaultPrice;
 };
 ---
 
@@ -151,7 +185,7 @@ const schema = {
                                     {sub.name}
                                 </h3>
                                 <p class="text-brand-gold text-3xl font-black mb-2">
-                                    {sub.price}
+                                    {getPrice(sub.name, sub.price)}
                                 </p>
                                 <div class="flex items-center gap-2 text-gray-500">
                                     <Clock className="w-4 h-4" />
