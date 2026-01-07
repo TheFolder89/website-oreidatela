@@ -94,46 +94,10 @@ const base = import.meta.env.BASE_URL;
 							"dataLayer",
 							"GTM-NM6HFXBJ",
 						);
-
-						// Meta Pixel
-						!(function (f, b, e, v, n, t, s) {
-							if (f.fbq) return;
-							n = f.fbq = function () {
-								n.callMethod
-									? n.callMethod.apply(n, arguments)
-									: n.queue.push(arguments);
-							};
-							if (!f._fbq) f._fbq = n;
-							n.push = n;
-							n.loaded = !0;
-							n.version = "2.0";
-							n.queue = [];
-							t = b.createElement(e);
-							t.async = !0;
-							t.src = v;
-							s = b.getElementsByTagName(e)[0];
-							s.parentNode.insertBefore(t, s);
-						})(
-							window,
-							document,
-							"script",
-							"https://connect.facebook.net/en_US/fbevents.js",
-						);
-						fbq("init", "1760266904626494");
-						fbq("track", "PageView");
 					}, 2500); // Delay 2.5s after load to prioritize LCP
 				});
 			}
 		</script>
-		<noscript>
-			<img
-				height="1"
-				width="1"
-				style="display:none"
-				src="https://www.facebook.com/tr?id=1760266904626494&ev=PageView&noscript=1"
-			/>
-		</noscript>
-		<!-- End Meta Pixel Code -->
 
 		<script>
 			document.addEventListener("astro:page-load", () => {
@@ -148,24 +112,7 @@ const base = import.meta.env.BASE_URL;
 
 				// WhatsApp Click Tracking
 				const trackWhatsAppClick = (href: string) => {
-					// GA4 Event (if gtag is available)
-					if (typeof (window as any).gtag === "function") {
-						(window as any).gtag("event", "whatsapp_contact", {
-							event_category: "conversion",
-							event_label: href,
-							value: 1,
-						});
-					}
-
-					// Meta Pixel Event
-					if (typeof (window as any).fbq === "function") {
-						(window as any).fbq("track", "Contact", {
-							content_name: "WhatsApp Redirect",
-							content_category: "Lead",
-						});
-					}
-
-					// GTM Event
+					// GTM Event only - Tags inside GTM will handle GA4/Ads/Meta
 					if ((window as any).dataLayer) {
 						(window as any).dataLayer.push({
 							event: "whatsapp_click",

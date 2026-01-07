@@ -6,8 +6,8 @@ const cases = [
         id: 1,
         device: "iPhone 13 Pro",
         problem: "Tela Estilhaçada",
-        before: "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=800&auto=format&fit=crop&fm=webp", // Simulated broken screen
-        after: "https://images.unsplash.com/photo-1556656793-062ff9878258?q=80&w=800&auto=format&fit=crop&fm=webp", // Fixed screen
+        before: "/images/cases/iphone_broken.png", // Simulated broken screen
+        after: "/images/cases/iphone_fixed.png", // Fixed screen
         description: "Troca de vidro e display mantendo o Face ID original.",
         time: "45 min"
     },
@@ -15,8 +15,8 @@ const cases = [
         id: 2,
         device: "Apple Watch Series 8",
         problem: "Vidro Quebrado",
-        before: "https://images.unsplash.com/photo-1544006659-f0b21f04cb1b?q=80&w=800&auto=format&fit=crop&fm=webp",
-        after: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?q=80&w=800&auto=format&fit=crop&fm=webp",
+        before: "/images/cases/watch_broken.png",
+        after: "/images/cases/watch_fixed.png",
         description: "Recondicionamento de vidro mantendo o display original.",
         time: "2 horas"
     }

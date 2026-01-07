@@ -31,12 +31,12 @@
         "subServices": [
             {
                 "name": "Troca de Tela",
-                "price": "A partir de R$ 299",
+                "price": "A partir de R$ 89",
                 "duration": "30 min"
             },
             {
                 "name": "Troca de Bateria",
-                "price": "A partir de R$ 199",
+                "price": "A partir de R$ 129",
                 "duration": "20 min"
             },
             {
@@ -46,7 +46,7 @@
             },
             {
                 "name": "Troca de Conector de Carga",
-                "price": "A partir de R$ 249",
+                "price": "A partir de R$ 149",
                 "duration": "45 min"
             }
         ]
@@ -73,7 +73,7 @@
         "subServices": [
             {
                 "name": "Troca de Vidro",
-                "price": "A partir de R$ 499",
+                "price": "A partir de R$ 299",
                 "duration": "2 horas"
             },
             {
@@ -83,7 +83,7 @@
             },
             {
                 "name": "Troca de Bateria",
-                "price": "A partir de R$ 349",
+                "price": "A partir de R$ 149",
                 "duration": "3 horas"
             }
         ]
@@ -145,12 +145,12 @@
         "subServices": [
             {
                 "name": "Troca de Tela",
-                "price": "A partir de R$ 349",
+                "price": "A partir de R$ 99",
                 "duration": "1 hora"
             },
             {
                 "name": "Troca de Bateria",
-                "price": "A partir de R$ 179",
+                "price": "A partir de R$ 99",
                 "duration": "30 min"
             },
             {
@@ -192,12 +192,12 @@
         "subServices": [
             {
                 "name": "Troca de Tela",
-                "price": "A partir de R$ 249",
+                "price": "A partir de R$ 75",
                 "duration": "1 hora"
             },
             {
                 "name": "Troca de Bateria",
-                "price": "A partir de R$ 149",
+                "price": "A partir de R$ 135",
                 "duration": "30 min"
             },
             {
@@ -207,7 +207,7 @@
             },
             {
                 "name": "Troca de Conector de Carga",
-                "price": "A partir de R$ 179",
+                "price": "A partir de R$ 105",
                 "duration": "45 min"
             }
         ]

@@ -1,0 +1,999 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2026-01-06 03:54:06",
+    "containerVersion": {
+        "path": "accounts/6139546815/containers/137226916/versions/0",
+        "accountId": "6139546815",
+        "containerId": "137226916",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6139546815/containers/137226916",
+            "accountId": "6139546815",
+            "containerId": "137226916",
+            "name": "www.ordt.com.br",
+            "publicId": "GTM-NM6HFXBJ",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1766950314063",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6139546815/containers/137226916/workspaces?apiLink=container",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                "GTM-NM6HFXBJ"
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "3",
+                "name": "Google Analytics configuração do GA4",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "G-1CCR4FDN50"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1690654371876",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "4",
+                "name": "Evento Click Link",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendEcommerceData",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "Whatsapp"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-1CCR4FDN50"
+                    }
+                ],
+                "fingerprint": "1690654582722",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "16",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Tag-GA4_Config",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "G-1CCR4FDN50"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "configSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "transport_url"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "https://server-side-tagging-i7dbxeidza-uc.a.run.app"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "send_page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1724776667978",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "17",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Tag-GA4_Event",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "eventSettingsTable",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "user_data"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-User_Data}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "currency"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Currency}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "items"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Items}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "transaction_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Transaction_ID}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "value"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Value}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_id"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Event_ID_Constant}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "event_name"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-FBEventName}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameter",
+                                        "value": "first_party_collection"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "parameterValue",
+                                        "value": "true"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementIdOverride",
+                        "value": "G-1CCR4FDN50"
+                    }
+                ],
+                "fingerprint": "1724776670516",
+                "firingTriggerId": [
+                    "7",
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "18",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Tag-Pixel_Event",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "\n<script>\n  fbq('track', {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-FBEventName}},\n    {\n      'currency': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Currency}},\n      'contents': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Items}},\n      'order_id': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Transaction_ID}},\n      'value': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Value}},\n    },\n    {\n      'eventID': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Event_ID_Constant}},\n    }\n  );\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1724776673996",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "19",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Tag-Pixel_Setup",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- Facebook Pixel Code -->\n<script nonce=\"okmQZUMl\">\n!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;\nn.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,\ndocument,'script','https://connect.facebook.net/en_US/fbevents.js');\n\nfbq('init', '1785430638385517');\nfbq('set', 'agent', 'gtmss', '1785430638385517');\n\nfbq('track', {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-FBEventName}}, {}, {'eventID': {{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Event_ID_Constant}}});\n</script>\n<noscript><img height=\"1\" width=\"1\" style=\"display:none\"\nsrc=\"https://www.facebook.com/tr?id=1785430638385517&ev=PageView&noscript=1\"\n/></noscript>\n<!-- End Facebook Pixel Code -->"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1724776677914",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "20",
+                "name": "GA4 - Configuration",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "GT-NCHTQNW"
+                    }
+                ],
+                "fingerprint": "1767667295795",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "21",
+                "name": "GA4 - Event - Page View",
+                "type": "googtag",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "tagId",
+                        "value": "GT-NCHTQNW"
+                    }
+                ],
+                "fingerprint": "1767668260662",
+                "firingTriggerId": [
+                    "2147479573",
+                    "22"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "23",
+                "name": "Google Ads - Remarketing",
+                "type": "sp",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableConversionLinker",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableDynamicRemarketing",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "conversionId",
+                        "value": "AW-11280775008"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "customParamsFormat",
+                        "value": "NONE"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "rdp",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1767670772334",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "tagId": "25",
+                "name": "Vinculador de conversões",
+                "type": "gclidw",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableCrossDomain",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "linkerDomains",
+                        "value": "ordt.com.br, thefolder89.github.io"
+                    }
+                ],
+                "fingerprint": "1767670933194",
+                "firingTriggerId": [
+                    "2147479573"
+                ],
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "triggerId": "5",
+                "name": "Click apenas links",
+                "type": "LINK_CLICK",
+                "waitForTags": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "checkValidation": {
+                    "type": "BOOLEAN",
+                    "value": "false"
+                },
+                "waitForTagsTimeout": {
+                    "type": "TEMPLATE",
+                    "value": "2000"
+                },
+                "uniqueTriggerId": {
+                    "type": "TEMPLATE"
+                },
+                "fingerprint": "1690654523984"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "triggerId": "7",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Trigger-DOM_Ready",
+                "type": "DOM_READY",
+                "fingerprint": "1724776643886"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "triggerId": "22",
+                "name": "Custom Event - page_view",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "page_view"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1767667915178"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "triggerId": "24",
+                "name": "Custom Event - whatsapp_click",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "whatsapp_click"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1767668559918"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "8",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Currency",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventModel.currency"
+                    }
+                ],
+                "fingerprint": "1724776651474"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "9",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Items",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventModel.items"
+                    }
+                ],
+                "fingerprint": "1724776652580"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "10",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Transaction_ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventModel.transaction_id"
+                    }
+                ],
+                "fingerprint": "1724776653524"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "11",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Custom_Data_Value",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventModel.value"
+                    }
+                ],
+                "fingerprint": "1724776654307"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "12",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Event_ID_Constant",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "88df5ecf-2e4e-4420-8895-2837262b8d0f_{{FB_CONVERSIONS_API-1785430638385517-Web-Variable-Get_Event_ID}}"
+                    }
+                ],
+                "fingerprint": "1724776655226"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "13",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-Get_Event_ID",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() {\n  var gtmData = window.google_tag_manager[{{Container ID}}].dataLayer.get('gtm');\n  return gtmData.start + '.' + gtmData.uniqueEventId;\n}\n"
+                    }
+                ],
+                "fingerprint": "1724776656441"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "14",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-FBEventName",
+                "type": "smm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{Event}}"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "add_payment_info"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "AddPaymentInfo"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "add_to_cart"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "AddToCart"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "add_to_wishlist"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "AddToWishlist"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "begin_checkout"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "InitiateCheckout"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "generate_lead"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Lead"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "gtm.dom"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "PageView"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "page_view"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "PageView"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "purchase"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Purchase"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "search"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "Search"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "sign_up"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "CompleteRegistration"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "view_item"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "ViewContent"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1724776657198"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "variableId": "15",
+                "name": "FB_CONVERSIONS_API-1785430638385517-Web-Variable-User_Data",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "eventModel.user_data"
+                    }
+                ],
+                "fingerprint": "1724776657549"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_ELEMENT",
+                "name": "Click Element"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_CLASSES",
+                "name": "Click Classes"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_TARGET",
+                "name": "Click Target"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_URL",
+                "name": "Click URL"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CLICK_TEXT",
+                "name": "Click Text"
+            },
+            {
+                "accountId": "6139546815",
+                "containerId": "137226916",
+                "type": "CONTAINER_ID",
+                "name": "Container ID"
+            }
+        ],
+        "fingerprint": "1767671646940",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6139546815/containers/137226916/versions/0?apiLink=version"
+    }
+}
