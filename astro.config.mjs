@@ -10,7 +10,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [react(), sitemap()],
   site: process.env.BUILD_DESTINATION === 'hostinger'
-    ? 'https://whitesmoke-snail-585456.hostingersite.com'
+    ? 'https://ordt.com.br'
     : 'https://thefolder89.github.io',
   base: (process.env.GITHUB_ACTIONS && process.env.BUILD_DESTINATION !== 'hostinger')
     ? '/website-oreidatela/'
