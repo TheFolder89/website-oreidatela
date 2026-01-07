@@ -7,6 +7,7 @@ import WhatsAppFloatingButton from "../components/WhatsAppFloatingButton";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import RepairSimulator from "../components/RepairSimulator";
 import LiveStats from "../components/LiveStats";
+import LiveIndicators from "../components/LiveIndicators";
 import BeforeAfterGallery from "../components/BeforeAfterGallery";
 import {
 	ShieldCheck,
@@ -25,32 +26,14 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
-	title="Assistência Técnica Apple em Salvador | O Rei da Tela"
+	title="Assistência Técnica Premium em Salvador | O Rei da Tela"
 	description="Troca de vidro e bateria de iPhone e Apple Watch em Salvador. Delivery rápido, garantia de 3 meses e técnicos especialistas."
 >
 	<Header />
 
 	<main>
 		<!-- Live Indicators Floating -->
-		<div
-			class="fixed top-32 right-4 z-[60] space-y-2 pointer-events-none hidden sm:flex flex-col items-end max-w-[calc(100vw-2rem)]"
-		>
-			<div
-				class="bg-brand-gold/90 backdrop-blur-md text-brand-navy px-4 py-2 rounded-full text-[10px] flex items-center gap-2 shadow-2xl border border-white/20 animate-fade-scale"
-			>
-				<div class="w-2 h-2 bg-brand-navy rounded-full animate-pulse">
-				</div>
-				<span class="font-black uppercase tracking-widest text-[9px]"
-					>Laboratório Online em Salvador</span
-				>
-			</div>
-			<div
-				class="bg-white/90 backdrop-blur-md text-brand-navy px-4 py-2 rounded-full text-xs flex items-center gap-2 shadow-lg border border-gray-100 animate-fade-scale animate-delay-200"
-			>
-				<Zap className="w-3 h-3 text-brand-gold fill-current" />
-				<span class="font-bold text-[10px]">Espera média: 15 min</span>
-			</div>
-		</div>
+		<LiveIndicators client:load />
 
 		<!-- Hero Section -->
 		<section
@@ -63,7 +46,7 @@ const base = import.meta.env.BASE_URL;
 					srcset="/images/hero-bg-mobile.webp 600w,
 					        /images/hero-bg.webp 1200w"
 					sizes="(max-width: 600px) 600px, 1200px"
-					alt="Apple devices repair"
+					alt="Smartphone repair and maintenance"
 					class="hidden md:block w-full h-full object-cover opacity-20 mix-blend-overlay"
 					fetchpriority="high"
 					width="1200"
@@ -533,12 +516,12 @@ const base = import.meta.env.BASE_URL;
 									>
 								</summary>
 								<p class="mt-4 text-gray-600">
-									Sim! Somos especialistas em Apple, mas
-									também atendemos toda linha Samsung Galaxy
-									(incluindo dobráveis Z Fold e Z Flip) e
-									Xiaomi (Redmi, POCO e linha Mi). Trabalhamos
-									com peças de alta qualidade para todas as
-									marcas.
+									Sim! Somos especialistas em dispositivos
+									premium, mas também atendemos toda linha
+									Samsung Galaxy (incluindo dobráveis Z Fold e
+									Z Flip) e Xiaomi (Redmi, POCO e linha Mi).
+									Trabalhamos com peças de alta qualidade para
+									todas as marcas.
 								</p>
 							</details>
 							<details
