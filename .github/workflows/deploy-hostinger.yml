@@ -33,15 +33,30 @@ jobs:
       - name: 📁 Setup SSH Key
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | sed 's/\r$//' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          # Remove any potential protocol prefix from SSH_HOST
-          CLEAN_HOST=$(echo "${{ secrets.SSH_HOST }}" | sed -e 's|^[^/]*//||' -e 's|/.*$||')
-          echo "Connecting to $CLEAN_HOST"
-          ssh-keyscan -H $CLEAN_HOST >> ~/.ssh/known_hosts
-          # Test connection
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@$CLEAN_HOST "ls -la"
+          
+          # Clean host and try to determine port
+          CLEAN_HOST=$(echo "${{ secrets.SSH_HOST }}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's/:.*$//')
+          PORT=$(echo "${{ secrets.SSH_HOST }}" | grep -oP '(?<=:)\d+' || echo "22")
+          
+          echo "Connecting to $CLEAN_HOST on port $PORT"
+          
+          # Add both standard and Hostinger ports to known_hosts
+          ssh-keyscan -p $PORT -H $CLEAN_HOST >> ~/.ssh/known_hosts
+          ssh-keyscan -p 65002 -H $CLEAN_HOST >> ~/.ssh/known_hosts
+          
+          # Try connection with both possible ports
+          if ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p $PORT ${{ secrets.SSH_USER }}@$CLEAN_HOST "ls -la" ; then
+            echo "PORT_TO_USE=$PORT" >> $GITHUB_ENV
+          elif ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no -p 65002 ${{ secrets.SSH_USER }}@$CLEAN_HOST "ls -la" ; then
+            echo "PORT_TO_USE=65002" >> $GITHUB_ENV
+          else
+            echo "Could not connect via SSH on port $PORT or 65002"
+            exit 1
+          fi
 
       - name: 🚀 Deploy via Rsync
         run: |
-          rsync -avz --delete ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/public_html/
+          rsync -avz --delete -e "ssh -p ${{ env.PORT_TO_USE }} -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" ./dist/ ${{ secrets.SSH_USER }}@$(echo "${{ secrets.SSH_HOST }}" | sed -e 's|^[^/]*//||' -e 's|/.*$||' -e 's/:.*$//'):~/public_html/
+
