@@ -5,7 +5,7 @@
     - [ ] Subtask: Create file `src/pages/modelos/[brand]/[model].astro`.
     - [ ] Subtask: Implement `getStaticPaths` to read from `src/data/models.json` and generate all brand/model combinations.
     - [ ] Subtask: Verify that all expected routes are generated during build.
-- [ ] Task: Create Brand Index Page
+- [x] Task: Create Brand Index Page b810e20
     - [ ] Subtask: Create file `src/pages/modelos/[brand]/index.astro`.
     - [ ] Subtask: Implement `getStaticPaths` for brands.
     - [ ] Subtask: List all models for the current brand on this page.
