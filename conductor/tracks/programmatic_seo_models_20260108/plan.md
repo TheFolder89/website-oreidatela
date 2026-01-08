@@ -16,7 +16,7 @@
     - [ ] Subtask: Implement the visual layout using Tailwind CSS.
     - [ ] Subtask: Integrate `Header`, `Footer`, and `Breadcrumbs`.
     - [ ] Subtask: Display Dynamic H1 (Model Name) and Hero section.
-- [ ] Task: Implement Service Listing Component
+- [x] Task: Implement Service Listing Component 8944760
     - [ ] Subtask: Read services from `src/data/services.json` matching the brand.
     - [ ] Subtask: Render the list of services (Screen, Battery, etc.) with price and duration.
     - [ ] Subtask: Add CTA buttons (WhatsApp/Budget).
