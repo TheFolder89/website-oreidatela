@@ -18,22 +18,47 @@ export function slugify(text: string): string {
 /**
  * Generates an array of path objects for Astro's getStaticPaths.
  */
-export function generateDevicePaths(modelsData: Record<string, string[]>) {
+export function generateDevicePaths(modelsData: Record<string, string[]>, servicesData: any[]) {
   const paths = [];
   
-  for (const [brand, models] of Object.entries(modelsData)) {
+  for (const [brandSlug, models] of Object.entries(modelsData)) {
+    // Find the corresponding service for this brand
+    const service = servicesData.find(s => s.brand === brandSlug || s.slug === `conserto-${brandSlug}`);
+    
     for (const model of models) {
       paths.push({
         params: {
-          brand: slugify(brand),
+          brand: brandSlug,
           model: slugify(model)
         },
         props: {
           modelName: model,
-          brandName: brand
+          brandName: brandSlug,
+          service: service // Include the service data for the layout
         }
       });
     }
+  }
+  
+  return paths;
+}
+
+/**
+ * Generates an array of path objects for Astro's getStaticPaths for brands.
+ */
+export function generateBrandPaths(modelsData: Record<string, string[]>) {
+  const paths = [];
+  
+  for (const [brand, models] of Object.entries(modelsData)) {
+    paths.push({
+      params: {
+        brand: brand
+      },
+      props: {
+        brandName: brand,
+        models: models
+      }
+    });
   }
   
   return paths;
