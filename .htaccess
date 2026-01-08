@@ -40,6 +40,14 @@
 RewriteEngine On
 RewriteBase /
 
+# Redirecionar www para não-www (versão canônica)
+RewriteCond %{HTTP_HOST} ^www\.ordt\.com\.br [NC]
+RewriteRule ^(.*)$ https://ordt.com.br/$1 [L,R=301]
+
+# Forçar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # 1. Clean URLs: Check if request + .html exists
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

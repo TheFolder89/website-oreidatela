@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloquear pastas de sistema
+Disallow: /_astro/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://ordt.com.br/sitemap-index.xml
