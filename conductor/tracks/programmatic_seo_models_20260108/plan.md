@@ -36,7 +36,7 @@
 - [x] Task: Validate Internal Linking 2f39600
     - [ ] Subtask: Ensure "Modelos" link in Footer/Header points to a main index or brand selection.
     - [ ] Subtask: Check Breadcrumb navigation flow.
-- [ ] Task: Performance Check
+- [x] Task: Performance Check eb7b319
     - [ ] Subtask: Run Lighthouse check on a generated model page.
     - [ ] Subtask: Verify mobile responsiveness.
 - [ ] Task: Conductor - User Manual Verification 'Verification & Polish' (Protocol in workflow.md)
