@@ -1,8 +1,0 @@
-{
-  "track_id": "programmatic_seo_models_20260108",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-01-08T16:10:00Z",
-  "updated_at": "2026-01-08T16:10:00Z",
-  "description": "Implement Programmatic SEO for Device Models: Generate individual static HTML pages for every device model and brand in the database, listing all available repair services for each, similar to the neighborhood pages strategy."
-}
