@@ -1,0 +1,92 @@
+---
+/**
+ * SchemaMarkup Component
+ * Adds structured data (JSON-LD) to pages for rich snippets in search results.
+ */
+
+interface Props {
+    type: "LocalBusiness" | "Service" | "FAQPage" | "BreadcrumbList";
+    data?: Record<string, any>;
+}
+
+const { type, data } = Astro.props;
+
+const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://ordt.com.br/#organization",
+    name: "O Rei da Tela",
+    alternateName: "ORDT",
+    description:
+        "Assistência técnica premium para iPhone, Samsung, Xiaomi e Apple Watch em Salvador. Especialistas em troca de tela com laminação a vácuo, preservando o display original.",
+    url: "https://ordt.com.br",
+    telephone: "+55-71-3506-7991",
+    email: "contato@ordt.com.br",
+    logo: "https://ordt.com.br/logo-oficial.png",
+    image: "https://ordt.com.br/og-image.jpg",
+    address: {
+        "@type": "PostalAddress",
+        streetAddress:
+            "Av. Tancredo Neves, Salvador Trade Center, Torre Norte, Sala 1407",
+        addressLocality: "Salvador",
+        addressRegion: "BA",
+        postalCode: "41820-021",
+        addressCountry: "BR",
+    },
+    geo: {
+        "@type": "GeoCoordinates",
+        latitude: -12.9823,
+        longitude: -38.4543,
+    },
+    openingHoursSpecification: [
+        {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "09:00",
+            closes: "18:00",
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "09:00",
+            closes: "12:00",
+        },
+    ],
+    priceRange: "$$",
+    currenciesAccepted: "BRL",
+    paymentAccepted: "Dinheiro, Cartão de Crédito, Cartão de Débito, PIX",
+    areaServed: {
+        "@type": "City",
+        name: "Salvador",
+        sameAs: "https://pt.wikipedia.org/wiki/Salvador_(Bahia)",
+    },
+    sameAs: [
+        "https://www.instagram.com/oreidatela",
+        "https://wa.me/557194142627",
+        "https://maps.app.goo.gl/Wsk7mF9jrc2zTRZFA",
+    ],
+    aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "127",
+    },
+};
+
+const schemas: Record<string, any> = {
+    LocalBusiness: localBusinessSchema,
+    Service: data,
+    FAQPage: data,
+    BreadcrumbList: data,
+};
+
+const schemaToRender = schemas[type];
+---
+
+{
+    schemaToRender && (
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(schemaToRender)}
+        />
+    )
+}

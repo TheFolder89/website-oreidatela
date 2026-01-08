@@ -1,18 +1,24 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import "../styles/global.css";
+import SchemaMarkup from "../components/SchemaMarkup.astro";
 
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	type?: string;
 }
 
 const {
 	title,
 	description = "Assistência Técnica Premium Especializada em Salvador. Troca de tela, bateria e reparos em celulares e tablets Multimarcas em 40 minutos.",
+	image = "/og-image.jpg",
+	type = "website",
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -26,6 +32,25 @@ const base = import.meta.env.BASE_URL;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalURL} />
 		<title>{title} | O Rei da Tela</title>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={`${title} | O Rei da Tela`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={imageURL} />
+		<meta property="og:site_name" content="O Rei da Tela" />
+		<meta property="og:locale" content="pt_BR" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalURL} />
+		<meta name="twitter:title" content={`${title} | O Rei da Tela`} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={imageURL} />
+
+		<!-- Schema Markup -->
+		<SchemaMarkup type="LocalBusiness" />
 
 		<!-- DNS Prefetch for third-party domains -->
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
