@@ -6,7 +6,7 @@
 
 ## Frontend UI
 - **Library:** [React 19](https://react.dev/) - Used for complex interactive components like the Budget Wizard and Status Form.
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS framework for rapid and consistent UI development.
+- **Styling:** [Tailwind CSS 4](https://tailw2indcss.com/) - Utility-first CSS framework for rapid and consistent UI development.
 - **Icons:** [Lucide React](https://lucide.dev/) - Modern and consistent icon set.
 
 ## Build & Optimization
