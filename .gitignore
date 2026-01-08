@@ -50,3 +50,6 @@ yarn-error.log*
 !.env.example
 
 
+
+.gemini/
+gha-creds-*.json
