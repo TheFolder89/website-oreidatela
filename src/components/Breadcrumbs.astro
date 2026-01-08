@@ -1,0 +1,63 @@
+---
+/**
+ * Breadcrumbs Component
+ * Renders breadcrumb navigation with Schema.org structured data.
+ */
+
+interface BreadcrumbItem {
+    name: string;
+    url: string;
+}
+
+interface Props {
+    items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: item.url,
+    })),
+};
+---
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="text-sm mb-6">
+    <ol class="flex items-center gap-2 text-gray-400">
+        {
+            items.map((item, index) => (
+                <>
+                    {index > 0 && <span class="text-gray-600">/</span>}
+                    {index === items.length - 1 ? (
+                        <li>
+                            <span class="text-brand-gold font-medium">
+                                {item.name}
+                            </span>
+                        </li>
+                    ) : (
+                        <li>
+                            <a
+                                href={item.url}
+                                class="hover:text-white transition-colors"
+                            >
+                                {item.name}
+                            </a>
+                        </li>
+                    )}
+                </>
+            ))
+        }
+    </ol>
+</nav>
+
+<!-- Structured Data -->
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(breadcrumbSchema)}
+/>

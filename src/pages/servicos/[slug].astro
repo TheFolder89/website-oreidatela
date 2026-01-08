@@ -15,7 +15,26 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 
-// JSON-LD Schema
+// FAQ Data for this page
+const faqData = [
+  {
+    question: "Perco meus dados durante o conserto?",
+    answer:
+      "Não! Em reparos de tela, bateria ou vidro, seus dados permanecem 100% seguros. Para reparos de placa, recomendamos backup prévio caso o aparelho ligue.",
+  },
+  {
+    question: "Qual a origem das peças?",
+    answer:
+      "Trabalhamos exclusivamente com peças de Qualidade Premium (AAA+) e Recondicionadas Originais. Isso garante brilho, toque e resolução idênticos ao novo.",
+  },
+  {
+    question: "Atendem via delivery hoje?",
+    answer:
+      "Sim! Possuímos motoboys exclusivos para coleta e entrega em toda Salvador e Lauro de Freitas. Agendando pela manhã, entregamos à tarde.",
+  },
+];
+
+// JSON-LD Service Schema
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -41,6 +60,20 @@ const schema = {
       "@type": "PriceSpecification",
       price: s.price.replace(/[^0-9,]/g, "").replace(",", "."),
       priceCurrency: "BRL",
+    },
+  })),
+};
+
+// JSON-LD FAQ Schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
     },
   })),
 };
@@ -317,6 +350,7 @@ const schema = {
 
     <!-- Schema Injection -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </main>
 
   <WhatsAppFloatingButton client:idle />
