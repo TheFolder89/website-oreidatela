@@ -33,7 +33,7 @@
 - [ ] Task: Conductor - User Manual Verification 'SEO Optimization & Metadata' (Protocol in workflow.md)
 
 ## Phase 4: Verification & Polish
-- [ ] Task: Validate Internal Linking
+- [x] Task: Validate Internal Linking 2f39600
     - [ ] Subtask: Ensure "Modelos" link in Footer/Header points to a main index or brand selection.
     - [ ] Subtask: Check Breadcrumb navigation flow.
 - [ ] Task: Performance Check
