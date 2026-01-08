@@ -25,14 +25,13 @@ jobs:
       - name: 🏗️ Build Site
         run: npm run build
 
-      - name: 🔧 Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: unnecessary
-          if_key_exists: replace
+      - name: 🔑 Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
-      - name: 🚀 Deploy via Rsync
+      - name:  Deploy via Rsync
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
@@ -44,21 +43,16 @@ jobs:
             SSH_PORT=65002
           fi
 
-          # Validation
-          if [ -z "$SSH_HOST" ]; then
-            echo "❌ Error: SSH_HOST secret is missing."
-            exit 1
-          fi
-          if [ -z "$SSH_USER" ]; then
-            echo "❌ Error: SSH_USER secret is missing."
+          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ]; then
+            echo "❌ Error: SSH_HOST or SSH_USER secret is missing."
             exit 1
           fi
 
           echo "Configuring SSH for $SSH_USER@$SSH_HOST:$SSH_PORT..."
           
-          mkdir -p ~/.ssh
-          # Use -p for port in ssh-keyscan
-          ssh-keyscan -p $SSH_PORT -H $SSH_HOST >> ~/.ssh/known_hosts
+          # We use the key file directly to avoid agent issues
+          chmod 600 ~/.ssh/id_rsa
           
           echo "Starting Rsync..."
-          rsync -avz --delete -e "ssh -p $SSH_PORT" ./dist/ $SSH_USER@$SSH_HOST:~/public_html/
+          # -o StrictHostKeyChecking=no is used to avoid interactive prompts about host keys which can fail automated builds
+          rsync -avz --delete -e "ssh -p $SSH_PORT -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" ./dist/ $SSH_USER@$SSH_HOST:~/public_html/
