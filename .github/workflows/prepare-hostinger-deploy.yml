@@ -25,6 +25,8 @@ jobs:
         run: npm ci
 
       - name: 🏗️ Build Site
+        env:
+          BUILD_DESTINATION: 'hostinger'
         run: npm run build
 
       - name: 🚀 Deploy to Branch
