@@ -11,6 +11,7 @@
 
 ## Build & Optimization
 - **Bundler:** Vite (Integrated with Astro).
+- **Testing:** Vitest for unit and component testing.
 - **SEO:** Astro Sitemap integration and manual JSON-LD Schema Markup for local business visibility.
 - **Images:** Astro's built-in image optimization for WebP delivery.
 
