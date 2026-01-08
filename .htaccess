@@ -48,7 +48,13 @@ RewriteRule ^(.*)$ https://ordt.com.br/$1 [L,R=301]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 1. Clean URLs: Check if request + .html exists
+# 1. If request is a directory AND a matching .html file exists, serve the .html
+# This handles /blog/ -> /blog.html when /blog/ directory also exists
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)/?$ $1.html [L]
+
+# 2. Clean URLs: Check if request + .html exists (for non-directory requests)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
