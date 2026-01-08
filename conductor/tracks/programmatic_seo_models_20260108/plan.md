@@ -1,6 +1,6 @@
 # Track Plan: Programmatic SEO for Device Models
 
-## Phase 1: Data Structure & Routing Foundation
+## Phase 1: Data Structure & Routing Foundation [checkpoint: d7c169e]
 - [x] Task: Create `[brand]/[model]` dynamic route structure dcbe6e3
     - [ ] Subtask: Create file `src/pages/modelos/[brand]/[model].astro`.
     - [ ] Subtask: Implement `getStaticPaths` to read from `src/data/models.json` and generate all brand/model combinations.
