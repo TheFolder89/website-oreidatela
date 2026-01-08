@@ -27,7 +27,7 @@
     - [ ] Subtask: Dynamic Title Tag (e.g., "Conserto de [Model] em Salvador - O Rei da Tela").
     - [ ] Subtask: Dynamic Meta Description.
     - [ ] Subtask: Canonical URLs.
-- [ ] Task: Implement JSON-LD Structured Data
+- [x] Task: Implement JSON-LD Structured Data e5c248a
     - [ ] Subtask: Generate `Product` schema for the device.
     - [ ] Subtask: Generate `Service` or `RepairService` schema for the services offered.
 - [ ] Task: Conductor - User Manual Verification 'SEO Optimization & Metadata' (Protocol in workflow.md)
