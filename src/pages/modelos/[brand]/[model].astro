@@ -1,10 +1,12 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
+import Layout from '../../../layouts/Layout.astro';
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../../components/WhatsAppFloatingButton";
-import services from "../../../data/services.json";
+import modelsData from '../../../data/models.json';
+import servicesData from '../../../data/services.json';
 import pricesData from "../../../data/prices.json";
+import { generateDevicePaths } from '../../../utils/seo';
 import {
     ShieldCheck,
     Clock,
@@ -14,55 +16,20 @@ import {
     MessageCircle,
 } from "lucide-react";
 
-export function getStaticPaths() {
-    // Função para gerar slug do modelo (inline para evitar hoisting)
-    const slugify = (text: string): string => {
-        return text
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/\s+/g, "-")
-            .replace(/[^\w\-]+/g, "")
-            .replace(/\-\-+/g, "-");
-    };
-
-    const paths: any[] = [];
-
-    services.forEach((service) => {
-        if (service.models) {
-            service.models.forEach((model: string) => {
-                paths.push({
-                    params: {
-                        marca: service.slug.replace("conserto-", ""),
-                        modelo: slugify(model),
-                    },
-                    props: { service, model },
-                });
-            });
-        }
-    });
-
-    return paths;
+export async function getStaticPaths() {
+  return generateDevicePaths(modelsData, servicesData);
 }
 
-const { service, model } = Astro.props;
+const { modelName, brandName, service } = Astro.props;
 
-// Determinar marca para SEO
-const brandNames: { [key: string]: string } = {
-    iphone: "iPhone",
-    "apple-watch": "Apple Watch",
-    ipad: "iPad",
-    samsung: "Samsung",
-    xiaomi: "Xiaomi",
-};
-const brandSlug = service.slug.replace("conserto-", "");
-const brandName = brandNames[brandSlug] || service.name;
+// Use brandSlug for logic consistency
+const brandSlug = brandName;
 
 // Schema JSON-LD
 const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `Conserto de ${model}`,
+    name: `Conserto de ${modelName}`,
     brand: {
         "@type": "Brand",
         name: brandName,
@@ -72,7 +39,7 @@ const schema = {
         priceCurrency: "BRL",
         lowPrice: "149",
         highPrice: "1500",
-        offerCount: service.subServices.length,
+        offerCount: service?.subServices?.length || 0,
     },
     provider: {
         "@type": "LocalBusiness",
@@ -84,14 +51,12 @@ const schema = {
 const normalizeModelName = (text: string): string => {
     if (!text) return "";
     let t = text.toLowerCase();
-    // Remove brand names that might be inconsistent
     t = t.replace(/\biphone\b/g, "");
     t = t.replace(/\bgalaxy\b/g, "");
     t = t.replace(/\bredmi\b/g, "");
     t = t.replace(/\bpoco\b/g, "");
     t = t.replace(/\bmoto\b/g, "");
     t = t.replace(/\bapple watch\b/g, "");
-
     t = t.replace(/pmx/g, "pro max");
     t = t.replace(/\bpl\b/g, "plus");
     t = t.replace(/(\d+)\s*pl\b/g, "$1 plus");
@@ -99,10 +64,10 @@ const normalizeModelName = (text: string): string => {
     return t.trim();
 };
 
-const normalizedModel = normalizeModelName(model);
-const priceBrandKey = service.slug.includes("apple-watch")
+const normalizedModel = normalizeModelName(modelName);
+const priceBrandKey = brandSlug.includes("apple-watch")
     ? "apple-watch"
-    : service.brand;
+    : (service?.brand || brandSlug);
 const priceKey = `${priceBrandKey}:${normalizedModel}`;
 const modelPrices = (pricesData as any)[priceKey] || {};
 
@@ -116,13 +81,40 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
 ---
 
 <Layout
-    title={`Conserto de ${model} em Salvador | O Rei da Tela`}
-    description={`Reparo especializado para ${model} em Salvador. Troca de tela, bateria e mais. Garantia de 3 meses, delivery grátis. Orçamento rápido pelo WhatsApp.`}
+    title={`Conserto de ${modelName} em Salvador | O Rei da Tela`}
+    description={`Reparo especializado para ${modelName} em Salvador. Troca de tela, bateria e mais. Garantia de 3 meses, delivery grátis. Orçamento rápido pelo WhatsApp.`}
 >
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <Header />
 
     <main class="pt-32">
+        <!-- Breadcrumbs -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+            <nav class="flex text-sm text-gray-500" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="hover:text-brand-gold">Home</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <a href={`/modelos/${brandSlug}`} class="ml-1 hover:text-brand-gold capitalize">{brandName}</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <span class="ml-1 font-medium text-gray-700">{modelName}</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
         <!-- Hero do Modelo -->
         <section class="bg-brand-dark py-20 relative overflow-hidden">
             <div
@@ -142,15 +134,15 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                     <h1
                         class="text-5xl lg:text-7xl font-black text-white mb-6 tracking-tighter"
                     >
-                        Conserto de <span class="text-brand-gold">{model}</span>
+                        Conserto de <span class="text-brand-gold">{modelName}</span>
                     </h1>
                     <p class="text-xl text-white/60 max-w-3xl mx-auto mb-10">
-                        Assistência técnica premium para seu {model} em Salvador.
+                        Assistência técnica premium para seu {modelName} em Salvador.
                         Técnicos certificados, peças de qualidade e garantia de 3
                         meses.
                     </p>
                     <a
-                        href={`https://wa.me/557194142627?text=Olá, preciso de orçamento para conserto do meu ${model}`}
+                        href={`https://wa.me/557194142627?text=Olá, preciso de orçamento para conserto do meu ${modelName}`}
                         class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-5 rounded-full font-black text-lg hover:bg-white transition-all shadow-2xl"
                     >
                         <MessageCircle className="w-6 h-6 fill-current" />
@@ -167,7 +159,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                     <h2
                         class="text-4xl font-black text-brand-navy mb-4 tracking-tight"
                     >
-                        Serviços para {model}
+                        Serviços para {modelName}
                     </h2>
                     <p class="text-gray-500 text-lg">
                         Confira os reparos disponíveis e valores estimados
@@ -176,7 +168,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {
-                        service.subServices.map((sub: any) => (
+                        service?.subServices?.map((sub: any) => (
                             <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                                 <div class="w-14 h-14 bg-brand-navy rounded-2xl flex items-center justify-center mb-6">
                                     <Wrench className="w-7 h-7 text-brand-gold" />
@@ -200,7 +192,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
 
                 <div class="mt-16 text-center">
                     <a
-                        href={`https://wa.me/557194142627?text=Olá, quero orçamento de conserto para ${model}`}
+                        href={`https://wa.me/557194142627?text=Olá, quero orçamento de conserto para ${modelName}`}
                         class="inline-flex items-center gap-3 bg-brand-navy text-white px-12 py-6 rounded-full font-black text-lg hover:bg-black transition-all shadow-xl"
                     >
                         <Zap className="w-6 h-6 text-brand-gold" />
@@ -216,7 +208,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                 <h2
                     class="text-3xl font-black text-brand-navy text-center mb-16 tracking-tight"
                 >
-                    Por que escolher O Rei da Tela para seu {model}?
+                    Por que escolher O Rei da Tela para seu {modelName}?
                 </h2>
                 <div class="grid md:grid-cols-4 gap-8">
                     <div class="text-center">
@@ -281,21 +273,21 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                 <h2
                     class="text-3xl font-black text-brand-navy text-center mb-12 tracking-tight"
                 >
-                    Dúvidas Frequentes sobre {model}
+                    Dúvidas Frequentes sobre {modelName}
                 </h2>
                 <div class="space-y-4">
                     <details class="bg-gray-50 rounded-2xl p-6 group">
                         <summary
                             class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
                         >
-                            Quanto tempo demora o conserto do {model}?
+                            Quanto tempo demora o conserto do {modelName}?
                             <span
                                 class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
                                 >+</span
                             >
                         </summary>
                         <p class="mt-4 text-gray-600">
-                            A maioria dos reparos do {model} são concluídos em 30
+                            A maioria dos reparos do {modelName} são concluídos em 30
                             minutos a 2 horas, dependendo do serviço. Reparos de placa
                             podem levar de 1 a 3 dias.
                         </p>
@@ -304,7 +296,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         <summary
                             class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
                         >
-                            Vocês usam peças originais no {model}?
+                            Vocês usam peças originais no {modelName}?
                             <span
                                 class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
                                 >+</span
@@ -312,7 +304,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         </summary>
                         <p class="mt-4 text-gray-600">
                             Trabalhamos com peças premium de alta qualidade que
-                            mantêm as funcionalidades originais do seu {model}.
+                            mantêm as funcionalidades originais do seu {modelName}.
                             Oferecemos garantia de 3 meses em todos os reparos.
                         </p>
                     </details>
@@ -320,7 +312,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         <summary
                             class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
                         >
-                            Vocês buscam e entregam o {model}?
+                            Vocês buscam e entregam o {modelName}?
                             <span
                                 class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
                                 >+</span
@@ -328,7 +320,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         </summary>
                         <p class="mt-4 text-gray-600">
                             Sim! Oferecemos serviço de delivery gratuito em
-                            Salvador e região. Buscamos seu {model} no local de sua
+                            Salvador e região. Buscamos seu {modelName} no local de sua
                             preferência e entregamos após o reparo.
                         </p>
                     </details>
