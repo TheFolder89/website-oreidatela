@@ -38,6 +38,27 @@ jobs:
           SSH_PORT: ${{ secrets.SSH_PORT }}
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
+          # Fallback for Port if secret is missing (Default Hostinger SSH Port)
+          if [ -z "$SSH_PORT" ]; then
+            echo "⚠️ SSH_PORT secret is not set. Defaulting to 65002."
+            SSH_PORT=65002
+          fi
+
+          # Validation
+          if [ -z "$SSH_HOST" ]; then
+            echo "❌ Error: SSH_HOST secret is missing."
+            exit 1
+          fi
+          if [ -z "$SSH_USER" ]; then
+            echo "❌ Error: SSH_USER secret is missing."
+            exit 1
+          fi
+
+          echo "Configuring SSH for $SSH_USER@$SSH_HOST:$SSH_PORT..."
+          
           mkdir -p ~/.ssh
+          # Use -p for port in ssh-keyscan
           ssh-keyscan -p $SSH_PORT -H $SSH_HOST >> ~/.ssh/known_hosts
+          
+          echo "Starting Rsync..."
           rsync -avz --delete -e "ssh -p $SSH_PORT" ./dist/ $SSH_USER@$SSH_HOST:~/public_html/
