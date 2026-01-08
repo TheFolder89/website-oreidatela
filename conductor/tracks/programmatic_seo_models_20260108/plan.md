@@ -11,7 +11,7 @@
     - [ ] Subtask: List all models for the current brand on this page.
 - [ ] Task: Conductor - User Manual Verification 'Data Structure & Routing Foundation' (Protocol in workflow.md)
 
-## Phase 2: Page Implementation & Component Design
+## Phase 2: Page Implementation & Component Design [checkpoint: 6f85d59]
 - [x] Task: Design Model Landing Page Layout 859465e
     - [ ] Subtask: Implement the visual layout using Tailwind CSS.
     - [ ] Subtask: Integrate `Header`, `Footer`, and `Breadcrumbs`.
