@@ -28,7 +28,7 @@ export default function StatusForm() {
                 setResult({
                     status: 'Em Bancada',
                     device: 'Apple Watch S7',
-                    service: 'Troca de Vidro',
+                    service: 'Troca de Tela',
                     date: '23/12/2025',
                     description: 'O especialista está trabalhando no seu aparelho neste momento.'
                 });
@@ -38,7 +38,7 @@ export default function StatusForm() {
                     device: 'iPad Air 5',
                     service: 'Reparo de Placa',
                     date: '22/12/2025',
-                    description: 'Peça original solicitada ao fornecedor. Previsão: 2 dias.'
+                    description: 'Peça premium solicitada ao fornecedor. Previsão: 2 dias.'
                 });
             } else {
                 setError('Ordem de Serviço não encontrada em nossa base de dados.');

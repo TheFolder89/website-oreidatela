@@ -15,7 +15,7 @@ const reviews = [
         name: "Fernanda Costa",
         avatar: "FC",
         rating: 5,
-        text: "Troquei o vidro do Apple Watch e ficou top. Muito mais barato que na autorizada e mantiveram o display original.",
+        text: "Troquei a tela do Apple Watch e ficou top. Muito mais barato que na autorizada e mantiveram as funções premium.",
         location: "Horto Florestal"
     },
     {
@@ -31,7 +31,7 @@ const reviews = [
         name: "Mariana Santos",
         avatar: "MS",
         rating: 5,
-        text: "O atendimento pelo WhatsApp é muito ágil. Tiraram todas as minhas dúvidas e o reparo foi feito na hora.",
+        text: "O atendimento pelo WhatsApp é muito ágil. Tiraram todas as minhas dúvidas e o serviço foi feito na hora.",
         location: "Caminho das Árvores"
     }
 ];

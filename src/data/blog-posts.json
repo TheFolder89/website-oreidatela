@@ -1,47 +1,25 @@
 [
     {
-        "id": 1,
-        "slug": "como-saber-se-tela-iphone-original",
-        "title": "Como Saber se a Tela do iPhone é Original?",
-        "excerpt": "Aprenda a identificar se a tela do seu iPhone é original ou foi trocada por uma peça genérica. Dicas de especialistas.",
-        "category": "Dicas",
-        "brand": "apple",
-        "date": "2024-12-20",
-        "image": "https://images.unsplash.com/photo-1592286927505-1def25115558?q=80&w=800&auto=format&fit=crop&fm=webp",
-        "content": "A tela original do iPhone possui características únicas que podem ser verificadas. Confira as principais diferenças entre telas originais e genéricas..."
-    },
-    {
         "id": 2,
         "slug": "galaxy-s24-ultra-vale-trocar-tela",
-        "title": "Galaxy S24 Ultra: Vale a Pena Trocar a Tela?",
-        "excerpt": "Análise completa sobre o custo-benefício de trocar a tela do Galaxy S24 Ultra versus comprar um novo aparelho.",
+        "title": "Galaxy S24 Ultra: Vale a Pena Adquirir um Novo Display?",
+        "excerpt": "Análise completa sobre o custo-benefício de componentes premium para o Galaxy S24 Ultra.",
         "category": "Samsung",
         "brand": "samsung",
         "date": "2024-12-18",
         "image": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=800&auto=format&fit=crop&fm=webp",
-        "content": "O Galaxy S24 Ultra é um dos smartphones mais avançados do mercado, com tela Dynamic AMOLED 2X. Entenda quando vale a pena investir no reparo..."
-    },
-    {
-        "id": 3,
-        "slug": "apple-watch-vidro-quebrado-display-funciona",
-        "title": "Apple Watch com Vidro Quebrado: O Display Ainda Funciona?",
-        "excerpt": "Entenda a diferença entre vidro e display no Apple Watch e por que é possível trocar apenas o vidro mantendo o display original.",
-        "category": "Apple Watch",
-        "brand": "apple",
-        "date": "2024-12-15",
-        "image": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=800&auto=format&fit=crop&fm=webp",
-        "content": "Muitos donos de Apple Watch não sabem que é possível trocar apenas o vidro sem substituir o display. Veja como funciona este processo..."
+        "content": "O Galaxy S24 Ultra é um dos smartphones mais avançados do mercado, com tela Dynamic AMOLED 2X. Entenda quando vale a pena investir em componentes de alta performance..."
     },
     {
         "id": 4,
         "slug": "xiaomi-redmi-note-13-pro-dicas-manutencao",
-        "title": "Xiaomi Redmi Note 13 Pro: Dicas de Manutenção",
-        "excerpt": "Cuidados essenciais para manter seu Redmi Note 13 Pro funcionando perfeitamente por mais tempo.",
+        "title": "Xiaomi Redmi Note 13 Pro: Dicas de Durabilidade",
+        "excerpt": "Cuidados essenciais para manter seu Redmi Note 13 Pro em perfeito estado por mais tempo.",
         "category": "Xiaomi",
         "brand": "xiaomi",
         "date": "2024-12-12",
         "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=800&auto=format&fit=crop&fm=webp",
-        "content": "O Redmi Note 13 Pro é um dos smartphones mais populares do Brasil. Veja dicas de manutenção para prolongar a vida útil do aparelho..."
+        "content": "O Redmi Note 13 Pro é um dos smartphones mais populares do Brasil. Veja dicas de conservação para prolongar a vida útil do aparelho..."
     },
     {
         "id": 5,

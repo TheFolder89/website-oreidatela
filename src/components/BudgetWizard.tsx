@@ -10,7 +10,7 @@ const devices = [
 ];
 
 const problems = [
-    { id: 'tela', name: 'Tela Quebrada (Vidro)' },
+    { id: 'tela', name: 'Tela Quebrada' },
     { id: 'display', name: 'Display/Touch Falhando' },
     { id: 'bateria', name: 'Bateria Ruim' },
     { id: 'outros', name: 'Outro Defeito' },
@@ -40,7 +40,7 @@ export default function BudgetWizard() {
 
     const getPriceEstimate = () => {
         if (selection.device === 'apple-watch') return 'R$ 499';
-        if (selection.device === 'iphone' && selection.problem === 'Tela Quebrada (Vidro)') return 'R$ 299';
+        if (selection.device === 'iphone' && selection.problem === 'Tela Quebrada') return 'R$ 299';
         return 'Sob Consulta';
     };
 
@@ -161,7 +161,7 @@ export default function BudgetWizard() {
                                 <h3 className="text-[10px] font-black text-brand-gold uppercase tracking-[0.4em] mb-4">Estimativa de Laboratório</h3>
                                 <div className="text-7xl font-black text-brand-navy mb-6 tracking-tighter">{getPriceEstimate()}</div>
                                 <p className="text-gray-400 mb-12 max-w-sm mx-auto text-sm font-medium leading-relaxed uppercase tracking-tight">
-                                    Valor aproximado para peças <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Oficiais</span> e especialista <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Certificado</span>.
+                                    Valor aproximado para peças <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Premium</span> e especialista <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Certificado</span>.
                                 </p>
 
                                 <button

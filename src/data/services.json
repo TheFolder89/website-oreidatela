@@ -56,7 +56,7 @@
         "name": "Peças para Apple Watch",
         "brand": "apple",
         "icon": "watch",
-        "description": "Troca de vidro mantendo o display original.",
+        "description": "Componentes premium para toda linha Apple Watch.",
         "models": [
             "Apple Watch Ultra 2",
             "Apple Watch Ultra",
@@ -72,12 +72,12 @@
         ],
         "subServices": [
             {
-                "name": "Troca de Vidro",
-                "price": "A partir de R$ 50",
+                "name": "Troca de Tela",
+                "price": "A partir de R$ 199",
                 "duration": "2 horas"
             },
             {
-                "name": "Polimento",
+                "name": "Polimento de Componente",
                 "price": "R$ 150",
                 "duration": "1 hora"
             },
@@ -93,7 +93,7 @@
         "name": "Peças para iPad",
         "brand": "apple",
         "icon": "tablet",
-        "description": "Troca de vidro e touch para toda linha iPad.",
+        "description": "Componentes de alta performance para toda linha iPad.",
         "models": [
             "iPad Pro 12.9\" M2",
             "iPad Pro 11\" M2",
@@ -104,7 +104,7 @@
         ],
         "subServices": [
             {
-                "name": "Troca de Vidro",
+                "name": "Troca de Tela",
                 "price": "A partir de R$ 399",
                 "duration": "24 horas"
             },

@@ -1,1848 +1,1495 @@
 {
-  "promo:se 3 2022/2023": {},
-  "promo:edge 30 com aro": {},
-  "promo:m51 c aro": {},
-  "promo:12c s aro": {},
-  "promo:14 pro": {},
-  "promo:g 5g plus s/ aro": {},
-  "promo:a03 core s aro": {},
-  "promo:10c c aro": {},
-  "promo:14 pro max": {},
-  "promo:g8 power c aro": {},
-  "promo:a05 s aro": {},
-  "promo:8/8a s aro": {},
-  "promo:g34/g53 s aro": {},
-  "promo:a14 4g s aro": {},
-  "promo:m3/note 9 4g": {},
-  "promo:g9 play/e7 plus s aro": {},
-  "promo:a14 4g s aro org": {},
-  "promo:g71 c aro": {},
-  "promo:m51 c aro borda grossa": {},
-  "promo:g100 imp s aro": {},
-  "promo:m23 5g s aro": {},
-  "promo:g7/g7 plus s aro": {},
-  "promo:a51 c aro": {},
-  "promo:s23 org": {},
-  "promo:k71 s aro": {},
-  "promo:s10 org": {},
-  "promo:k61 s aro": {},
-  "promo:a52 4g c aro": {},
-  "promo:a34 prime": {},
-  "promo:a53 c aro": {},
-  "promo:a72 c aro borda grossa": {},
-  "promo:a10/m10 prime": {},
-  "promo:g22/e13/e32/g53/g13 prime": {},
-  "promo:g34 prime": {},
-  "promo:f3 prime": {},
-  "promo:s20 fe prime": {},
-  "promo:note 9s/9pro prime": {},
-  "promo:mi 9t pro - bp40 prime": {},
-  "promo:edge 30 neo org": {},
-  "promo:one fusion plus org": {},
-  "promo:a71 org": {},
-  "promo:a20/a30/a30s/a50 org": {},
-  "promo:s8 plus org": {},
-  "promo:6s": {},
-  "apple:7": {
-    "Troca de Tela": 89,
-    "Troca de Vidro": 89,
-    "Troca de Bateria": 129,
-    "Reparo de Placa": 150,
-    "Troca de Conector de Carga": 149
-  },
-  "apple:7 plus": {
-    "Troca de Tela": 89,
-    "Troca de Vidro": 89,
-    "Troca de Bateria": 147,
-    "Reparo de Placa": 150,
-    "Troca de Conector de Carga": 149
-  },
-  "apple:8/se 2020": {
-    "Troca de Tela": 89,
-    "Troca de Vidro": 89
-  },
-  "apple:8": {
-    "Troca de Bateria": 145,
-    "Reparo de Placa": 150,
-    "Troca de Conector de Carga": 149
-  },
-  "apple:8 plus": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 145,
-    "Reparo de Placa": 150,
-    "Troca de Conector de Carga": 149
-  },
-  "apple:se 3 (2022/2023)": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "apple:se 3": {
-    "Troca de Bateria": 324
-  },
-  "apple:se 2 - 2020": {
-    "Troca de Bateria": 169
-  },
-  "apple:x": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149,
-    "Troca de Bateria": 259,
-    "Reparo de Placa": 180,
-    "Troca de Conector de Carga": 222
-  },
-  "apple:xs": {
-    "Troca de Tela": 145,
-    "Troca de Vidro": 145,
-    "Troca de Bateria": 265,
-    "Reparo de Placa": 180,
-    "Troca de Conector de Carga": 399
-  },
-  "apple:xsmax": {
-    "Troca de Tela": 165,
-    "Troca de Vidro": 165,
-    "Troca de Bateria": 259,
-    "Reparo de Placa": 180,
-    "Troca de Conector de Carga": 399
-  },
-  "apple:xr": {
-    "Troca de Tela": 125,
-    "Troca de Vidro": 125,
-    "Troca de Bateria": 285,
-    "Reparo de Placa": 180,
-    "Troca de Conector de Carga": 230
-  },
-  "apple:11": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149,
-    "Troca de Bateria": 249,
-    "Reparo de Placa": 200,
-    "Troca de Conector de Carga": 199
-  },
-  "apple:11 pro": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189,
-    "Troca de Bateria": 289,
-    "Reparo de Placa": 200,
-    "Troca de Conector de Carga": 449
-  },
-  "apple:11 pro max": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189,
-    "Troca de Bateria": 297,
-    "Reparo de Placa": 200,
-    "Troca de Conector de Carga": 336
-  },
-  "apple:12": {
-    "Troca de Tela": 235,
-    "Troca de Vidro": 235,
-    "Troca de Bateria": 269,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 288
-  },
-  "apple:12 pro": {
-    "Troca de Tela": 235,
-    "Troca de Vidro": 235,
-    "Troca de Bateria": 269,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 479
-  },
-  "apple:12 pro max": {
-    "Troca de Tela": 335,
-    "Troca de Vidro": 335,
-    "Troca de Bateria": 335,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 483
-  },
-  "apple:12 mini": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299,
-    "Troca de Bateria": 299,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 479
-  },
-  "apple:13": {
-    "Troca de Tela": 329,
-    "Troca de Vidro": 329,
-    "Troca de Bateria": 396,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 369
-  },
-  "apple:13 pro": {
-    "Troca de Tela": 349,
-    "Troca de Vidro": 349,
-    "Troca de Bateria": 375,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 519
-  },
-  "apple:13 pro max": {
-    "Troca de Tela": 349,
-    "Troca de Vidro": 349,
-    "Troca de Bateria": 427,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 335
-  },
-  "apple:13 mini": {
-    "Troca de Tela": 439,
-    "Troca de Vidro": 439,
-    "Troca de Bateria": 285,
-    "Reparo de Placa": 450,
-    "Troca de Conector de Carga": 498
-  },
-  "apple:14": {
-    "Troca de Tela": 399,
-    "Troca de Vidro": 399,
-    "Troca de Bateria": 455,
-    "Reparo de Placa": 1569
-  },
-  "apple:14 pro": {
-    "Troca de Tela": 489,
-    "Troca de Vidro": 489,
-    "Troca de Bateria": 593,
-    "Reparo de Placa": 1569
-  },
-  "apple:14 pro max": {
-    "Troca de Tela": 489,
-    "Troca de Vidro": 489,
-    "Troca de Bateria": 499
-  },
-  "apple:14 plus": {
-    "Troca de Tela": 345,
-    "Troca de Vidro": 345,
-    "Troca de Bateria": 473
-  },
-  "apple:15": {
-    "Troca de Tela": 599,
-    "Troca de Vidro": 599,
-    "Troca de Bateria": 540
-  },
-  "apple:15 pro": {
-    "Troca de Tela": 895,
-    "Troca de Vidro": 895,
-    "Troca de Bateria": 540
-  },
-  "apple:15 plus": {
-    "Troca de Tela": 699,
-    "Troca de Vidro": 699
-  },
-  "apple:15 pro max": {
-    "Troca de Tela": 899,
-    "Troca de Vidro": 899,
-    "Troca de Bateria": 540
-  },
-  "apple:16": {
-    "Troca de Tela": 999,
-    "Troca de Vidro": 999
-  },
-  "apple:16 pro max": {
-    "Troca de Tela": 1199,
-    "Troca de Vidro": 1199
-  },
-  "apple-watch:series 2": {
-    "Troca de Tela": 130,
-    "Troca de Vidro": 130,
-    "Troca de Bateria": 55
-  },
-  "apple-watch:series 3": {
-    "Troca de Tela": 130,
-    "Troca de Vidro": 130,
-    "Troca de Bateria": 55
-  },
-  "apple-watch:series 4": {
-    "Troca de Tela": 50,
-    "Troca de Vidro": 50,
-    "Troca de Bateria": 60
-  },
-  "apple-watch:series 5": {
-    "Troca de Tela": 459,
-    "Troca de Vidro": 459,
-    "Troca de Bateria": 60
-  },
-  "apple-watch:series se": {
-    "Troca de Tela": 55,
-    "Troca de Vidro": 55,
-    "Troca de Bateria": 60
-  },
-  "apple-watch:series 6": {
-    "Troca de Tela": 70,
-    "Troca de Vidro": 70,
-    "Troca de Bateria": 110
-  },
-  "apple-watch:series 7": {
-    "Troca de Tela": 499,
-    "Troca de Vidro": 499,
-    "Troca de Bateria": 313
-  },
-  "apple-watch:series 8": {
-    "Troca de Tela": 579,
-    "Troca de Vidro": 579
-  },
-  "apple-watch:series 9": {
-    "Troca de Tela": 529,
-    "Troca de Vidro": 529
-  },
-  "samsung:s8": {
-    "Reparo de Placa": 249,
-    "Troca de Bateria": 197
-  },
-  "samsung:s8 plus": {
-    "Reparo de Placa": 249
-  },
-  "samsung:s9": {
-    "Reparo de Placa": 249,
-    "Troca de Bateria": 197
-  },
-  "samsung:s9 plus": {
-    "Reparo de Placa": 249,
-    "Troca de Bateria": 197
-  },
-  "samsung:s10": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s10e": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s10 lite": {
-    "Reparo de Placa": 275
-  },
-  "samsung:s10 plus": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s20": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s20 fe": {
-    "Troca de Tela": 300,
-    "Troca de Vidro": 300,
-    "Troca de Bateria": 169
-  },
-  "samsung:s20 fe 4g/5g": {
-    "Reparo de Placa": 259
-  },
-  "samsung:s20 plus": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s20 ultra": {
-    "Troca de Bateria": 189
-  },
-  "samsung:s21": {
-    "Reparo de Placa": 285,
-    "Troca de Bateria": 197
-  },
-  "samsung:s21 fe": {
-    "Reparo de Placa": 339,
-    "Troca de Bateria": 245
-  },
-  "samsung:s21 plus": {
-    "Troca de Bateria": 197
-  },
-  "samsung:s21 ultra": {
-    "Reparo de Placa": 289,
-    "Troca de Bateria": 197
-  },
-  "samsung:s22": {
-    "Reparo de Placa": 333,
-    "Troca de Bateria": 239
-  },
-  "samsung:s22 plus": {
-    "Reparo de Placa": 359
-  },
-  "samsung:s22 ultra": {
-    "Reparo de Placa": 355,
-    "Troca de Bateria": 245
-  },
-  "samsung:s23": {
-    "Reparo de Placa": 389,
-    "Troca de Bateria": 225
-  },
-  "samsung:s23 plus": {
-    "Reparo de Placa": 389
-  },
-  "samsung:s23 fe": {
-    "Reparo de Placa": 425
-  },
-  "samsung:s23 ultra": {
-    "Reparo de Placa": 224,
-    "Troca de Bateria": 239
-  },
-  "samsung:s24": {},
-  "samsung:s24 plus": {},
-  "samsung:s24 ultra": {},
-  "samsung:s24 fe": {
-    "Troca de Bateria": 500
-  },
-  "samsung:s25": {
-    "Reparo de Placa": 415
-  },
-  "samsung:s25 plus": {},
-  "samsung:s25 ultra": {},
-  "samsung:note 8": {},
-  "samsung:note 9": {
-    "Troca de Bateria": 209
-  },
-  "samsung:note 10": {
-    "Troca de Bateria": 197
-  },
-  "samsung:note 10 lite": {
-    "Reparo de Placa": 295,
-    "Troca de Bateria": 197
-  },
-  "samsung:note 10 plus": {},
-  "samsung:note 20": {
-    "Troca de Bateria": 499
-  },
-  "samsung:note 20 ultra": {
-    "Reparo de Placa": 112,
-    "Troca de Bateria": 239
-  },
-  "samsung:a02": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "samsung:m10": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 99
-  },
-  "samsung:a02s": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "samsung:m12": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Reparo de Placa": 99
-  },
-  "samsung:a03": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Reparo de Placa": 95
-  },
-  "samsung:m13": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a03s": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "samsung:m14": {
-    "Troca de Tela": 165,
-    "Troca de Vidro": 165
-  },
-  "samsung:a03 core": {
-    "Troca de Tela": 97,
-    "Troca de Vidro": 97,
-    "Troca de Bateria": 179
-  },
-  "samsung:m15": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "samsung:a04": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "samsung:m20": {
-    "Troca de Tela": 160,
-    "Troca de Vidro": 160
-  },
-  "samsung:a04s": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "samsung:m21": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "samsung:a04e": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "samsung:m21s": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "samsung:a05": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129
-  },
-  "samsung:m22": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "samsung:a05s": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139,
-    "Reparo de Placa": 105
-  },
-  "samsung:m23 4g": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Reparo de Placa": 199
-  },
-  "samsung:a06": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "samsung:m23 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a10": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 99
-  },
-  "samsung:m30": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "samsung:a10s": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 149
-  },
-  "samsung:m30s": {
-    "Troca de Tela": 315,
-    "Troca de Vidro": 315
-  },
-  "samsung:a11": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "samsung:m31": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "samsung:a12": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139,
-    "Reparo de Placa": 149
-  },
-  "samsung:m32": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "samsung:a13 4g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Reparo de Placa": 149
-  },
-  "samsung:m33": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a13 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Reparo de Placa": 149
-  },
-  "samsung:m35": {
-    "Troca de Tela": 379,
-    "Troca de Vidro": 379
-  },
-  "samsung:a14 4g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Reparo de Placa": 155
-  },
-  "samsung:m51": {
-    "Troca de Tela": 295,
-    "Troca de Vidro": 295,
-    "Reparo de Placa": 166
-  },
-  "samsung:a14 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Reparo de Placa": 106
-  },
-  "samsung:m52": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289,
-    "Reparo de Placa": 166
-  },
-  "samsung:a15 5g": {
-    "Troca de Tela": 259,
-    "Troca de Vidro": 259
-  },
-  "samsung:m53 5g": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "samsung:a16 4g": {},
-  "samsung:m54": {
-    "Troca de Tela": 379,
-    "Troca de Vidro": 379
-  },
-  "samsung:a16 5g": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "samsung:m62": {
-    "Troca de Tela": 349,
-    "Troca de Vidro": 349,
-    "Reparo de Placa": 166
-  },
-  "samsung:a20": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149,
-    "Reparo de Placa": 89,
-    "Troca de Bateria": 135
-  },
-  "samsung:a20s": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129,
-    "Troca de Bateria": 149
-  },
-  "samsung:a21s": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129,
-    "Troca de Bateria": 165
-  },
-  "samsung:a22 4g": {
-    "Troca de Tela": 170,
-    "Troca de Vidro": 170,
-    "Troca de Bateria": 179
-  },
-  "samsung:a22 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a23 4g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a23 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "samsung:a24": {
-    "Troca de Tela": 269,
-    "Troca de Vidro": 269
-  },
-  "samsung:a25": {
-    "Troca de Tela": 805
-  },
-  "samsung:a30": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199,
-    "Troca de Bateria": 135
-  },
-  "samsung:a30s": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199,
-    "Reparo de Placa": 149,
-    "Troca de Bateria": 135
-  },
-  "samsung:a31": {
-    "Troca de Tela": 165,
-    "Troca de Vidro": 165,
-    "Reparo de Placa": 189,
-    "Troca de Bateria": 179
-  },
-  "samsung:a32 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189,
-    "Reparo de Placa": 189,
-    "Troca de Bateria": 179
-  },
-  "samsung:a32 5g": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "samsung:a33 5g": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "samsung:a34 5g": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199,
-    "Reparo de Placa": 310,
-    "Troca de Bateria": 199
-  },
-  "samsung:a35": {
-    "Troca de Tela": 349,
-    "Troca de Vidro": 349
-  },
-  "samsung:a50": {
-    "Troca de Tela": 175,
-    "Troca de Vidro": 175,
-    "Reparo de Placa": 209,
-    "Troca de Bateria": 135
-  },
-  "samsung:a50s": {
-    "Troca de Tela": 175,
-    "Troca de Vidro": 175
-  },
-  "samsung:a51 4g": {
-    "Troca de Tela": 175,
-    "Troca de Vidro": 175,
-    "Reparo de Placa": 209,
-    "Troca de Bateria": 188
-  },
-  "samsung:a51 5g": {
-    "Troca de Tela": 175,
-    "Troca de Vidro": 175,
-    "Reparo de Placa": 209
-  },
-  "samsung:a52 4g": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289,
-    "Reparo de Placa": 209
-  },
-  "samsung:a52 5g": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289,
-    "Troca de Bateria": 225
-  },
-  "samsung:a52s 5g": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289,
-    "Reparo de Placa": 225
-  },
-  "samsung:a53 5g": {
-    "Troca de Tela": 395,
-    "Troca de Vidro": 395,
-    "Reparo de Placa": 239,
-    "Troca de Bateria": 175
-  },
-  "samsung:a54 5g": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199,
-    "Troca de Bateria": 245
-  },
-  "samsung:a55 5g": {
-    "Troca de Tela": 219,
-    "Troca de Vidro": 219,
-    "Reparo de Placa": 135
-  },
-  "samsung:a70": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199,
-    "Troca de Bateria": 179
-  },
-  "samsung:a71": {
-    "Troca de Tela": 185,
-    "Troca de Vidro": 185,
-    "Reparo de Placa": 209,
-    "Troca de Bateria": 140
-  },
-  "samsung:a72": {
-    "Troca de Tela": 235,
-    "Troca de Vidro": 235
-  },
-  "samsung:a73 5g": {
-    "Troca de Tela": 319,
-    "Troca de Vidro": 319,
-    "Reparo de Placa": 135
-  },
-  "samsung:a80": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "xiaomi:8/8a": {
-    "Troca de Tela": 75,
-    "Troca de Vidro": 75
-  },
-  "xiaomi:mi 9": {},
-  "xiaomi:9": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 9se": {},
-  "xiaomi:9a": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 9 lite": {},
-  "xiaomi:9c": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 9t/9t pro": {},
-  "xiaomi:9t": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:mi 10": {},
-  "xiaomi:10a": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 10t": {},
-  "xiaomi:10c/ 10 power/ c40": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 10t lite 5g": {},
-  "xiaomi:10 4g": {
-    "Troca de Tela": 155,
-    "Troca de Vidro": 155
-  },
-  "xiaomi:mi 10t pro 5g": {},
-  "xiaomi:10 5g (versão importada)": {},
-  "xiaomi:mi 10 lite 5g": {},
-  "xiaomi:12 4g/5g/ m6 pro 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "xiaomi:mi note 10": {},
-  "xiaomi:12c/ c55": {
-    "Troca de Tela": 125,
-    "Troca de Vidro": 125
-  },
-  "xiaomi:mi note 10 pro": {},
-  "xiaomi:13": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "xiaomi:mi note 10 lite": {},
-  "xiaomi:13c/ c65": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 11 lite": {},
-  "xiaomi:14c/c75": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "xiaomi:mi 11 lite 5g ne": {},
-  "xiaomi:mi 11t/mi 11t pro": {},
-  "xiaomi:note 7/note 7 pro": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "xiaomi:mi 12 lite": {},
-  "xiaomi:note 8": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105,
-    "Troca de Bateria": 159
-  },
-  "xiaomi:mi 12 t/mi 12t pro": {},
-  "xiaomi:note 8 pro": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:mi 13 lite": {},
-  "xiaomi:note 8t": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:note 9": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "xiaomi:pocophone f1": {},
-  "xiaomi:note 9s": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "xiaomi:m2/m3": {},
-  "xiaomi:note 9 pro": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "xiaomi:m3 pro": {},
-  "xiaomi:note 10 4g": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179,
-    "Reparo de Placa": 105
-  },
-  "xiaomi:x3": {},
-  "xiaomi:note 10 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:x3 pro": {},
-  "xiaomi:note 10s 4g": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179,
-    "Reparo de Placa": 105
-  },
-  "xiaomi:x3 gt": {},
-  "xiaomi:note 10s 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:x3 nfc": {},
-  "xiaomi:note 10t 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "xiaomi:f3": {},
-  "xiaomi:note 10 pro 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:f4 gt": {},
-  "xiaomi:note 10 pro max": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:x4 pro 4g": {},
-  "xiaomi:note 11 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:x4 pro 5g": {},
-  "xiaomi:note 11 5g": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "xiaomi:x4 gt": {},
-  "xiaomi:note 11s 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:m4 5g": {},
-  "xiaomi:note 11s 5g": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "xiaomi:m4 pro 4g": {},
-  "xiaomi:note 11t": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "xiaomi:m4 pro 5g": {},
-  "xiaomi:note 11 pro 4g": {
-    "Troca de Tela": 197,
-    "Troca de Vidro": 197
-  },
-  "xiaomi:m6 pro 4g (amoled)": {},
-  "xiaomi:note 11 pro 5g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:m6 pro 5g (lcd)": {},
-  "xiaomi:note 11 pro plus 5g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:m7": {},
-  "xiaomi:note 12 / x5": {
-    "Troca de Tela": 249,
-    "Troca de Vidro": 249
-  },
-  "xiaomi:m7 pro 5g": {},
-  "xiaomi:note 12 pro 5g/ x5 pro": {
-    "Troca de Tela": 239,
-    "Troca de Vidro": 239
-  },
-  "xiaomi:x5 / note 12": {},
-  "xiaomi:note 12 pro 4g": {},
-  "xiaomi:x5 pro/ note 12 pro": {},
-  "xiaomi:note 12 pro plus": {},
-  "xiaomi:c40/ 10c": {},
-  "xiaomi:note 12s": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "xiaomi:x6": {},
-  "xiaomi:note 13 4g": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "xiaomi:x6 pro": {},
-  "xiaomi:note 13 5g": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "motorola:g7": {
-    "Troca de Tela": 69,
-    "Troca de Vidro": 69,
-    "Troca de Bateria": 169
-  },
-  "motorola:edge 20": {
-    "Troca de Tela": 185,
-    "Troca de Vidro": 185
-  },
-  "motorola:g7 plus": {
-    "Troca de Tela": 69,
-    "Troca de Vidro": 69
-  },
-  "motorola:edge 20 pro": {
-    "Troca de Tela": 185,
-    "Troca de Vidro": 185
-  },
-  "motorola:g7 play": {
-    "Troca de Tela": 69,
-    "Troca de Vidro": 69
-  },
-  "motorola:edge 20 lite": {
-    "Troca de Tela": 185,
-    "Troca de Vidro": 185
-  },
-  "motorola:g7 power": {
-    "Troca de Tela": 69,
-    "Troca de Vidro": 69,
-    "Troca de Bateria": 179
-  },
-  "motorola:edge 30": {
-    "Troca de Tela": 195,
-    "Troca de Vidro": 195,
-    "Troca de Bateria": 379
-  },
-  "motorola:edge 30 neo": {
-    "Troca de Tela": 335,
-    "Troca de Vidro": 335,
-    "Reparo de Placa": 30,
-    "Troca de Bateria": 30
-  },
-  "motorola:g8": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "motorola:edge 30 pro": {
-    "Troca de Tela": 185,
-    "Troca de Vidro": 185
-  },
-  "motorola:g8 plus": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95,
-    "Reparo de Placa": 85
-  },
-  "motorola:edge 30 ultra": {
-    "Troca de Tela": 349,
-    "Troca de Vidro": 349
-  },
-  "motorola:g8 play": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "motorola:edge 30 fusion": {
-    "Troca de Tela": 1052
-  },
-  "motorola:g8 power": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "motorola:edge 40": {
-    "Troca de Tela": 829
-  },
-  "motorola:g8 power lite": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "motorola:edge 40 neo": {},
-  "motorola:edge 50": {
-    "Troca de Tela": 1228
-  },
-  "motorola:g9 plus": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "motorola:edge 50 neo": {
-    "Troca de Tela": 399,
-    "Troca de Vidro": 399
-  },
-  "motorola:g9 play": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 179
-  },
-  "motorola:edge 50 pro": {
-    "Troca de Tela": 550,
-    "Troca de Vidro": 550
-  },
-  "motorola:g9 power": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99
-  },
-  "motorola:edge 50 ultra": {
-    "Troca de Tela": 1255
-  },
-  "motorola:g5g": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "motorola:edge 50 fusion": {
-    "Troca de Tela": 942
-  },
-  "motorola:g5g plus": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g04": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "motorola:g04s": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g05": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "motorola:g10": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Troca de Bateria": 179
-  },
-  "motorola:g13": {
-    "Troca de Tela": 125,
-    "Troca de Vidro": 125,
-    "Troca de Bateria": 145
-  },
-  "motorola:g15": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:g15 power": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:g14": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g20": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Troca de Bateria": 179
-  },
-  "motorola:g22": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Troca de Bateria": 145
-  },
-  "motorola:g23": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g24": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105,
-    "Reparo de Placa": 105
-  },
-  "motorola:g30": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Troca de Bateria": 179
-  },
-  "motorola:g31": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179,
-    "Troca de Bateria": 179
-  },
-  "motorola:g32": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139,
-    "Troca de Bateria": 189
-  },
-  "motorola:g35": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "motorola:g34": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139,
-    "Troca de Bateria": 135
-  },
-  "motorola:g40 fusion": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129
-  },
-  "motorola:g41": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179
-  },
-  "motorola:g42": {
-    "Troca de Tela": 155,
-    "Troca de Vidro": 155
-  },
-  "motorola:g50 4g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "motorola:g50 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "motorola:g51": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129
-  },
-  "motorola:g52": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:g53": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129,
-    "Reparo de Placa": 105,
-    "Troca de Bateria": 145
-  },
-  "motorola:g54 5g": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g60": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g60s": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129
-  },
-  "motorola:g62": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "motorola:g71": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179,
-    "Troca de Bateria": 179
-  },
-  "motorola:g71s": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:g72": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "motorola:g73 5g": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "motorola:g75": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "motorola:g82": {
-    "Troca de Tela": 195,
-    "Troca de Vidro": 195
-  },
-  "motorola:g84": {
-    "Troca de Tela": 195,
-    "Troca de Vidro": 195
-  },
-  "motorola:g85": {
-    "Troca de Tela": 359,
-    "Troca de Vidro": 359
-  },
-  "motorola:g100": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:g200": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "motorola:one macro": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "motorola:one vision/one action": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "motorola:one hyper": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "motorola:one zoom": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:one fusion": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149,
-    "Troca de Bateria": 179
-  },
-  "motorola:one fusion plus": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169,
-    "Troca de Bateria": 135
-  },
-  "motorola:e7": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "motorola:e7 plus": {
-    "Troca de Tela": 99,
-    "Troca de Vidro": 99,
-    "Troca de Bateria": 179
-  },
-  "motorola:e7 power": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135,
-    "Troca de Bateria": 179
-  },
-  "motorola:e13": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Troca de Bateria": 145
-  },
-  "motorola:e14": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:e15": {
-    "Troca de Tela": 135,
-    "Troca de Vidro": 135
-  },
-  "motorola:e20": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "motorola:e22": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "motorola:e22s": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "motorola:e32": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119,
-    "Troca de Bateria": 145
-  },
-  "motorola:e32s": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "motorola:e40": {
-    "Troca de Tela": 150,
-    "Troca de Vidro": 150
-  },
-  "lg:k22": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "lg:k40s": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "lg:k41s": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "lg:k42": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "lg:k43": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "lg:k52": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "lg:k61": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "lg:k62/k62 plus": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "lg:k71": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "recolagens:series 2": {},
-  "recolagens:series 3": {},
-  "recolagens:series 4": {},
-  "recolagens:series 5": {},
-  "recolagens:series se": {},
-  "recolagens:series 6": {},
-  "recolagens:series 7": {},
-  "disabled:g7": {},
-  "disabled:g7 plus": {},
-  "disabled:one macro": {},
-  "disabled:g7 play": {},
-  "disabled:one vision/one action": {},
-  "disabled:g7 power": {},
-  "disabled:one hyper": {},
-  "disabled:one zoom": {},
-  "disabled:g8": {},
-  "disabled:one fusion": {},
-  "disabled:g8 plus": {},
-  "disabled:one fusion plus": {},
-  "disabled:g8 play": {},
-  "disabled:g8 power": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "disabled:g8 power lite": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "disabled:e7": {},
-  "disabled:g9 plus": {},
-  "disabled:e7 plus": {},
-  "disabled:g9 play": {},
-  "disabled:e7 power": {},
-  "disabled:g9 power": {},
-  "disabled:e13": {},
-  "disabled:e15": {},
-  "disabled:g5g": {},
-  "disabled:e20": {},
-  "disabled:g5g plus": {},
-  "disabled:e22": {},
-  "disabled:e32": {},
-  "disabled:e40": {},
-  "disabled:g10": {},
-  "disabled:g14": {},
-  "disabled:edge 20 pro": {},
-  "disabled:g20": {},
-  "disabled:g22": {},
-  "disabled:edge 30 neo": {
-    "Troca de Tela": 229,
-    "Troca de Vidro": 229
-  },
-  "disabled:g23": {},
-  "disabled:g30": {},
-  "disabled:g31": {},
-  "disabled:g32": {},
-  "disabled:g34": {},
-  "disabled:g41": {},
-  "disabled:g42": {},
-  "disabled:g50 5g": {},
-  "disabled:edge 30 ultra": {
-    "Troca de Tela": 229,
-    "Troca de Vidro": 229
-  },
-  "disabledx:8/8a": {
-    "Troca de Tela": 75,
-    "Troca de Vidro": 75
-  },
-  "disabledx:mi 9": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:pocophone f1": {
-    "Troca de Tela": 129,
-    "Troca de Vidro": 129
-  },
-  "disabledx:9": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 9se": {
-    "Troca de Tela": 320,
-    "Troca de Vidro": 320
-  },
-  "disabledx:m2/m3": {
-    "Troca de Tela": 95,
-    "Troca de Vidro": 95
-  },
-  "disabledx:9a": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 9 lite": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:m3 pro": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:9c": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 9t/9t pro": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "disabledx:x3": {
-    "Troca de Tela": 165,
-    "Troca de Vidro": 165
-  },
-  "disabledx:9t": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:mi 10": {
-    "Troca de Tela": 390,
-    "Troca de Vidro": 390
-  },
-  "disabledx:x3 pro": {
-    "Troca de Tela": 165,
-    "Troca de Vidro": 165
-  },
-  "disabledx:10a": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 10t": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "disabledx:x3 gt": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "disabledx:10c/ 10 power/ c40": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 10t lite 5g": {
-    "Troca de Tela": 195,
-    "Troca de Vidro": 195
-  },
-  "disabledx:x3 nfc": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "disabledx:10 4g": {
-    "Troca de Tela": 155,
-    "Troca de Vidro": 155
-  },
-  "disabledx:mi 10t pro 5g": {
-    "Troca de Tela": 199,
-    "Troca de Vidro": 199
-  },
-  "disabledx:f3": {
-    "Troca de Tela": 145,
-    "Troca de Vidro": 145
-  },
-  "disabledx:10 5g (versão importada)": {},
-  "disabledx:mi 10 lite 5g": {
-    "Troca de Tela": 300,
-    "Troca de Vidro": 300
-  },
-  "disabledx:f4 gt": {
-    "Troca de Tela": 289,
-    "Troca de Vidro": 289
-  },
-  "disabledx:12 4g/5g/ m6 pro 5g": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:mi note 10": {},
-  "disabledx:x4 pro 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:12c/ c55": {
-    "Troca de Tela": 125,
-    "Troca de Vidro": 125
-  },
-  "disabledx:mi note 10 pro": {},
-  "disabledx:x4 pro 5g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:13": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:mi note 10 lite": {},
-  "disabledx:x4 gt": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "disabledx:13c/ c65": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 11 lite": {
-    "Troca de Tela": 209,
-    "Troca de Vidro": 209
-  },
-  "disabledx:m4 5g": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:14c": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:mi 11 lite 5g ne": {
-    "Troca de Tela": 209,
-    "Troca de Vidro": 209
-  },
-  "disabledx:m4 pro 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:mi 11t/mi 11t pro": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "disabledx:m4 pro 5g": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:note 7/note 7 pro": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:mi 12 lite": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "disabledx:note 8": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:mi 12 t/mi 12t pro": {},
-  "disabledx:m6 pro 5g (lcd)": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:note 8 pro": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:mi 13 lite": {},
-  "disabledx:m7 pro 5g": {},
-  "disabledx:note 8t": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:x5 / note 12": {
-    "Troca de Tela": 229,
-    "Troca de Vidro": 229
-  },
-  "disabledx:note 9": {
-    "Troca de Tela": 149,
-    "Troca de Vidro": 149
-  },
-  "disabledx:média": {
-    "Troca de Tela": 69,
-    "Troca de Vidro": 69
-  },
-  "disabledx:x5 pro/ note 12 pro": {
-    "Troca de Tela": 249,
-    "Troca de Vidro": 249
-  },
-  "disabledx:note 9s": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "disabledx:c40/ 10c": {
-    "Troca de Tela": 155,
-    "Troca de Vidro": 155
-  },
-  "disabledx:note 9 pro": {
-    "Troca de Tela": 109,
-    "Troca de Vidro": 109
-  },
-  "disabledx:note 10 4g": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179
-  },
-  "disabledx:note 10 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:note 10s 4g": {
-    "Troca de Tela": 179,
-    "Troca de Vidro": 179
-  },
-  "disabledx:note 10s 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:note 7": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "disabledx:note 10t 5g": {
-    "Troca de Tela": 105,
-    "Troca de Vidro": 105
-  },
-  "disabledx:note 10 pro 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 10 pro max": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 11 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 9s/9 pro": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:note 11 5g": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:note 11s 4g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:mi 9 se": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:note 11s 5g": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:mi 9t pro - bp40": {
-    "Troca de Tela": 139,
-    "Troca de Vidro": 139
-  },
-  "disabledx:note 11t": {
-    "Troca de Tela": 119,
-    "Troca de Vidro": 119
-  },
-  "disabledx:x3 pro - bn61": {
-    "Troca de Tela": 169,
-    "Troca de Vidro": 169
-  },
-  "disabledx:note 11 pro 4g": {
-    "Troca de Tela": 197,
-    "Troca de Vidro": 197
-  },
-  "disabledx:f1": {
-    "Troca de Tela": 159,
-    "Troca de Vidro": 159
-  },
-  "disabledx:note 11 pro 5g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:mi a3": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 11 pro plus 5g": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 12 / x5": {
-    "Troca de Tela": 249,
-    "Troca de Vidro": 249
-  },
-  "disabledx:note 12 pro 5g/ x5 pro": {
-    "Troca de Tela": 239,
-    "Troca de Vidro": 239
-  },
-  "disabledx:note 12 pro 4g": {},
-  "disabledx:note 12 pro plus": {},
-  "disabledx:note 12s": {
-    "Troca de Tela": 189,
-    "Troca de Vidro": 189
-  },
-  "disabledx:note 11 4g - bn5d": {
-    "Troca de Tela": 218,
-    "Troca de Vidro": 218
-  },
-  "disabledx:note 13 4g": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "disabledx:note 13 5g": {
-    "Troca de Tela": 299,
-    "Troca de Vidro": 299
-  },
-  "b2b:6": {
-    "Troca de Tela": 180,
-    "Troca de Vidro": 180
-  },
-  "b2b:8": {},
-  "b2b:series 2": {
-    "Troca de Tela": 430,
-    "Troca de Vidro": 430
-  },
-  "b2b:6 plus": {
-    "Troca de Tela": 190,
-    "Troca de Vidro": 190
-  },
-  "b2b:8 plus": {
-    "Troca de Tela": 249,
-    "Troca de Vidro": 249
-  },
-  "b2b:series 3": {
-    "Troca de Tela": 500,
-    "Troca de Vidro": 500
-  },
-  "b2b:series 4": {
-    "Troca de Tela": 615,
-    "Troca de Vidro": 615
-  },
-  "b2b:6s": {
-    "Troca de Tela": 180,
-    "Troca de Vidro": 180
-  },
-  "b2b:x": {
-    "Troca de Tela": 500,
-    "Troca de Vidro": 500
-  },
-  "b2b:series 5": {
-    "Troca de Tela": 700,
-    "Troca de Vidro": 700
-  },
-  "b2b:6s plus": {
-    "Troca de Tela": 190,
-    "Troca de Vidro": 190
-  },
-  "b2b:xs": {
-    "Troca de Tela": 500,
-    "Troca de Vidro": 500
-  },
-  "b2b:series se": {
-    "Troca de Tela": 700,
-    "Troca de Vidro": 700
-  },
-  "b2b:xs max": {
-    "Troca de Tela": 670,
-    "Troca de Vidro": 670
-  },
-  "b2b:series 6": {
-    "Troca de Tela": 780,
-    "Troca de Vidro": 780
-  },
-  "b2b:7": {
-    "Troca de Tela": 209,
-    "Troca de Vidro": 209
-  },
-  "b2b:xr": {
-    "Troca de Tela": 500,
-    "Troca de Vidro": 500
-  },
-  "b2b:7 plus": {
-    "Troca de Tela": 249,
-    "Troca de Vidro": 249
-  },
-  "b2b:11": {
-    "Troca de Tela": 500,
-    "Troca de Vidro": 500
-  },
-  "b2b:8/se 2": {
-    "Troca de Tela": 209,
-    "Troca de Vidro": 209
-  },
-  "b2b:11 pro": {
-    "Troca de Tela": 670,
-    "Troca de Vidro": 670
-  },
-  "b2b:11 pro max": {
-    "Troca de Tela": 790,
-    "Troca de Vidro": 790
-  },
-  "b2b:12": {
-    "Troca de Tela": 945,
-    "Troca de Vidro": 945
-  },
-  "b2b:12 mini": {
-    "Troca de Tela": 735,
-    "Troca de Vidro": 735
-  },
-  "b2b:12 pro": {
-    "Troca de Tela": 945,
-    "Troca de Vidro": 945
-  },
-  "b2b:12 pro max": {
-    "Troca de Tela": 1175,
-    "Troca de Vidro": 1175
-  },
-  "b2b:13": {},
-  "b2b:13 pro": {},
-  "b2b:13 pro max": {}
+    "promo:se 3 2022/2023": {},
+    "promo:edge 30 com aro": {},
+    "promo:m51 c aro": {},
+    "promo:12c s aro": {},
+    "promo:14 pro": {},
+    "promo:g 5g plus s/ aro": {},
+    "promo:a03 core s aro": {},
+    "promo:10c c aro": {},
+    "promo:14 pro max": {},
+    "promo:g8 power c aro": {},
+    "promo:a05 s aro": {},
+    "promo:8/8a s aro": {},
+    "promo:g34/g53 s aro": {},
+    "promo:a14 4g s aro": {},
+    "promo:m3/note 9 4g": {},
+    "promo:g9 play/e7 plus s aro": {},
+    "promo:a14 4g s aro org": {},
+    "promo:g71 c aro": {},
+    "promo:m51 c aro borda grossa": {},
+    "promo:g100 imp s aro": {},
+    "promo:m23 5g s aro": {},
+    "promo:g7/g7 plus s aro": {},
+    "promo:a51 c aro": {},
+    "promo:s23 org": {},
+    "promo:k71 s aro": {},
+    "promo:s10 org": {},
+    "promo:k61 s aro": {},
+    "promo:a52 4g c aro": {},
+    "promo:a34 prime": {},
+    "promo:a53 c aro": {},
+    "promo:a72 c aro borda grossa": {},
+    "promo:a10/m10 prime": {},
+    "promo:g22/e13/e32/g53/g13 prime": {},
+    "promo:g34 prime": {},
+    "promo:f3 prime": {},
+    "promo:s20 fe prime": {},
+    "promo:note 9s/9pro prime": {},
+    "promo:mi 9t pro - bp40 prime": {},
+    "promo:edge 30 neo org": {},
+    "promo:one fusion plus org": {},
+    "promo:a71 org": {},
+    "promo:a20/a30/a30s/a50 org": {},
+    "promo:s8 plus org": {},
+    "promo:6s": {},
+    "apple:7": {
+        "Troca de Tela": 89,
+        "Troca de Bateria": 129,
+        "Reparo de Placa": 150,
+        "Troca de Conector de Carga": 149
+    },
+    "apple:7 plus": {
+        "Troca de Tela": 89,
+        "Troca de Bateria": 147,
+        "Reparo de Placa": 150,
+        "Troca de Conector de Carga": 149
+    },
+    "apple:8/se 2020": {
+        "Troca de Tela": 89
+    },
+    "apple:8": {
+        "Troca de Bateria": 145,
+        "Reparo de Placa": 150,
+        "Troca de Conector de Carga": 149
+    },
+    "apple:8 plus": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 145,
+        "Reparo de Placa": 150,
+        "Troca de Conector de Carga": 149
+    },
+    "apple:se 3 (2022/2023)": {
+        "Troca de Tela": 99
+    },
+    "apple:se 3": {
+        "Troca de Bateria": 324
+    },
+    "apple:se 2 - 2020": {
+        "Troca de Bateria": 169
+    },
+    "apple:x": {
+        "Troca de Tela": 149,
+        "Troca de Bateria": 259,
+        "Reparo de Placa": 180,
+        "Troca de Conector de Carga": 222
+    },
+    "apple:xs": {
+        "Troca de Tela": 145,
+        "Troca de Bateria": 265,
+        "Reparo de Placa": 180,
+        "Troca de Conector de Carga": 399
+    },
+    "apple:xsmax": {
+        "Troca de Tela": 165,
+        "Troca de Bateria": 259,
+        "Reparo de Placa": 180,
+        "Troca de Conector de Carga": 399
+    },
+    "apple:xr": {
+        "Troca de Tela": 125,
+        "Troca de Bateria": 285,
+        "Reparo de Placa": 180,
+        "Troca de Conector de Carga": 230
+    },
+    "apple:11": {
+        "Troca de Tela": 149,
+        "Troca de Bateria": 249,
+        "Reparo de Placa": 200,
+        "Troca de Conector de Carga": 199
+    },
+    "apple:11 pro": {
+        "Troca de Tela": 189,
+        "Troca de Bateria": 289,
+        "Reparo de Placa": 200,
+        "Troca de Conector de Carga": 449
+    },
+    "apple:11 pro max": {
+        "Troca de Tela": 189,
+        "Troca de Bateria": 297,
+        "Reparo de Placa": 200,
+        "Troca de Conector de Carga": 336
+    },
+    "apple:12": {
+        "Troca de Tela": 235,
+        "Troca de Bateria": 269,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 288
+    },
+    "apple:12 pro": {
+        "Troca de Tela": 235,
+        "Troca de Bateria": 269,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 479
+    },
+    "apple:12 pro max": {
+        "Troca de Tela": 335,
+        "Troca de Bateria": 335,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 483
+    },
+    "apple:12 mini": {
+        "Troca de Tela": 299,
+        "Troca de Bateria": 299,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 479
+    },
+    "apple:13": {
+        "Troca de Tela": 329,
+        "Troca de Bateria": 396,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 369
+    },
+    "apple:13 pro": {
+        "Troca de Tela": 349,
+        "Troca de Bateria": 375,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 519
+    },
+    "apple:13 pro max": {
+        "Troca de Tela": 349,
+        "Troca de Bateria": 427,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 335
+    },
+    "apple:13 mini": {
+        "Troca de Tela": 439,
+        "Troca de Bateria": 285,
+        "Reparo de Placa": 450,
+        "Troca de Conector de Carga": 498
+    },
+    "apple:14": {
+        "Troca de Tela": 399,
+        "Troca de Bateria": 455,
+        "Reparo de Placa": 1569
+    },
+    "apple:14 pro": {
+        "Troca de Tela": 489,
+        "Troca de Bateria": 593,
+        "Reparo de Placa": 1569
+    },
+    "apple:14 pro max": {
+        "Troca de Tela": 489,
+        "Troca de Bateria": 499
+    },
+    "apple:14 plus": {
+        "Troca de Tela": 345,
+        "Troca de Bateria": 473
+    },
+    "apple:15": {
+        "Troca de Tela": 599,
+        "Troca de Bateria": 540
+    },
+    "apple:15 pro": {
+        "Troca de Tela": 895,
+        "Troca de Bateria": 540
+    },
+    "apple:15 plus": {
+        "Troca de Tela": 699
+    },
+    "apple:15 pro max": {
+        "Troca de Tela": 899,
+        "Troca de Bateria": 540
+    },
+    "apple:16": {
+        "Troca de Tela": 999
+    },
+    "apple:16 pro max": {
+        "Troca de Tela": 1199
+    },
+    "apple-watch:series 2": {
+        "Troca de Tela": 130,
+        "Troca de Bateria": 55
+    },
+    "apple-watch:series 3": {
+        "Troca de Tela": 130,
+        "Troca de Bateria": 55
+    },
+    "apple-watch:series 4": {
+        "Troca de Tela": 50,
+        "Troca de Bateria": 60
+    },
+    "apple-watch:series 5": {
+        "Troca de Tela": 459,
+        "Troca de Bateria": 60
+    },
+    "apple-watch:series se": {
+        "Troca de Tela": 55,
+        "Troca de Bateria": 60
+    },
+    "apple-watch:series 6": {
+        "Troca de Tela": 70,
+        "Troca de Bateria": 110
+    },
+    "apple-watch:series 7": {
+        "Troca de Tela": 499,
+        "Troca de Bateria": 313
+    },
+    "apple-watch:series 8": {
+        "Troca de Tela": 579
+    },
+    "apple-watch:series 9": {
+        "Troca de Tela": 529
+    },
+    "samsung:s8": {
+        "Reparo de Placa": 249,
+        "Troca de Bateria": 197
+    },
+    "samsung:s8 plus": {
+        "Reparo de Placa": 249
+    },
+    "samsung:s9": {
+        "Reparo de Placa": 249,
+        "Troca de Bateria": 197
+    },
+    "samsung:s9 plus": {
+        "Reparo de Placa": 249,
+        "Troca de Bateria": 197
+    },
+    "samsung:s10": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s10e": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s10 lite": {
+        "Reparo de Placa": 275
+    },
+    "samsung:s10 plus": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s20": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s20 fe": {
+        "Troca de Tela": 300,
+        "Troca de Bateria": 169
+    },
+    "samsung:s20 fe 4g/5g": {
+        "Reparo de Placa": 259
+    },
+    "samsung:s20 plus": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s20 ultra": {
+        "Troca de Bateria": 189
+    },
+    "samsung:s21": {
+        "Reparo de Placa": 285,
+        "Troca de Bateria": 197
+    },
+    "samsung:s21 fe": {
+        "Reparo de Placa": 339,
+        "Troca de Bateria": 245
+    },
+    "samsung:s21 plus": {
+        "Troca de Bateria": 197
+    },
+    "samsung:s21 ultra": {
+        "Reparo de Placa": 289,
+        "Troca de Bateria": 197
+    },
+    "samsung:s22": {
+        "Reparo de Placa": 333,
+        "Troca de Bateria": 239
+    },
+    "samsung:s22 plus": {
+        "Reparo de Placa": 359
+    },
+    "samsung:s22 ultra": {
+        "Reparo de Placa": 355,
+        "Troca de Bateria": 245
+    },
+    "samsung:s23": {
+        "Reparo de Placa": 389,
+        "Troca de Bateria": 225
+    },
+    "samsung:s23 plus": {
+        "Reparo de Placa": 389
+    },
+    "samsung:s23 fe": {
+        "Reparo de Placa": 425
+    },
+    "samsung:s23 ultra": {
+        "Reparo de Placa": 224,
+        "Troca de Bateria": 239
+    },
+    "samsung:s24": {},
+    "samsung:s24 plus": {},
+    "samsung:s24 ultra": {},
+    "samsung:s24 fe": {
+        "Troca de Bateria": 500
+    },
+    "samsung:s25": {
+        "Reparo de Placa": 415
+    },
+    "samsung:s25 plus": {},
+    "samsung:s25 ultra": {},
+    "samsung:note 8": {},
+    "samsung:note 9": {
+        "Troca de Bateria": 209
+    },
+    "samsung:note 10": {
+        "Troca de Bateria": 197
+    },
+    "samsung:note 10 lite": {
+        "Reparo de Placa": 295,
+        "Troca de Bateria": 197
+    },
+    "samsung:note 10 plus": {},
+    "samsung:note 20": {
+        "Troca de Bateria": 499
+    },
+    "samsung:note 20 ultra": {
+        "Reparo de Placa": 112,
+        "Troca de Bateria": 239
+    },
+    "samsung:a02": {
+        "Troca de Tela": 139
+    },
+    "samsung:m10": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 99
+    },
+    "samsung:a02s": {
+        "Troca de Tela": 99
+    },
+    "samsung:m12": {
+        "Troca de Tela": 135,
+        "Reparo de Placa": 99
+    },
+    "samsung:a03": {
+        "Troca de Tela": 99,
+        "Reparo de Placa": 95
+    },
+    "samsung:m13": {
+        "Troca de Tela": 135
+    },
+    "samsung:a03s": {
+        "Troca de Tela": 99
+    },
+    "samsung:m14": {
+        "Troca de Tela": 165
+    },
+    "samsung:a03 core": {
+        "Troca de Tela": 97,
+        "Troca de Bateria": 179
+    },
+    "samsung:m15": {
+        "Troca de Tela": 289
+    },
+    "samsung:a04": {
+        "Troca de Tela": 139
+    },
+    "samsung:m20": {
+        "Troca de Tela": 160
+    },
+    "samsung:a04s": {
+        "Troca de Tela": 139
+    },
+    "samsung:m21": {
+        "Troca de Tela": 149
+    },
+    "samsung:a04e": {
+        "Troca de Tela": 99
+    },
+    "samsung:m21s": {
+        "Troca de Tela": 149
+    },
+    "samsung:a05": {
+        "Troca de Tela": 129
+    },
+    "samsung:m22": {
+        "Troca de Tela": 289
+    },
+    "samsung:a05s": {
+        "Troca de Tela": 139,
+        "Reparo de Placa": 105
+    },
+    "samsung:m23 4g": {
+        "Troca de Tela": 119,
+        "Reparo de Placa": 199
+    },
+    "samsung:a06": {
+        "Troca de Tela": 149
+    },
+    "samsung:m23 5g": {
+        "Troca de Tela": 135
+    },
+    "samsung:a10": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 99
+    },
+    "samsung:m30": {
+        "Troca de Tela": 149
+    },
+    "samsung:a10s": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 149
+    },
+    "samsung:m30s": {
+        "Troca de Tela": 315
+    },
+    "samsung:a11": {
+        "Troca de Tela": 105
+    },
+    "samsung:m31": {
+        "Troca de Tela": 149
+    },
+    "samsung:a12": {
+        "Troca de Tela": 139,
+        "Reparo de Placa": 149
+    },
+    "samsung:m32": {
+        "Troca de Tela": 289
+    },
+    "samsung:a13 4g": {
+        "Troca de Tela": 135,
+        "Reparo de Placa": 149
+    },
+    "samsung:m33": {
+        "Troca de Tela": 135
+    },
+    "samsung:a13 5g": {
+        "Troca de Tela": 135,
+        "Reparo de Placa": 149
+    },
+    "samsung:m35": {
+        "Troca de Tela": 379
+    },
+    "samsung:a14 4g": {
+        "Troca de Tela": 135,
+        "Reparo de Placa": 155
+    },
+    "samsung:m51": {
+        "Troca de Tela": 295,
+        "Reparo de Placa": 166
+    },
+    "samsung:a14 5g": {
+        "Troca de Tela": 135,
+        "Reparo de Placa": 106
+    },
+    "samsung:m52": {
+        "Troca de Tela": 289,
+        "Reparo de Placa": 166
+    },
+    "samsung:a15 5g": {
+        "Troca de Tela": 259
+    },
+    "samsung:m53 5g": {
+        "Troca de Tela": 289
+    },
+    "samsung:a16 4g": {},
+    "samsung:m54": {
+        "Troca de Tela": 379
+    },
+    "samsung:a16 5g": {
+        "Troca de Tela": 289
+    },
+    "samsung:m62": {
+        "Troca de Tela": 349,
+        "Reparo de Placa": 166
+    },
+    "samsung:a20": {
+        "Troca de Tela": 149,
+        "Reparo de Placa": 89,
+        "Troca de Bateria": 135
+    },
+    "samsung:a20s": {
+        "Troca de Tela": 129,
+        "Troca de Bateria": 149
+    },
+    "samsung:a21s": {
+        "Troca de Tela": 129,
+        "Troca de Bateria": 165
+    },
+    "samsung:a22 4g": {
+        "Troca de Tela": 170,
+        "Troca de Bateria": 179
+    },
+    "samsung:a22 5g": {
+        "Troca de Tela": 135
+    },
+    "samsung:a23 4g": {
+        "Troca de Tela": 135
+    },
+    "samsung:a23 5g": {
+        "Troca de Tela": 135
+    },
+    "samsung:a24": {
+        "Troca de Tela": 269
+    },
+    "samsung:a25": {
+        "Troca de Tela": 805
+    },
+    "samsung:a30": {
+        "Troca de Tela": 199,
+        "Troca de Bateria": 135
+    },
+    "samsung:a30s": {
+        "Troca de Tela": 199,
+        "Reparo de Placa": 149,
+        "Troca de Bateria": 135
+    },
+    "samsung:a31": {
+        "Troca de Tela": 165,
+        "Reparo de Placa": 189,
+        "Troca de Bateria": 179
+    },
+    "samsung:a32 4g": {
+        "Troca de Tela": 189,
+        "Reparo de Placa": 189,
+        "Troca de Bateria": 179
+    },
+    "samsung:a32 5g": {
+        "Troca de Tela": 139
+    },
+    "samsung:a33 5g": {
+        "Troca de Tela": 299
+    },
+    "samsung:a34 5g": {
+        "Troca de Tela": 199,
+        "Reparo de Placa": 310,
+        "Troca de Bateria": 199
+    },
+    "samsung:a35": {
+        "Troca de Tela": 349
+    },
+    "samsung:a50": {
+        "Troca de Tela": 175,
+        "Reparo de Placa": 209,
+        "Troca de Bateria": 135
+    },
+    "samsung:a50s": {
+        "Troca de Tela": 175
+    },
+    "samsung:a51 4g": {
+        "Troca de Tela": 175,
+        "Reparo de Placa": 209,
+        "Troca de Bateria": 188
+    },
+    "samsung:a51 5g": {
+        "Troca de Tela": 175,
+        "Reparo de Placa": 209
+    },
+    "samsung:a52 4g": {
+        "Troca de Tela": 289,
+        "Reparo de Placa": 209
+    },
+    "samsung:a52 5g": {
+        "Troca de Tela": 289,
+        "Troca de Bateria": 225
+    },
+    "samsung:a52s 5g": {
+        "Troca de Tela": 289,
+        "Reparo de Placa": 225
+    },
+    "samsung:a53 5g": {
+        "Troca de Tela": 395,
+        "Reparo de Placa": 239,
+        "Troca de Bateria": 175
+    },
+    "samsung:a54 5g": {
+        "Troca de Tela": 199,
+        "Troca de Bateria": 245
+    },
+    "samsung:a55 5g": {
+        "Troca de Tela": 219,
+        "Reparo de Placa": 135
+    },
+    "samsung:a70": {
+        "Troca de Tela": 199,
+        "Troca de Bateria": 179
+    },
+    "samsung:a71": {
+        "Troca de Tela": 185,
+        "Reparo de Placa": 209,
+        "Troca de Bateria": 140
+    },
+    "samsung:a72": {
+        "Troca de Tela": 235
+    },
+    "samsung:a73 5g": {
+        "Troca de Tela": 319,
+        "Reparo de Placa": 135
+    },
+    "samsung:a80": {
+        "Troca de Tela": 199
+    },
+    "xiaomi:8/8a": {
+        "Troca de Tela": 75
+    },
+    "xiaomi:mi 9": {},
+    "xiaomi:9": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 9se": {},
+    "xiaomi:9a": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 9 lite": {},
+    "xiaomi:9c": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 9t/9t pro": {},
+    "xiaomi:9t": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:mi 10": {},
+    "xiaomi:10a": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 10t": {},
+    "xiaomi:10c/ 10 power/ c40": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 10t lite 5g": {},
+    "xiaomi:10 4g": {
+        "Troca de Tela": 155
+    },
+    "xiaomi:mi 10t pro 5g": {},
+    "xiaomi:10 5g (versão importada)": {},
+    "xiaomi:mi 10 lite 5g": {},
+    "xiaomi:12 4g/5g/ m6 pro 5g": {
+        "Troca de Tela": 135
+    },
+    "xiaomi:mi note 10": {},
+    "xiaomi:12c/ c55": {
+        "Troca de Tela": 125
+    },
+    "xiaomi:mi note 10 pro": {},
+    "xiaomi:13": {
+        "Troca de Tela": 149
+    },
+    "xiaomi:mi note 10 lite": {},
+    "xiaomi:13c/ c65": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 11 lite": {},
+    "xiaomi:14c/c75": {
+        "Troca de Tela": 135
+    },
+    "xiaomi:mi 11 lite 5g ne": {},
+    "xiaomi:mi 11t/mi 11t pro": {},
+    "xiaomi:note 7/note 7 pro": {
+        "Troca de Tela": 139
+    },
+    "xiaomi:mi 12 lite": {},
+    "xiaomi:note 8": {
+        "Troca de Tela": 105,
+        "Troca de Bateria": 159
+    },
+    "xiaomi:mi 12 t/mi 12t pro": {},
+    "xiaomi:note 8 pro": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:mi 13 lite": {},
+    "xiaomi:note 8t": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:note 9": {
+        "Troca de Tela": 149
+    },
+    "xiaomi:pocophone f1": {},
+    "xiaomi:note 9s": {
+        "Troca de Tela": 109
+    },
+    "xiaomi:m2/m3": {},
+    "xiaomi:note 9 pro": {
+        "Troca de Tela": 109
+    },
+    "xiaomi:m3 pro": {},
+    "xiaomi:note 10 4g": {
+        "Troca de Tela": 179,
+        "Reparo de Placa": 105
+    },
+    "xiaomi:x3": {},
+    "xiaomi:note 10 5g": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:x3 pro": {},
+    "xiaomi:note 10s 4g": {
+        "Troca de Tela": 179,
+        "Reparo de Placa": 105
+    },
+    "xiaomi:x3 gt": {},
+    "xiaomi:note 10s 5g": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:x3 nfc": {},
+    "xiaomi:note 10t 5g": {
+        "Troca de Tela": 105
+    },
+    "xiaomi:f3": {},
+    "xiaomi:note 10 pro 4g": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:f4 gt": {},
+    "xiaomi:note 10 pro max": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:x4 pro 4g": {},
+    "xiaomi:note 11 4g": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:x4 pro 5g": {},
+    "xiaomi:note 11 5g": {
+        "Troca de Tela": 169
+    },
+    "xiaomi:x4 gt": {},
+    "xiaomi:note 11s 4g": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:m4 5g": {},
+    "xiaomi:note 11s 5g": {
+        "Troca de Tela": 169
+    },
+    "xiaomi:m4 pro 4g": {},
+    "xiaomi:note 11t": {
+        "Troca de Tela": 119
+    },
+    "xiaomi:m4 pro 5g": {},
+    "xiaomi:note 11 pro 4g": {
+        "Troca de Tela": 197
+    },
+    "xiaomi:m6 pro 4g (amoled)": {},
+    "xiaomi:note 11 pro 5g": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:m6 pro 5g (lcd)": {},
+    "xiaomi:note 11 pro plus 5g": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:m7": {},
+    "xiaomi:note 12 / x5": {
+        "Troca de Tela": 249
+    },
+    "xiaomi:m7 pro 5g": {},
+    "xiaomi:note 12 pro 5g/ x5 pro": {
+        "Troca de Tela": 239
+    },
+    "xiaomi:x5 / note 12": {},
+    "xiaomi:note 12 pro 4g": {},
+    "xiaomi:x5 pro/ note 12 pro": {},
+    "xiaomi:note 12 pro plus": {},
+    "xiaomi:c40/ 10c": {},
+    "xiaomi:note 12s": {
+        "Troca de Tela": 189
+    },
+    "xiaomi:x6": {},
+    "xiaomi:note 13 4g": {
+        "Troca de Tela": 299
+    },
+    "xiaomi:x6 pro": {},
+    "xiaomi:note 13 5g": {
+        "Troca de Tela": 299
+    },
+    "motorola:g7": {
+        "Troca de Tela": 69,
+        "Troca de Bateria": 169
+    },
+    "motorola:edge 20": {
+        "Troca de Tela": 185
+    },
+    "motorola:g7 plus": {
+        "Troca de Tela": 69
+    },
+    "motorola:edge 20 pro": {
+        "Troca de Tela": 185
+    },
+    "motorola:g7 play": {
+        "Troca de Tela": 69
+    },
+    "motorola:edge 20 lite": {
+        "Troca de Tela": 185
+    },
+    "motorola:g7 power": {
+        "Troca de Tela": 69,
+        "Troca de Bateria": 179
+    },
+    "motorola:edge 30": {
+        "Troca de Tela": 195,
+        "Troca de Bateria": 379
+    },
+    "motorola:edge 30 neo": {
+        "Troca de Tela": 335,
+        "Reparo de Placa": 30,
+        "Troca de Bateria": 30
+    },
+    "motorola:g8": {
+        "Troca de Tela": 95
+    },
+    "motorola:edge 30 pro": {
+        "Troca de Tela": 185
+    },
+    "motorola:g8 plus": {
+        "Troca de Tela": 95,
+        "Reparo de Placa": 85
+    },
+    "motorola:edge 30 ultra": {
+        "Troca de Tela": 349
+    },
+    "motorola:g8 play": {
+        "Troca de Tela": 95
+    },
+    "motorola:edge 30 fusion": {
+        "Troca de Tela": 1052
+    },
+    "motorola:g8 power": {
+        "Troca de Tela": 95
+    },
+    "motorola:edge 40": {
+        "Troca de Tela": 829
+    },
+    "motorola:g8 power lite": {
+        "Troca de Tela": 95
+    },
+    "motorola:edge 40 neo": {},
+    "motorola:edge 50": {
+        "Troca de Tela": 1228
+    },
+    "motorola:g9 plus": {
+        "Troca de Tela": 99
+    },
+    "motorola:edge 50 neo": {
+        "Troca de Tela": 399
+    },
+    "motorola:g9 play": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 179
+    },
+    "motorola:edge 50 pro": {
+        "Troca de Tela": 550
+    },
+    "motorola:g9 power": {
+        "Troca de Tela": 99
+    },
+    "motorola:edge 50 ultra": {
+        "Troca de Tela": 1255
+    },
+    "motorola:g5g": {
+        "Troca de Tela": 159
+    },
+    "motorola:edge 50 fusion": {
+        "Troca de Tela": 942
+    },
+    "motorola:g5g plus": {
+        "Troca de Tela": 135
+    },
+    "motorola:g04": {
+        "Troca de Tela": 105
+    },
+    "motorola:g04s": {
+        "Troca de Tela": 135
+    },
+    "motorola:g05": {
+        "Troca de Tela": 119
+    },
+    "motorola:g10": {
+        "Troca de Tela": 119,
+        "Troca de Bateria": 179
+    },
+    "motorola:g13": {
+        "Troca de Tela": 125,
+        "Troca de Bateria": 145
+    },
+    "motorola:g15": {
+        "Troca de Tela": 149
+    },
+    "motorola:g15 power": {
+        "Troca de Tela": 149
+    },
+    "motorola:g14": {
+        "Troca de Tela": 135
+    },
+    "motorola:g20": {
+        "Troca de Tela": 119,
+        "Troca de Bateria": 179
+    },
+    "motorola:g22": {
+        "Troca de Tela": 135,
+        "Troca de Bateria": 145
+    },
+    "motorola:g23": {
+        "Troca de Tela": 135
+    },
+    "motorola:g24": {
+        "Troca de Tela": 105,
+        "Reparo de Placa": 105
+    },
+    "motorola:g30": {
+        "Troca de Tela": 119,
+        "Troca de Bateria": 179
+    },
+    "motorola:g31": {
+        "Troca de Tela": 179,
+        "Troca de Bateria": 179
+    },
+    "motorola:g32": {
+        "Troca de Tela": 139,
+        "Troca de Bateria": 189
+    },
+    "motorola:g35": {
+        "Troca de Tela": 139
+    },
+    "motorola:g34": {
+        "Troca de Tela": 139,
+        "Troca de Bateria": 135
+    },
+    "motorola:g40 fusion": {
+        "Troca de Tela": 129
+    },
+    "motorola:g41": {
+        "Troca de Tela": 179
+    },
+    "motorola:g42": {
+        "Troca de Tela": 155
+    },
+    "motorola:g50 4g": {
+        "Troca de Tela": 105
+    },
+    "motorola:g50 5g": {
+        "Troca de Tela": 105
+    },
+    "motorola:g51": {
+        "Troca de Tela": 129
+    },
+    "motorola:g52": {
+        "Troca de Tela": 149
+    },
+    "motorola:g53": {
+        "Troca de Tela": 129,
+        "Reparo de Placa": 105,
+        "Troca de Bateria": 145
+    },
+    "motorola:g54 5g": {
+        "Troca de Tela": 135
+    },
+    "motorola:g60": {
+        "Troca de Tela": 135
+    },
+    "motorola:g60s": {
+        "Troca de Tela": 129
+    },
+    "motorola:g62": {
+        "Troca de Tela": 139
+    },
+    "motorola:g71": {
+        "Troca de Tela": 179,
+        "Troca de Bateria": 179
+    },
+    "motorola:g71s": {
+        "Troca de Tela": 149
+    },
+    "motorola:g72": {
+        "Troca de Tela": 199
+    },
+    "motorola:g73 5g": {
+        "Troca de Tela": 139
+    },
+    "motorola:g75": {
+        "Troca de Tela": 159
+    },
+    "motorola:g82": {
+        "Troca de Tela": 195
+    },
+    "motorola:g84": {
+        "Troca de Tela": 195
+    },
+    "motorola:g85": {
+        "Troca de Tela": 359
+    },
+    "motorola:g100": {
+        "Troca de Tela": 135
+    },
+    "motorola:g200": {
+        "Troca de Tela": 189
+    },
+    "motorola:one macro": {
+        "Troca de Tela": 109
+    },
+    "motorola:one vision/one action": {
+        "Troca de Tela": 169
+    },
+    "motorola:one hyper": {
+        "Troca de Tela": 139
+    },
+    "motorola:one zoom": {
+        "Troca de Tela": 149
+    },
+    "motorola:one fusion": {
+        "Troca de Tela": 149,
+        "Troca de Bateria": 179
+    },
+    "motorola:one fusion plus": {
+        "Troca de Tela": 169,
+        "Troca de Bateria": 135
+    },
+    "motorola:e7": {
+        "Troca de Tela": 119
+    },
+    "motorola:e7 plus": {
+        "Troca de Tela": 99,
+        "Troca de Bateria": 179
+    },
+    "motorola:e7 power": {
+        "Troca de Tela": 135,
+        "Troca de Bateria": 179
+    },
+    "motorola:e13": {
+        "Troca de Tela": 119,
+        "Troca de Bateria": 145
+    },
+    "motorola:e14": {
+        "Troca de Tela": 135
+    },
+    "motorola:e15": {
+        "Troca de Tela": 135
+    },
+    "motorola:e20": {
+        "Troca de Tela": 149
+    },
+    "motorola:e22": {
+        "Troca de Tela": 119
+    },
+    "motorola:e22s": {
+        "Troca de Tela": 119
+    },
+    "motorola:e32": {
+        "Troca de Tela": 119,
+        "Troca de Bateria": 145
+    },
+    "motorola:e32s": {
+        "Troca de Tela": 119
+    },
+    "motorola:e40": {
+        "Troca de Tela": 150
+    },
+    "lg:k22": {
+        "Troca de Tela": 149
+    },
+    "lg:k40s": {
+        "Troca de Tela": 149
+    },
+    "lg:k41s": {
+        "Troca de Tela": 105
+    },
+    "lg:k42": {
+        "Troca de Tela": 109
+    },
+    "lg:k43": {
+        "Troca de Tela": 149
+    },
+    "lg:k52": {
+        "Troca de Tela": 109
+    },
+    "lg:k61": {
+        "Troca de Tela": 95
+    },
+    "lg:k62/k62 plus": {
+        "Troca de Tela": 109
+    },
+    "lg:k71": {
+        "Troca de Tela": 159
+    },
+    "recolagens:series 2": {},
+    "recolagens:series 3": {},
+    "recolagens:series 4": {},
+    "recolagens:series 5": {},
+    "recolagens:series se": {},
+    "recolagens:series 6": {},
+    "recolagens:series 7": {},
+    "disabled:g7": {},
+    "disabled:g7 plus": {},
+    "disabled:one macro": {},
+    "disabled:g7 play": {},
+    "disabled:one vision/one action": {},
+    "disabled:g7 power": {},
+    "disabled:one hyper": {},
+    "disabled:one zoom": {},
+    "disabled:g8": {},
+    "disabled:one fusion": {},
+    "disabled:g8 plus": {},
+    "disabled:one fusion plus": {},
+    "disabled:g8 play": {},
+    "disabled:g8 power": {
+        "Troca de Tela": 119
+    },
+    "disabled:g8 power lite": {
+        "Troca de Tela": 119
+    },
+    "disabled:e7": {},
+    "disabled:g9 plus": {},
+    "disabled:e7 plus": {},
+    "disabled:g9 play": {},
+    "disabled:e7 power": {},
+    "disabled:g9 power": {},
+    "disabled:e13": {},
+    "disabled:e15": {},
+    "disabled:g5g": {},
+    "disabled:e20": {},
+    "disabled:g5g plus": {},
+    "disabled:e22": {},
+    "disabled:e32": {},
+    "disabled:e40": {},
+    "disabled:g10": {},
+    "disabled:g14": {},
+    "disabled:edge 20 pro": {},
+    "disabled:g20": {},
+    "disabled:g22": {},
+    "disabled:edge 30 neo": {
+        "Troca de Tela": 229
+    },
+    "disabled:g23": {},
+    "disabled:g30": {},
+    "disabled:g31": {},
+    "disabled:g32": {},
+    "disabled:g34": {},
+    "disabled:g41": {},
+    "disabled:g42": {},
+    "disabled:g50 5g": {},
+    "disabled:edge 30 ultra": {
+        "Troca de Tela": 229
+    },
+    "disabledx:8/8a": {
+        "Troca de Tela": 75
+    },
+    "disabledx:mi 9": {
+        "Troca de Tela": 169
+    },
+    "disabledx:pocophone f1": {
+        "Troca de Tela": 129
+    },
+    "disabledx:9": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 9se": {
+        "Troca de Tela": 320
+    },
+    "disabledx:m2/m3": {
+        "Troca de Tela": 95
+    },
+    "disabledx:9a": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 9 lite": {
+        "Troca de Tela": 169
+    },
+    "disabledx:m3 pro": {
+        "Troca de Tela": 105
+    },
+    "disabledx:9c": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 9t/9t pro": {
+        "Troca de Tela": 199
+    },
+    "disabledx:x3": {
+        "Troca de Tela": 165
+    },
+    "disabledx:9t": {
+        "Troca de Tela": 105
+    },
+    "disabledx:mi 10": {
+        "Troca de Tela": 390
+    },
+    "disabledx:x3 pro": {
+        "Troca de Tela": 165
+    },
+    "disabledx:10a": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 10t": {
+        "Troca de Tela": 199
+    },
+    "disabledx:x3 gt": {
+        "Troca de Tela": 159
+    },
+    "disabledx:10c/ 10 power/ c40": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 10t lite 5g": {
+        "Troca de Tela": 195
+    },
+    "disabledx:x3 nfc": {
+        "Troca de Tela": 199
+    },
+    "disabledx:10 4g": {
+        "Troca de Tela": 155
+    },
+    "disabledx:mi 10t pro 5g": {
+        "Troca de Tela": 199
+    },
+    "disabledx:f3": {
+        "Troca de Tela": 145
+    },
+    "disabledx:10 5g (versão importada)": {},
+    "disabledx:mi 10 lite 5g": {
+        "Troca de Tela": 300
+    },
+    "disabledx:f4 gt": {
+        "Troca de Tela": 289
+    },
+    "disabledx:12 4g/5g/ m6 pro 5g": {
+        "Troca de Tela": 149
+    },
+    "disabledx:mi note 10": {},
+    "disabledx:x4 pro 4g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:12c/ c55": {
+        "Troca de Tela": 125
+    },
+    "disabledx:mi note 10 pro": {},
+    "disabledx:x4 pro 5g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:13": {
+        "Troca de Tela": 149
+    },
+    "disabledx:mi note 10 lite": {},
+    "disabledx:x4 gt": {
+        "Troca de Tela": 119
+    },
+    "disabledx:13c/ c65": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 11 lite": {
+        "Troca de Tela": 209
+    },
+    "disabledx:m4 5g": {
+        "Troca de Tela": 149
+    },
+    "disabledx:14c": {
+        "Troca de Tela": 149
+    },
+    "disabledx:mi 11 lite 5g ne": {
+        "Troca de Tela": 209
+    },
+    "disabledx:m4 pro 4g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:mi 11t/mi 11t pro": {
+        "Troca de Tela": 299
+    },
+    "disabledx:m4 pro 5g": {
+        "Troca de Tela": 169
+    },
+    "disabledx:note 7/note 7 pro": {
+        "Troca de Tela": 139
+    },
+    "disabledx:mi 12 lite": {
+        "Troca de Tela": 299
+    },
+    "disabledx:note 8": {
+        "Troca de Tela": 105
+    },
+    "disabledx:mi 12 t/mi 12t pro": {},
+    "disabledx:m6 pro 5g (lcd)": {
+        "Troca de Tela": 149
+    },
+    "disabledx:note 8 pro": {
+        "Troca de Tela": 105
+    },
+    "disabledx:mi 13 lite": {},
+    "disabledx:m7 pro 5g": {},
+    "disabledx:note 8t": {
+        "Troca de Tela": 105
+    },
+    "disabledx:x5 / note 12": {
+        "Troca de Tela": 229
+    },
+    "disabledx:note 9": {
+        "Troca de Tela": 149
+    },
+    "disabledx:média": {
+        "Troca de Tela": 69
+    },
+    "disabledx:x5 pro/ note 12 pro": {
+        "Troca de Tela": 249
+    },
+    "disabledx:note 9s": {
+        "Troca de Tela": 109
+    },
+    "disabledx:c40/ 10c": {
+        "Troca de Tela": 155
+    },
+    "disabledx:note 9 pro": {
+        "Troca de Tela": 109
+    },
+    "disabledx:note 10 4g": {
+        "Troca de Tela": 179
+    },
+    "disabledx:note 10 5g": {
+        "Troca de Tela": 105
+    },
+    "disabledx:note 10s 4g": {
+        "Troca de Tela": 179
+    },
+    "disabledx:note 10s 5g": {
+        "Troca de Tela": 105
+    },
+    "disabledx:note 7": {
+        "Troca de Tela": 159
+    },
+    "disabledx:note 10t 5g": {
+        "Troca de Tela": 105
+    },
+    "disabledx:note 10 pro 4g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 10 pro max": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 11 4g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 9s/9 pro": {
+        "Troca de Tela": 139
+    },
+    "disabledx:note 11 5g": {
+        "Troca de Tela": 169
+    },
+    "disabledx:note 11s 4g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:mi 9 se": {
+        "Troca de Tela": 169
+    },
+    "disabledx:note 11s 5g": {
+        "Troca de Tela": 169
+    },
+    "disabledx:mi 9t pro - bp40": {
+        "Troca de Tela": 139
+    },
+    "disabledx:note 11t": {
+        "Troca de Tela": 119
+    },
+    "disabledx:x3 pro - bn61": {
+        "Troca de Tela": 169
+    },
+    "disabledx:note 11 pro 4g": {
+        "Troca de Tela": 197
+    },
+    "disabledx:f1": {
+        "Troca de Tela": 159
+    },
+    "disabledx:note 11 pro 5g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:mi a3": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 11 pro plus 5g": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 12 / x5": {
+        "Troca de Tela": 249
+    },
+    "disabledx:note 12 pro 5g/ x5 pro": {
+        "Troca de Tela": 239
+    },
+    "disabledx:note 12 pro 4g": {},
+    "disabledx:note 12 pro plus": {},
+    "disabledx:note 12s": {
+        "Troca de Tela": 189
+    },
+    "disabledx:note 11 4g - bn5d": {
+        "Troca de Tela": 218
+    },
+    "disabledx:note 13 4g": {
+        "Troca de Tela": 299
+    },
+    "disabledx:note 13 5g": {
+        "Troca de Tela": 299
+    },
+    "b2b:6": {
+        "Troca de Tela": 180
+    },
+    "b2b:8": {},
+    "b2b:series 2": {
+        "Troca de Tela": 430
+    },
+    "b2b:6 plus": {
+        "Troca de Tela": 190
+    },
+    "b2b:8 plus": {
+        "Troca de Tela": 249
+    },
+    "b2b:series 3": {
+        "Troca de Tela": 500
+    },
+    "b2b:series 4": {
+        "Troca de Tela": 615
+    },
+    "b2b:6s": {
+        "Troca de Tela": 180
+    },
+    "b2b:x": {
+        "Troca de Tela": 500
+    },
+    "b2b:series 5": {
+        "Troca de Tela": 700
+    },
+    "b2b:6s plus": {
+        "Troca de Tela": 190
+    },
+    "b2b:xs": {
+        "Troca de Tela": 500
+    },
+    "b2b:series se": {
+        "Troca de Tela": 700
+    },
+    "b2b:xs max": {
+        "Troca de Tela": 670
+    },
+    "b2b:series 6": {
+        "Troca de Tela": 780
+    },
+    "b2b:7": {
+        "Troca de Tela": 209
+    },
+    "b2b:xr": {
+        "Troca de Tela": 500
+    },
+    "b2b:7 plus": {
+        "Troca de Tela": 249
+    },
+    "b2b:11": {
+        "Troca de Tela": 500
+    },
+    "b2b:8/se 2": {
+        "Troca de Tela": 209
+    },
+    "b2b:11 pro": {
+        "Troca de Tela": 670
+    },
+    "b2b:11 pro max": {
+        "Troca de Tela": 790
+    },
+    "b2b:12": {
+        "Troca de Tela": 945
+    },
+    "b2b:12 mini": {
+        "Troca de Tela": 735
+    },
+    "b2b:12 pro": {
+        "Troca de Tela": 945
+    },
+    "b2b:12 pro max": {
+        "Troca de Tela": 1175
+    },
+    "b2b:13": {},
+    "b2b:13 pro": {},
+    "b2b:13 pro max": {}
 }

@@ -8,16 +8,16 @@ const cases = [
         problem: "Tela Estilhaçada",
         before: "/images/cases/iphone_broken.png", // Simulated broken screen
         after: "/images/cases/iphone_fixed.png", // Fixed screen
-        description: "Troca de vidro e display mantendo o Face ID original.",
+        description: "Troca de tela mantendo o Face ID ativo.",
         time: "45 min"
     },
     {
         id: 2,
         device: "Apple Watch Series 8",
-        problem: "Vidro Quebrado",
+        problem: "Tela Quebrada",
         before: "/images/cases/watch_broken.png",
         after: "/images/cases/watch_fixed.png",
-        description: "Recondicionamento de vidro mantendo o display original.",
+        description: "Troca de componente mantendo a vedação premium.",
         time: "2 horas"
     }
 ];
@@ -35,7 +35,7 @@ export default function BeforeAfterGallery() {
                 <div className="md:w-1/2 relative bg-gray-900 aspect-square md:aspect-auto">
                     <img
                         src={showAfter ? cases[currentIndex].after : cases[currentIndex].before}
-                        alt="Reparo"
+                        alt="Troca de componente"
                         className="w-full h-full object-cover opacity-80"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
@@ -71,12 +71,12 @@ export default function BeforeAfterGallery() {
                         <div className="flex items-center gap-6">
                             <div className="text-center">
                                 <span className="block text-brand-blue font-black text-2xl">{cases[currentIndex].time}</span>
-                                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Tempo de Reparo</span>
+                                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Tempo de Instalação</span>
                             </div>
                             <div className="w-px h-10 bg-gray-200"></div>
                             <div className="text-center">
                                 <span className="block text-green-500 font-black text-2xl">100%</span>
-                                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Originalidade</span>
+                                <span className="text-[10px] text-gray-400 uppercase font-bold tracking-widest">Performance</span>
                             </div>
                         </div>
                     </div>
