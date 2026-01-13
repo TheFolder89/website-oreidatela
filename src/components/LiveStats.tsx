@@ -64,7 +64,7 @@ export default function LiveStats() {
                     <div className="text-2xl lg:text-3xl font-black text-brand-navy leading-none mb-2 tracking-tighter">
                         {isOpen ? activeTechnicians : 0}
                     </div>
-                    <div className="text-[9px] lg:text-[10px] text-gray-400 font-black uppercase tracking-widest leading-tight">Técnicos em Bancada</div>
+                    <div className="text-[9px] lg:text-[10px] text-gray-400 font-black uppercase tracking-widest leading-tight">Especialistas em Bancada</div>
                 </div>
             </div>
 

@@ -1,9 +1,9 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
-import modelsData from '../../data/models.json';
+import modelsData from "../../data/models.json";
 import { ChevronRight, Smartphone, Tablet, Watch } from "lucide-react";
 
 const brands = Object.keys(modelsData);
@@ -25,20 +25,25 @@ const brandIcons: { [key: string]: any } = {
 };
 ---
 
-<Layout 
-    title="Modelos Suportados | Assistência Técnica O Rei da Tela"
-    description="Selecione a marca do seu dispositivo para ver todos os modelos que atendemos em Salvador. Reparo especializado para iPhone, Samsung, Xiaomi e mais."
+<Layout
+    title="Modelos Suportados | Peças Premium O Rei da Tela"
+    description="Selecione a marca do seu dispositivo para ver todos os modelos que atendemos em Salvador. Troca especializada para iPhone, Samsung, Xiaomi e mais."
 >
     <Header />
 
     <main class="pt-32">
         <section class="bg-brand-dark py-16 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-4xl lg:text-6xl font-black text-white mb-4 tracking-tighter">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+            >
+                <h1
+                    class="text-4xl lg:text-6xl font-black text-white mb-4 tracking-tighter"
+                >
                     Marcas e <span class="text-brand-gold">Modelos</span>
                 </h1>
                 <p class="text-xl text-white/60 max-w-2xl mx-auto">
-                    Escolha a marca do seu dispositivo para conferir os serviços de reparo premium que oferecemos.
+                    Escolha a marca do seu dispositivo para conferir os serviços
+                    de troca premium que oferecemos.
                 </p>
             </div>
         </section>
@@ -46,30 +51,41 @@ const brandIcons: { [key: string]: any } = {
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {brands.map((brandSlug) => {
-                        const Icon = brandIcons[brandSlug] || Smartphone;
-                        const displayName = brandNames[brandSlug] || brandSlug;
-                        const count = (modelsData as any)[brandSlug].length;
+                    {
+                        brands.map((brandSlug) => {
+                            const Icon = brandIcons[brandSlug] || Smartphone;
+                            const displayName =
+                                brandNames[brandSlug] || brandSlug;
+                            const count = (modelsData as any)[brandSlug].length;
 
-                        return (
-                            <a 
-                                href={`/modelos/${brandSlug}`}
-                                class="group bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-brand-gold hover:shadow-2xl transition-all"
-                            >
-                                <div class="flex items-center justify-between mb-6">
-                                    <div class="w-16 h-16 bg-brand-navy rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <Icon className="w-8 h-8 text-brand-gold" />
+                            return (
+                                <a
+                                    href={`/modelos/${brandSlug}`}
+                                    class="group bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:border-brand-gold hover:shadow-2xl transition-all"
+                                >
+                                    <div class="flex items-center justify-between mb-6">
+                                        <div class="w-16 h-16 bg-brand-navy rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <Icon className="w-8 h-8 text-brand-gold" />
+                                        </div>
+                                        <span class="text-gray-400 font-bold text-sm">
+                                            {count} Modelos
+                                        </span>
                                     </div>
-                                    <span class="text-gray-400 font-bold text-sm">{count} Modelos</span>
-                                </div>
-                                <h3 class="text-2xl font-black text-brand-navy mb-2 capitalize">{displayName}</h3>
-                                <p class="text-gray-500 mb-6 text-sm">Ver todos os modelos e serviços para {displayName}.</p>
-                                <div class="flex items-center text-brand-gold font-black uppercase tracking-widest text-xs gap-2">
-                                    Explorar Modelos <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </div>
-                            </a>
-                        )
-                    })}
+                                    <h3 class="text-2xl font-black text-brand-navy mb-2 capitalize">
+                                        {displayName}
+                                    </h3>
+                                    <p class="text-gray-500 mb-6 text-sm">
+                                        Ver todos os modelos e serviços para{" "}
+                                        {displayName}.
+                                    </p>
+                                    <div class="flex items-center text-brand-gold font-black uppercase tracking-widest text-xs gap-2">
+                                        Explorar Modelos{" "}
+                                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </a>
+                            );
+                        })
+                    }
                 </div>
             </div>
         </section>

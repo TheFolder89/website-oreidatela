@@ -1,12 +1,12 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../../components/WhatsAppFloatingButton";
-import modelsData from '../../../data/models.json';
-import servicesData from '../../../data/services.json';
+import modelsData from "../../../data/models.json";
+import servicesData from "../../../data/services.json";
 import pricesData from "../../../data/prices.json";
-import { generateDevicePaths } from '../../../utils/seo';
+import { generateDevicePaths } from "../../../utils/seo";
 import {
     ShieldCheck,
     Clock,
@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export async function getStaticPaths() {
-  return generateDevicePaths(modelsData, servicesData);
+    return generateDevicePaths(modelsData, servicesData);
 }
 
 const { modelName, brandName, service } = Astro.props;
@@ -29,7 +29,7 @@ const brandSlug = brandName;
 const schema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: `Conserto de ${modelName}`,
+    name: `Peças para ${modelName}`,
     brand: {
         "@type": "Brand",
         name: brandName,
@@ -67,7 +67,7 @@ const normalizeModelName = (text: string): string => {
 const normalizedModel = normalizeModelName(modelName);
 const priceBrandKey = brandSlug.includes("apple-watch")
     ? "apple-watch"
-    : (service?.brand || brandSlug);
+    : service?.brand || brandSlug;
 const priceKey = `${priceBrandKey}:${normalizedModel}`;
 const modelPrices = (pricesData as any)[priceKey] || {};
 
@@ -81,8 +81,8 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
 ---
 
 <Layout
-    title={`Conserto de ${modelName} em Salvador | O Rei da Tela`}
-    description={`Reparo especializado para ${modelName} em Salvador. Troca de tela, bateria e mais. Garantia de 3 meses, delivery grátis. Orçamento rápido pelo WhatsApp.`}
+    title={`Peças para ${modelName} em Salvador | O Rei da Tela`}
+    description={`Troca especializada para ${modelName} em Salvador. Troca de tela, bateria e mais. Garantia de 3 meses, delivery grátis. Orçamento rápido pelo WhatsApp.`}
 >
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <Header />
@@ -97,18 +97,46 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                     </li>
                     <li>
                         <div class="flex items-center">
-                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            <svg
+                                class="w-3 h-3 text-gray-400 mx-1"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 6 10"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 9 4-4-4-4"></path>
                             </svg>
-                            <a href={`/modelos/${brandSlug}`} class="ml-1 hover:text-brand-gold capitalize">{brandName}</a>
+                            <a
+                                href={`/modelos/${brandSlug}`}
+                                class="ml-1 hover:text-brand-gold capitalize"
+                                >{brandName}</a
+                            >
                         </div>
                     </li>
                     <li aria-current="page">
                         <div class="flex items-center">
-                            <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            <svg
+                                class="w-3 h-3 text-gray-400 mx-1"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 6 10"
+                            >
+                                <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="m1 9 4-4-4-4"></path>
                             </svg>
-                            <span class="ml-1 font-medium text-gray-700">{modelName}</span>
+                            <span class="ml-1 font-medium text-gray-700"
+                                >{modelName}</span
+                            >
                         </div>
                     </li>
                 </ol>
@@ -129,20 +157,21 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-gold/20 text-brand-gold text-sm font-black uppercase tracking-widest mb-8"
                     >
                         <Wrench className="w-5 h-5" />
-                        Reparo Especializado
+                        Troca Especializada
                     </div>
                     <h1
                         class="text-5xl lg:text-7xl font-black text-white mb-6 tracking-tighter"
                     >
-                        Conserto de <span class="text-brand-gold">{modelName}</span>
+                        Peças para <span class="text-brand-gold"
+                            >{modelName}</span
+                        >
                     </h1>
                     <p class="text-xl text-white/60 max-w-3xl mx-auto mb-10">
-                        Assistência técnica premium para seu {modelName} em Salvador.
-                        Técnicos certificados, peças de qualidade e garantia de 3
-                        meses.
+                        Laboratório premium para seu {modelName} em Salvador. Especialistas
+                        certificados, peças de qualidade e garantia de 3 meses.
                     </p>
                     <a
-                        href={`https://wa.me/557194142627?text=Olá, preciso de orçamento para conserto do meu ${modelName}`}
+                        href={`https://wa.me/557194142627?text=Olá, preciso de orçamento para troca de peças do meu ${modelName}`}
                         class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-5 rounded-full font-black text-lg hover:bg-white transition-all shadow-2xl"
                     >
                         <MessageCircle className="w-6 h-6 fill-current" />
@@ -162,7 +191,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         Serviços para {modelName}
                     </h2>
                     <p class="text-gray-500 text-lg">
-                        Confira os reparos disponíveis e valores estimados
+                        Confira as trocas disponíveis e valores estimados
                     </p>
                 </div>
 
@@ -192,7 +221,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
 
                 <div class="mt-16 text-center">
                     <a
-                        href={`https://wa.me/557194142627?text=Olá, quero orçamento de conserto para ${modelName}`}
+                        href={`https://wa.me/557194142627?text=Olá, quero orçamento para ${modelName}`}
                         class="inline-flex items-center gap-3 bg-brand-navy text-white px-12 py-6 rounded-full font-black text-lg hover:bg-black transition-all shadow-xl"
                     >
                         <Zap className="w-6 h-6 text-brand-gold" />
@@ -221,7 +250,7 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                             Garantia 3 Meses
                         </h3>
                         <p class="text-gray-500 text-sm">
-                            Cobertura total em todos os reparos
+                            Cobertura total em todas as trocas
                         </p>
                     </div>
                     <div class="text-center">
@@ -231,10 +260,10 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                             <Clock className="w-8 h-8 text-brand-navy" />
                         </div>
                         <h3 class="font-black text-brand-navy mb-2">
-                            Reparo Express
+                            Troca Express
                         </h3>
                         <p class="text-gray-500 text-sm">
-                            A maioria dos reparos em até 1 hora
+                            A maioria das trocas em até 1 hora
                         </p>
                     </div>
                     <div class="text-center">
@@ -280,16 +309,16 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         <summary
                             class="font-black text-brand-navy cursor-pointer list-none flex justify-between items-center"
                         >
-                            Quanto tempo demora o conserto do {modelName}?
+                            Quanto tempo demora a troca no {modelName}?
                             <span
                                 class="text-brand-gold text-2xl group-open:rotate-45 transition-transform"
                                 >+</span
                             >
                         </summary>
                         <p class="mt-4 text-gray-600">
-                            A maioria dos reparos do {modelName} são concluídos em 30
-                            minutos a 2 horas, dependendo do serviço. Reparos de placa
-                            podem levar de 1 a 3 dias.
+                            A maioria das trocas no {modelName} são concluídas em
+                            30 minutos a 2 horas, dependendo do serviço. Serviços
+                            de placa podem levar de 1 a 3 dias.
                         </p>
                     </details>
                     <details class="bg-gray-50 rounded-2xl p-6 group">
@@ -304,8 +333,10 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         </summary>
                         <p class="mt-4 text-gray-600">
                             Trabalhamos com peças premium de alta qualidade que
-                            mantêm as funcionalidades originais do seu {modelName}.
-                            Oferecemos garantia de 3 meses em todos os reparos.
+                            mantêm as funcionalidades originais do seu {
+                                modelName
+                            }. Oferecemos garantia de 3 meses em todas as
+                            trocas.
                         </p>
                     </details>
                     <details class="bg-gray-50 rounded-2xl p-6 group">
@@ -320,8 +351,8 @@ const getPrice = (subServiceName: string, defaultPrice: string) => {
                         </summary>
                         <p class="mt-4 text-gray-600">
                             Sim! Oferecemos serviço de delivery gratuito em
-                            Salvador e região. Buscamos seu {modelName} no local de sua
-                            preferência e entregamos após o reparo.
+                            Salvador e região. Buscamos seu {modelName} no local de
+                            sua preferência e entregamos após a troca.
                         </p>
                     </details>
                 </div>

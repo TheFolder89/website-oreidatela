@@ -34,13 +34,13 @@ function capitalize(str: string) {
   return str; // Already capitalized in JSON props, but we could enforce title case if needed
 }
 
-const title = `Assistência Técnica Apple em ${bairro} - Salvador | Delivery`;
-const description = `Precisando consertar seu iPhone ou Apple Watch em ${bairro}? O Rei da Tela atende sua região com delivery rápido. Troca de tela e bateria com garantia.`;
+const title = `Peças Premium em ${bairro} - Salvador | Delivery`;
+const description = `Precisando de peças para seu iPhone ou Apple Watch em ${bairro}? O Rei da Tela atende sua região com delivery rápido. Troca de tela e bateria com garantia.`;
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: `Conserto Apple em ${bairro}`,
+  name: `Peças Premium em ${bairro}`,
   provider: {
     "@type": "LocalBusiness",
     name: "O Rei da Tela",
@@ -82,12 +82,12 @@ const schema = {
         <div
           class="inline-flex items-center gap-3 px-6 py-2 bg-brand-gold/10 rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-10 border border-brand-gold/20 text-brand-gold backdrop-blur-md"
         >
-          <MapPin className="w-4 h-4" /> Coleta Técnica em {bairro}
+          <MapPin className="w-4 h-4" /> Coleta Expressa em {bairro}
         </div>
         <h1
           class="text-5xl md:text-8xl font-black mb-10 leading-none tracking-tighter uppercase"
         >
-          ASSISTÊNCIA APPLE <br />
+          PEÇAS PREMIUM <br />
           <span class="text-brand-gold">EM {bairro}</span>
         </h1>
         <p
@@ -171,7 +171,7 @@ const schema = {
             <h3
               class="text-2xl font-black mb-4 tracking-tight group-hover:text-white uppercase transition-colors leading-none"
             >
-              Técnico Local
+              Atendimento Local
             </h3>
             <p
               class="text-gray-500 group-hover:text-white/60 font-medium leading-relaxed"

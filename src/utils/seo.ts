@@ -20,11 +20,11 @@ export function slugify(text: string): string {
  */
 export function generateDevicePaths(modelsData: Record<string, string[]>, servicesData: any[]) {
   const paths = [];
-  
+
   for (const [brandSlug, models] of Object.entries(modelsData)) {
     // Find the corresponding service for this brand
-    const service = servicesData.find(s => s.brand === brandSlug || s.slug === `conserto-${brandSlug}`);
-    
+    const service = servicesData.find(s => s.brand === brandSlug || s.slug === `pecas-${brandSlug}`);
+
     for (const model of models) {
       paths.push({
         params: {
@@ -39,7 +39,7 @@ export function generateDevicePaths(modelsData: Record<string, string[]>, servic
       });
     }
   }
-  
+
   return paths;
 }
 
@@ -48,7 +48,7 @@ export function generateDevicePaths(modelsData: Record<string, string[]>, servic
  */
 export function generateBrandPaths(modelsData: Record<string, string[]>) {
   const paths = [];
-  
+
   for (const [brand, models] of Object.entries(modelsData)) {
     paths.push({
       params: {
@@ -60,6 +60,6 @@ export function generateBrandPaths(modelsData: Record<string, string[]>) {
       }
     });
   }
-  
+
   return paths;
 }

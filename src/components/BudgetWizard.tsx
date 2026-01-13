@@ -161,7 +161,7 @@ export default function BudgetWizard() {
                                 <h3 className="text-[10px] font-black text-brand-gold uppercase tracking-[0.4em] mb-4">Estimativa de Laboratório</h3>
                                 <div className="text-7xl font-black text-brand-navy mb-6 tracking-tighter">{getPriceEstimate()}</div>
                                 <p className="text-gray-400 mb-12 max-w-sm mx-auto text-sm font-medium leading-relaxed uppercase tracking-tight">
-                                    Valor aproximado para pecas <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Oficiais</span> e técnico <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Certificado</span>.
+                                    Valor aproximado para peças <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Oficiais</span> e especialista <span className="text-brand-navy font-black underline decoration-brand-gold decoration-4 underline-offset-4">Certificado</span>.
                                 </p>
 
                                 <button
@@ -172,7 +172,7 @@ export default function BudgetWizard() {
                                 </button>
 
                                 <p className="text-[10px] text-gray-400 mt-8 font-black uppercase tracking-[0.4em]">
-                                    Sem cobrança de taxa de análise em caso de reparo
+                                    Sem cobrança de taxa de análise
                                 </p>
                                 <button onClick={() => setStep(1)} className="mt-6 text-[10px] text-gray-400 hover:text-brand-gold font-black uppercase tracking-[0.2em] underline decoration-gray-200 underline-offset-4">
                                     Fazer novo orçamento

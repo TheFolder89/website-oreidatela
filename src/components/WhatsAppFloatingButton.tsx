@@ -9,11 +9,11 @@ export default function WhatsAppFloatingButton() {
     // Logic to determine contextual message based on URL
     const path = window.location.pathname;
 
-    if (path.includes('conserto-iphone')) {
+    if (path.includes('pecas-iphone')) {
       setMessage("Olá! Preciso de um orçamento urgente para meu iPhone.");
       setTooltip("Orçamento iPhone Agora");
-    } else if (path.includes('conserto-apple-watch')) {
-      setMessage("Olá! Quanto custa o reparo do Apple Watch?");
+    } else if (path.includes('pecas-apple-watch')) {
+      setMessage("Olá! Quanto custa a troca no Apple Watch?");
       setTooltip("Dúvidas Apple Watch");
     } else if (path.includes('unidades/')) {
       setMessage("Olá! Vi que vocês atendem no meu bairro. Gostaria de agendar uma coleta.");

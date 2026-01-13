@@ -30,7 +30,7 @@ export default function StatusForm() {
                     device: 'Apple Watch S7',
                     service: 'Troca de Vidro',
                     date: '23/12/2025',
-                    description: 'O técnico está trabalhando no seu aparelho neste momento.'
+                    description: 'O especialista está trabalhando no seu aparelho neste momento.'
                 });
             } else if (osNumber === '9999') {
                 setResult({
@@ -97,7 +97,7 @@ export default function StatusForm() {
 
                     <div className="flex items-center gap-6 mb-10 pb-10 border-b border-white/10">
                         <div className={`w-20 h-20 rounded-[1.5rem] flex items-center justify-center relative shadow-2xl ${result.status === 'Pronto' ? 'bg-green-500 text-white' :
-                                result.status === 'Aguardando Peça' ? 'bg-brand-gold text-brand-navy' : 'bg-white text-brand-navy'
+                            result.status === 'Aguardando Peça' ? 'bg-brand-gold text-brand-navy' : 'bg-white text-brand-navy'
                             }`}>
                             {result.status === 'Pronto' ? <CheckCircle className="w-10 h-10" /> :
                                 result.status === 'Aguardando Peça' ? <Package className="w-10 h-10" /> : <Clock className="w-10 h-10 animate-pulse" />}
@@ -105,7 +105,7 @@ export default function StatusForm() {
                         <div>
                             <div className="text-[10px] text-white/40 uppercase tracking-[0.4em] font-black mb-1">Status Atualizado</div>
                             <div className={`text-4xl font-black tracking-tighter uppercase ${result.status === 'Pronto' ? 'text-green-400' :
-                                    result.status === 'Aguardando Peça' ? 'text-brand-gold' : 'text-white'
+                                result.status === 'Aguardando Peça' ? 'text-brand-gold' : 'text-white'
                                 }`}>{result.status}</div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ export default function StatusForm() {
                         </a>
                     ) : (
                         <a href="https://wa.me/557194142627" className="block w-full bg-white/10 text-white text-center py-6 rounded-[1.5rem] font-black text-xl hover:bg-white/20 transition-all uppercase tracking-widest">
-                            FALAR COM TÉCNICO
+                            FALAR COM ESPECIALISTA
                         </a>
                     )}
                 </div>

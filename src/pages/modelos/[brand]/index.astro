@@ -1,14 +1,14 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
+import Layout from "../../../layouts/Layout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../../components/WhatsAppFloatingButton";
-import modelsData from '../../../data/models.json';
-import { generateBrandPaths, slugify } from '../../../utils/seo';
+import modelsData from "../../../data/models.json";
+import { generateBrandPaths, slugify } from "../../../utils/seo";
 import { ChevronRight, Smartphone } from "lucide-react";
 
 export async function getStaticPaths() {
-  return generateBrandPaths(modelsData);
+    return generateBrandPaths(modelsData);
 }
 
 const { brandName, models } = Astro.props;
@@ -25,20 +25,25 @@ const brandNames: { [key: string]: string } = {
 const displayName = brandNames[brandName] || brandName;
 ---
 
-<Layout 
-    title={`Modelos ${displayName} | Assistência Técnica O Rei da Tela`}
-    description={`Confira todos os modelos de ${displayName} que atendemos em Salvador. Reparos especializados com garantia e qualidade.`}
+<Layout
+    title={`Modelos ${displayName} | Peças Premium O Rei da Tela`}
+    description={`Confira todos os modelos de ${displayName} que atendemos em Salvador. Troca especializada com garantia e qualidade.`}
 >
     <Header />
 
     <main class="pt-32">
         <section class="bg-brand-dark py-16 relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-4xl lg:text-6xl font-black text-white mb-4 tracking-tighter">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+            >
+                <h1
+                    class="text-4xl lg:text-6xl font-black text-white mb-4 tracking-tighter"
+                >
                     Modelos <span class="text-brand-gold">{displayName}</span>
                 </h1>
                 <p class="text-xl text-white/60 max-w-2xl mx-auto">
-                    Selecione seu modelo para ver os serviços e preços disponíveis para reparo especializado em Salvador.
+                    Selecione seu modelo para ver os serviços e preços
+                    disponíveis para troca especializada em Salvador.
                 </p>
             </div>
         </section>
@@ -46,20 +51,24 @@ const displayName = brandNames[brandName] || brandName;
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {models.map((model: string) => (
-                        <a 
-                            href={`/modelos/${brand}/${slugify(model)}`}
-                            class="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-brand-gold hover:shadow-lg transition-all flex items-center justify-between"
-                        >
-                            <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center group-hover:bg-brand-gold/10 transition-colors">
-                                    <Smartphone className="w-6 h-6 text-brand-navy" />
+                    {
+                        models.map((model: string) => (
+                            <a
+                                href={`/modelos/${brand}/${slugify(model)}`}
+                                class="group bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-brand-gold hover:shadow-lg transition-all flex items-center justify-between"
+                            >
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center group-hover:bg-brand-gold/10 transition-colors">
+                                        <Smartphone className="w-6 h-6 text-brand-navy" />
+                                    </div>
+                                    <span class="text-xl font-bold text-brand-navy">
+                                        {model}
+                                    </span>
                                 </div>
-                                <span class="text-xl font-bold text-brand-navy">{model}</span>
-                            </div>
-                            <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-brand-gold group-hover:translate-x-1 transition-all" />
-                        </a>
-                    ))}
+                                <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-brand-gold group-hover:translate-x-1 transition-all" />
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
         </section>

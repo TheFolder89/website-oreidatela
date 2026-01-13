@@ -11,7 +11,7 @@ interface RepairStep {
 const repairSteps: RepairStep[] = [
     { id: 1, title: "Diagnóstico", duration: 2000, icon: <Search className="w-6 h-6" /> },
     { id: 2, title: "Desmontagem", duration: 3000, icon: <Wrench className="w-6 h-6" /> },
-    { id: 3, title: "Troca de Peça", duration: 4000, icon: <RefreshCw className="w-6 h-6" /> },
+    { id: 3, title: "Instalação", duration: 4000, icon: <RefreshCw className="w-6 h-6" /> },
     { id: 4, title: "Montagem", duration: 3000, icon: <Layers className="w-6 h-6" /> },
     { id: 5, title: "Teste Final", duration: 2000, icon: <CheckCircle className="w-6 h-6" /> }
 ];

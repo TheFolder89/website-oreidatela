@@ -1,10 +1,10 @@
 [
     {
-        "slug": "conserto-iphone",
-        "name": "Conserto de iPhone",
+        "slug": "pecas-iphone",
+        "name": "Peças para iPhone",
         "brand": "apple",
         "icon": "smartphone",
-        "description": "Reparos especializados para todos os modelos de iPhone.",
+        "description": "Componentes premium para todos os modelos de iPhone.",
         "models": [
             "iPhone 15 Pro Max",
             "iPhone 15 Pro",
@@ -40,7 +40,7 @@
                 "duration": "20 min"
             },
             {
-                "name": "Reparo de Placa",
+                "name": "Recuperação de Placa",
                 "price": "A partir de R$ 150",
                 "duration": "1-3 dias"
             },
@@ -52,11 +52,11 @@
         ]
     },
     {
-        "slug": "conserto-apple-watch",
-        "name": "Conserto de Apple Watch",
+        "slug": "pecas-apple-watch",
+        "name": "Peças para Apple Watch",
         "brand": "apple",
         "icon": "watch",
-        "description": "Especialistas em troca de vidro mantendo o display original.",
+        "description": "Troca de vidro mantendo o display original.",
         "models": [
             "Apple Watch Ultra 2",
             "Apple Watch Ultra",
@@ -89,8 +89,8 @@
         ]
     },
     {
-        "slug": "conserto-ipad",
-        "name": "Conserto de iPad",
+        "slug": "pecas-ipad",
+        "name": "Peças para iPad",
         "brand": "apple",
         "icon": "tablet",
         "description": "Troca de vidro e touch para toda linha iPad.",
@@ -116,11 +116,11 @@
         ]
     },
     {
-        "slug": "conserto-samsung",
-        "name": "Conserto de Samsung",
+        "slug": "pecas-samsung",
+        "name": "Peças para Samsung",
         "brand": "samsung",
         "icon": "smartphone",
-        "description": "Reparo especializado para toda linha Galaxy, incluindo dobráveis.",
+        "description": "Componentes para toda linha Galaxy, incluindo dobráveis.",
         "models": [
             "Galaxy S24 Ultra",
             "Galaxy S24+",
@@ -159,18 +159,18 @@
                 "duration": "2 horas"
             },
             {
-                "name": "Reparo de Placa",
+                "name": "Recuperação de Placa",
                 "price": "A partir de R$ 106",
                 "duration": "1-3 dias"
             }
         ]
     },
     {
-        "slug": "conserto-xiaomi",
-        "name": "Conserto de Xiaomi",
+        "slug": "pecas-xiaomi",
+        "name": "Peças para Xiaomi",
         "brand": "xiaomi",
         "icon": "smartphone",
-        "description": "Assistência técnica para linha Redmi, POCO e Mi.",
+        "description": "Componentes para linha Redmi, POCO e Mi.",
         "models": [
             "Xiaomi 14 Ultra",
             "Xiaomi 14",
@@ -201,7 +201,7 @@
                 "duration": "30 min"
             },
             {
-                "name": "Reparo de Placa",
+                "name": "Recuperação de Placa",
                 "price": "A partir de R$ 450",
                 "duration": "1-3 dias"
             },
