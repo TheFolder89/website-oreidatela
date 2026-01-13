@@ -1,0 +1,39 @@
+name: Deploy Ads Subdomain
+
+on:
+  push:
+    branches:
+      - google-ads-compliant
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: ⚡ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🏗️ Build Site
+        env:
+          BUILD_DESTINATION: 'hostinger'
+          BUILD_SITE: 'https://ads.ordt.com.br'
+        run: npm run build
+
+      - name: 🚀 Deploy to Ads Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # The folder the action should deploy.
+          branch: ads-deploy # The branch the action should deploy to.
+          clean: true # Automatically remove deleted files from the deploy branch
