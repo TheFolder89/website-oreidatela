@@ -1,22 +1,142 @@
 [
-    "Barra",
-    "Ondina",
-    "Rio Vermelho",
-    "Pituba",
-    "Itaigara",
-    "Caminho das Árvores",
-    "Horto Florestal",
-    "Graça",
-    "Vitória",
-    "Canela",
-    "Campo Grande",
-    "Imbuí",
-    "Costa Azul",
-    "Armação",
-    "Boca do Rio",
-    "Patamares",
-    "Piatã",
-    "Itapuã",
-    "Stella Maris",
-    "Vilas do Atlântico"
+    {
+        "slug": "barra",
+        "name": "Barra",
+        "zone": "Orla Sul",
+        "deliveryTime": "30-40 min",
+        "landmark": "próximo ao Farol e região do Shopping Barra"
+    },
+    {
+        "slug": "ondina",
+        "name": "Ondina",
+        "zone": "Orla Sul",
+        "deliveryTime": "25-35 min",
+        "landmark": "região dos hotéis e UFBA"
+    },
+    {
+        "slug": "rio-vermelho",
+        "name": "Rio Vermelho",
+        "zone": "Orla Sul",
+        "deliveryTime": "25-35 min",
+        "landmark": "próximo ao Largo da Mariquita e Ceasinha"
+    },
+    {
+        "slug": "pituba",
+        "name": "Pituba",
+        "zone": "Central",
+        "deliveryTime": "20-30 min",
+        "landmark": "região da Av. Paulo VI e Manoel Dias"
+    },
+    {
+        "slug": "itaigara",
+        "name": "Itaigara",
+        "zone": "Central",
+        "deliveryTime": "15-25 min",
+        "landmark": "próximo ao Parque da Cidade e Shopping Itaigara"
+    },
+    {
+        "slug": "caminho-das-arvores",
+        "name": "Caminho das Árvores",
+        "zone": "Central (Sede)",
+        "deliveryTime": "10-15 min",
+        "landmark": "região do Shopping da Bahia e Salvador Shopping"
+    },
+    {
+        "slug": "horto-florestal",
+        "name": "Horto Florestal",
+        "zone": "Nobre",
+        "deliveryTime": "20-30 min",
+        "landmark": "área residencial de alto padrão e Av. Waldemar Falcão"
+    },
+    {
+        "slug": "graca",
+        "name": "Graça",
+        "zone": "Centro",
+        "deliveryTime": "35-45 min",
+        "landmark": "próximo ao Museu Rodin e Palacete das Artes"
+    },
+    {
+        "slug": "vitoria",
+        "name": "Vitória",
+        "zone": "Centro",
+        "deliveryTime": "35-45 min",
+        "landmark": "Corredor da Vitória"
+    },
+    {
+        "slug": "canela",
+        "name": "Canela",
+        "zone": "Centro",
+        "deliveryTime": "35-45 min",
+        "landmark": "região das Clínicas e Teatro Castro Alves"
+    },
+    {
+        "slug": "campo-grande",
+        "name": "Campo Grande",
+        "zone": "Centro",
+        "deliveryTime": "40-50 min",
+        "landmark": "próximo à Praça do Campo Grande"
+    },
+    {
+        "slug": "imbui",
+        "name": "Imbuí",
+        "zone": "Residencial",
+        "deliveryTime": "20-30 min",
+        "landmark": "próximo às barracas e Av. Jorge Amado"
+    },
+    {
+        "slug": "costa-azul",
+        "name": "Costa Azul",
+        "zone": "Orla",
+        "deliveryTime": "20-30 min",
+        "landmark": "próximo ao Parque Costa Azul"
+    },
+    {
+        "slug": "armacao",
+        "name": "Armação",
+        "zone": "Orla",
+        "deliveryTime": "25-35 min",
+        "landmark": "orla marítima e região do Centro de Convenções"
+    },
+    {
+        "slug": "boca-do-rio",
+        "name": "Boca do Rio",
+        "zone": "Orla",
+        "deliveryTime": "25-35 min",
+        "landmark": "região da nova Orla e Aeroclube"
+    },
+    {
+        "slug": "patamares",
+        "name": "Patamares",
+        "zone": "Orla Norte",
+        "deliveryTime": "30-40 min",
+        "landmark": "colinas e orla marítima"
+    },
+    {
+        "slug": "piata",
+        "name": "Piatã",
+        "zone": "Orla Norte",
+        "deliveryTime": "40-50 min",
+        "landmark": "próximo à praia de Piatã"
+    },
+    {
+        "slug": "itapua",
+        "name": "Itapuã",
+        "zone": "Orla Norte",
+        "deliveryTime": "45-55 min",
+        "landmark": "região do Farol de Itapuã e Abaeté"
+    },
+    {
+        "slug": "stella-maris",
+        "name": "Stella Maris",
+        "zone": "Orla Norte",
+        "deliveryTime": "50-60 min",
+        "landmark": "região dos hotéis e praia do Flamengo"
+    },
+    {
+        "slug": "vilas-do-atlantico",
+        "name": "Vilas do Atlântico",
+        "zone": "Lauro de Freitas",
+        "deliveryTime": "60-90 min",
+        "landmark": "região metropolitana de Lauro de Freitas"
+    }
 ]

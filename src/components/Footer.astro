@@ -193,14 +193,10 @@ const currentYear = new Date().getFullYear();
           {
             neighborhoods.slice(0, 15).map((bairro) => (
               <a
-                href={`${base}unidades/${bairro
-                  .toLowerCase()
-                  .normalize("NFD")
-                  .replace(/[\u0300-\u036f]/g, "")
-                  .replace(/\s+/g, "-")}`}
+                href={`${base}unidades/${bairro.slug}`}
                 class="text-[10px] font-bold uppercase tracking-wider bg-white/5 px-3 py-2 rounded-lg hover:bg-brand-gold hover:text-brand-navy transition-all border border-white/5"
               >
-                {bairro}
+                {bairro.name}
               </a>
             ))
           }
