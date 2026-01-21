@@ -5,7 +5,12 @@
  */
 
 interface Props {
-    type: "LocalBusiness" | "Service" | "FAQPage" | "BreadcrumbList";
+    type:
+        | "LocalBusiness"
+        | "Service"
+        | "FAQPage"
+        | "BreadcrumbList"
+        | "Article";
     data?: Record<string, any>;
 }
 
@@ -77,6 +82,7 @@ const schemas: Record<string, any> = {
     Service: data,
     FAQPage: data,
     BreadcrumbList: data,
+    Article: data,
 };
 
 const schemaToRender = schemas[type];

@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import SchemaMarkup from "../../components/SchemaMarkup.astro";
 import blogPosts from "../../data/blog-posts.json";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 
@@ -19,9 +20,37 @@ const { post } = Astro.props;
 const relatedPosts = blogPosts
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 2);
+
+const base = import.meta.env.BASE_URL;
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image.startsWith("http")
+        ? post.image
+        : `https://ordt.com.br${post.image}`,
+    author: {
+        "@type": "Organization",
+        name: "O Rei da Tela",
+        url: "https://ordt.com.br",
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "O Rei da Tela",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://ordt.com.br/logo-oficial.png",
+        },
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+};
 ---
 
 <Layout title={`${post.title} | O Rei da Tela`} description={post.excerpt}>
+    <SchemaMarkup type="Article" data={articleSchema} />
     <Header />
 
     <main class="pt-32">
@@ -35,7 +64,7 @@ const relatedPosts = blogPosts
 
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <a
-                    href="/blog"
+                    href={`${base}blog`}
                     class="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors mb-8"
                 >
                     <ArrowLeft className="w-4 h-4" />
@@ -82,9 +111,26 @@ const relatedPosts = blogPosts
         <section class="py-16 bg-white">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <article class="prose prose-lg prose-gray max-w-none">
-                    <p class="text-xl text-gray-600 leading-relaxed mb-8">
-                        {post.content}
-                    </p>
+                    <div
+                        class="blog-content"
+                        set:html={post.content.replace(/\n/g, "<br/>")}
+                    />
+
+                    <div
+                        class="mt-16 pt-10 border-t border-gray-100 italic text-gray-500 text-sm flex items-center gap-4"
+                    >
+                        <img
+                            src={`${base}logo-oficial.png`}
+                            alt="O Rei da Tela Expert"
+                            class="w-10 h-10 object-contain opacity-50"
+                        />
+                        <span
+                            >Artigo revisado por especialistas técnicos do <strong
+                                >O Rei da Tela Salvador</strong
+                            >. Especialistas em componentes premium e
+                            microssoldagem avançada.</span
+                        >
+                    </div>
 
                     <h2 class="text-2xl font-black text-brand-navy mt-12 mb-6">
                         Por que escolher O Rei da Tela?
@@ -130,18 +176,27 @@ const relatedPosts = blogPosts
                         class="mt-12 p-8 bg-brand-navy rounded-3xl text-center"
                     >
                         <h3 class="text-2xl font-black text-white mb-4">
-                            Precisa de Ajuda?
+                            Precisa de Assistência?
                         </h3>
-                        <p class="text-white/60 mb-6">
-                            Entre em contato e receba um orçamento gratuito em
-                            minutos.
+                        <p class="text-white/60 mb-8">
+                            Escolha a melhor opção para você agora mesmo:
                         </p>
-                        <a
-                            href="https://wa.me/557194142627?text=Olá, li o artigo sobre {post.title} e gostaria de um orçamento"
-                            class="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-8 py-4 rounded-full font-black hover:bg-white transition-all"
+                        <div
+                            class="flex flex-col sm:flex-row gap-4 justify-center"
                         >
-                            Solicitar Orçamento
-                        </a>
+                            <a
+                                href="https://wa.me/557194142627?text=Olá, li o artigo sobre {post.title} e gostaria de um orçamento"
+                                class="inline-flex items-center justify-center gap-3 bg-brand-gold text-brand-navy px-8 py-4 rounded-full font-black hover:bg-white transition-all w-full sm:w-auto"
+                            >
+                                Falar no WhatsApp
+                            </a>
+                            <a
+                                href={`${base}#orcamento`}
+                                class="inline-flex items-center justify-center gap-3 bg-white/10 text-white border border-white/20 px-8 py-4 rounded-full font-black hover:bg-white/20 transition-all w-full sm:w-auto"
+                            >
+                                Simular Orçamento Online
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
